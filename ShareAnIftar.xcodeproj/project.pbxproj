@@ -12,6 +12,8 @@
 		96F7D45C1E91346D00B23325 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96F7D45A1E91346D00B23325 /* Main.storyboard */; };
 		96F7D45E1E91346D00B23325 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96F7D45D1E91346D00B23325 /* Assets.xcassets */; };
 		96F7D4611E91346D00B23325 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96F7D45F1E91346D00B23325 /* LaunchScreen.storyboard */; };
+		96F7D46E1E9151E000B23325 /* SAIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F7D46D1E9151E000B23325 /* SAIViewController.swift */; };
+		96F7D4701E91524100B23325 /* SAIServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F7D46F1E91524100B23325 /* SAIServiceManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		96F7D45D1E91346D00B23325 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96F7D4601E91346D00B23325 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		96F7D4621E91346D00B23325 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96F7D46D1E9151E000B23325 /* SAIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAIViewController.swift; sourceTree = "<group>"; };
+		96F7D46F1E91524100B23325 /* SAIServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAIServiceManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,10 @@
 		96F7D4551E91346D00B23325 /* ShareAnIftar */ = {
 			isa = PBXGroup;
 			children = (
+				96F7D46B1E91512200B23325 /* ExternalLibs */,
+				96F7D46A1E91511700B23325 /* Frameworks */,
+				96F7D4691E91510D00B23325 /* Modules */,
+				96F7D4681E9150F200B23325 /* Service Manager */,
 				96F7D4561E91346D00B23325 /* AppDelegate.swift */,
 				96F7D4581E91346D00B23325 /* ViewController.swift */,
 				96F7D45A1E91346D00B23325 /* Main.storyboard */,
@@ -62,6 +70,44 @@
 				96F7D4621E91346D00B23325 /* Info.plist */,
 			);
 			path = ShareAnIftar;
+			sourceTree = "<group>";
+		};
+		96F7D4681E9150F200B23325 /* Service Manager */ = {
+			isa = PBXGroup;
+			children = (
+				96F7D46F1E91524100B23325 /* SAIServiceManager.swift */,
+			);
+			path = "Service Manager";
+			sourceTree = "<group>";
+		};
+		96F7D4691E91510D00B23325 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				96F7D46C1E91515E00B23325 /* Base */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		96F7D46A1E91511700B23325 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		96F7D46B1E91512200B23325 /* ExternalLibs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ExternalLibs;
+			sourceTree = "<group>";
+		};
+		96F7D46C1E91515E00B23325 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				96F7D46D1E9151E000B23325 /* SAIViewController.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +184,8 @@
 			files = (
 				96F7D4591E91346D00B23325 /* ViewController.swift in Sources */,
 				96F7D4571E91346D00B23325 /* AppDelegate.swift in Sources */,
+				96F7D46E1E9151E000B23325 /* SAIViewController.swift in Sources */,
+				96F7D4701E91524100B23325 /* SAIServiceManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
