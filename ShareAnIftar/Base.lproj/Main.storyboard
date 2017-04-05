@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qIj-Tw-8Iz">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ShareAnIftar" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -21,6 +26,234 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-103" y="38"/>
+        </scene>
+        <!--Iftar View Controller-->
+        <scene sceneID="4Rf-1A-xTa">
+            <objects>
+                <viewController id="rna-tq-jEJ" customClass="SAIIftarViewController" customModule="ShareAnIftar" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6gZ-xZ-5lt"/>
+                        <viewControllerLayoutGuide type="bottom" id="Nih-Gl-Zpa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5RZ-PY-cpv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Work In Progress" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQf-az-aQV">
+                                <rect key="frame" x="89" y="323" width="196" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Nih-Gl-Zpa" firstAttribute="top" secondItem="ZQf-az-aQV" secondAttribute="bottom" constant="274" id="ArW-9R-feQ"/>
+                            <constraint firstItem="ZQf-az-aQV" firstAttribute="leading" secondItem="5RZ-PY-cpv" secondAttribute="leadingMargin" constant="73" id="JBd-8B-G6Z"/>
+                            <constraint firstItem="ZQf-az-aQV" firstAttribute="top" secondItem="6gZ-xZ-5lt" secondAttribute="bottom" constant="259" id="P9e-1w-VWu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZQf-az-aQV" secondAttribute="trailing" constant="74" id="hoF-Lr-OYw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="HhZ-im-BbI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3bD-5j-5Zw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4215.1999999999998" y="71.514242878560722"/>
+        </scene>
+        <!--Eid View Controller-->
+        <scene sceneID="gqH-oO-ysx">
+            <objects>
+                <viewController id="VTR-U1-Ggn" customClass="SAIEidViewController" customModule="ShareAnIftar" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WPK-MM-XYp"/>
+                        <viewControllerLayoutGuide type="bottom" id="2f3-2Z-zQL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rbx-nL-nEi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Work In Progress" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r6Q-Ls-3L8">
+                                <rect key="frame" x="73" y="323" width="228" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="r6Q-Ls-3L8" secondAttribute="trailing" constant="58" id="93M-L9-71c"/>
+                            <constraint firstItem="r6Q-Ls-3L8" firstAttribute="top" secondItem="WPK-MM-XYp" secondAttribute="bottom" constant="259" id="JEO-nG-85N"/>
+                            <constraint firstItem="2f3-2Z-zQL" firstAttribute="top" secondItem="r6Q-Ls-3L8" secondAttribute="bottom" constant="274" id="Wcp-EG-Eb1"/>
+                            <constraint firstItem="r6Q-Ls-3L8" firstAttribute="leading" secondItem="rbx-nL-nEi" secondAttribute="leadingMargin" constant="57" id="fth-26-FPk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="SST-CF-fO7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KRD-jo-RxK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4215.1999999999998" y="853.22338830584715"/>
+        </scene>
+        <!--Monthly View Controller-->
+        <scene sceneID="1kg-i0-N00">
+            <objects>
+                <viewController id="wLb-pS-iHx" customClass="SAIMonthlyViewController" customModule="ShareAnIftar" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vBM-1r-XBW"/>
+                        <viewControllerLayoutGuide type="bottom" id="m4w-7v-oBs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yF0-8q-G4e">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Work In Progress" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KaH-OS-nS7">
+                                <rect key="frame" x="96" y="323" width="182" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KaH-OS-nS7" firstAttribute="top" secondItem="vBM-1r-XBW" secondAttribute="bottom" constant="259" id="EY9-fE-wCZ"/>
+                            <constraint firstItem="m4w-7v-oBs" firstAttribute="top" secondItem="KaH-OS-nS7" secondAttribute="bottom" constant="274" id="KXX-45-FLt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KaH-OS-nS7" secondAttribute="trailing" constant="81" id="jMv-ct-fcq"/>
+                            <constraint firstItem="KaH-OS-nS7" firstAttribute="leading" secondItem="yF0-8q-G4e" secondAttribute="leadingMargin" constant="80" id="uh9-GO-Vae"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="bZk-On-BTR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F6N-4j-eqv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4215.1999999999998" y="1607.9460269865069"/>
+        </scene>
+        <!--Home Screen View Controller-->
+        <scene sceneID="xNo-UA-QdP">
+            <objects>
+                <viewController id="rAJ-yv-Yw2" customClass="SAIHomeScreenViewController" customModule="ShareAnIftar" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="p22-MY-LI8"/>
+                        <viewControllerLayoutGuide type="bottom" id="kFT-Ub-pc8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gue-Bt-1tY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Work In Progress" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6l9-HY-hEL">
+                                <rect key="frame" x="95" y="323" width="184" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6l9-HY-hEL" firstAttribute="centerX" secondItem="gue-Bt-1tY" secondAttribute="centerX" id="0D1-0e-6fP"/>
+                            <constraint firstItem="6l9-HY-hEL" firstAttribute="leading" secondItem="gue-Bt-1tY" secondAttribute="leadingMargin" constant="79" id="Xlh-h3-1bb"/>
+                            <constraint firstItem="6l9-HY-hEL" firstAttribute="centerY" secondItem="gue-Bt-1tY" secondAttribute="centerY" id="oTf-ko-TEb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ERU-7I-d1P"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o3s-zV-wD5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4215.1999999999998" y="-783.05847076461771"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="XeO-Rf-bp0">
+            <objects>
+                <tabBarController id="qIj-Tw-8Iz" customClass="SAITabBarController" customModule="ShareAnIftar" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="LN7-Gq-wEE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="X34-aM-Qah" kind="relationship" relationship="viewControllers" id="dIk-0d-6OY"/>
+                        <segue destination="Pd6-Zf-FXd" kind="relationship" relationship="viewControllers" id="WQu-Nf-73W"/>
+                        <segue destination="IFy-7q-qIJ" kind="relationship" relationship="viewControllers" id="mac-zT-W4I"/>
+                        <segue destination="Qhz-z9-i3L" kind="relationship" relationship="viewControllers" id="eJG-3a-czu"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oec-oL-bqw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-103" y="731"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="xoX-m8-Y1Z">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="X34-aM-Qah" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" id="edv-Fq-a8i"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZZA-3X-6aT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rAJ-yv-Yw2" kind="relationship" relationship="rootViewController" id="Plu-Cg-Oi6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KxL-B9-Aa7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3276" y="-783.05847076461771"/>
+        </scene>
+        <!--Iftar Kit-->
+        <scene sceneID="OVC-Ed-gln">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Pd6-Zf-FXd" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Iftar Kit" id="1lv-RZ-JSr"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1H0-5P-qQL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rna-tq-jEJ" kind="relationship" relationship="rootViewController" id="RcZ-ya-hoj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tSV-sm-5LB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3276" y="71.514242878560722"/>
+        </scene>
+        <!--Eid Kit-->
+        <scene sceneID="6vW-Tq-Pqc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IFy-7q-qIJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Eid Kit" id="9gf-gW-Ubd"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6dv-Q1-TFB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="VTR-U1-Ggn" kind="relationship" relationship="rootViewController" id="W9f-r3-Jsv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rqn-pI-V2C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3276" y="853.22338830584715"/>
+        </scene>
+        <!--Monthly Kit-->
+        <scene sceneID="duu-Jv-LAZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qhz-z9-i3L" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Monthly Kit" id="yNl-yt-8tb"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CWX-6N-1xN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wLb-pS-iHx" kind="relationship" relationship="rootViewController" id="aQZ-kc-2og"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9v1-Xn-SMq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3276" y="1607.9460269865069"/>
         </scene>
     </scenes>
 </document>

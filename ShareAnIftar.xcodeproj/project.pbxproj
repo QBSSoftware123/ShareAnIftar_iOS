@@ -14,6 +14,11 @@
 		96F7D4611E91346D00B23325 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96F7D45F1E91346D00B23325 /* LaunchScreen.storyboard */; };
 		96F7D46E1E9151E000B23325 /* SAIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F7D46D1E9151E000B23325 /* SAIViewController.swift */; };
 		96F7D4701E91524100B23325 /* SAIServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F7D46F1E91524100B23325 /* SAIServiceManager.swift */; };
+		D3A0E7D91E94C95E00FB26C6 /* SAITabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A0E7D81E94C95E00FB26C6 /* SAITabBarController.swift */; };
+		D3A0E7EB1E950BE100FB26C6 /* SAIEidViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A0E7EA1E950BE100FB26C6 /* SAIEidViewController.swift */; };
+		D3A0E7ED1E950BF500FB26C6 /* SAIHomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A0E7EC1E950BF500FB26C6 /* SAIHomeScreenViewController.swift */; };
+		D3A0E7EF1E950C0700FB26C6 /* SAIIftarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A0E7EE1E950C0700FB26C6 /* SAIIftarViewController.swift */; };
+		D3A0E7F11E950C1600FB26C6 /* SAIMonthlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A0E7F01E950C1600FB26C6 /* SAIMonthlyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		96F7D4621E91346D00B23325 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96F7D46D1E9151E000B23325 /* SAIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAIViewController.swift; sourceTree = "<group>"; };
 		96F7D46F1E91524100B23325 /* SAIServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAIServiceManager.swift; sourceTree = "<group>"; };
+		D3A0E7D81E94C95E00FB26C6 /* SAITabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAITabBarController.swift; sourceTree = "<group>"; };
+		D3A0E7EA1E950BE100FB26C6 /* SAIEidViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAIEidViewController.swift; sourceTree = "<group>"; };
+		D3A0E7EC1E950BF500FB26C6 /* SAIHomeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAIHomeScreenViewController.swift; sourceTree = "<group>"; };
+		D3A0E7EE1E950C0700FB26C6 /* SAIIftarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAIIftarViewController.swift; sourceTree = "<group>"; };
+		D3A0E7F01E950C1600FB26C6 /* SAIMonthlyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAIMonthlyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +93,7 @@
 		96F7D4691E91510D00B23325 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				D3A0E7E51E950B9600FB26C6 /* Landing Page */,
 				96F7D46C1E91515E00B23325 /* Base */,
 			);
 			path = Modules;
@@ -106,8 +117,52 @@
 			isa = PBXGroup;
 			children = (
 				96F7D46D1E9151E000B23325 /* SAIViewController.swift */,
+				D3A0E7D81E94C95E00FB26C6 /* SAITabBarController.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		D3A0E7E51E950B9600FB26C6 /* Landing Page */ = {
+			isa = PBXGroup;
+			children = (
+				D3A0E7E61E950BC700FB26C6 /* Eid */,
+				D3A0E7E71E950BC700FB26C6 /* Home Screen */,
+				D3A0E7E81E950BC700FB26C6 /* Iftar */,
+				D3A0E7E91E950BC700FB26C6 /* Monthly */,
+			);
+			path = "Landing Page";
+			sourceTree = "<group>";
+		};
+		D3A0E7E61E950BC700FB26C6 /* Eid */ = {
+			isa = PBXGroup;
+			children = (
+				D3A0E7EA1E950BE100FB26C6 /* SAIEidViewController.swift */,
+			);
+			path = Eid;
+			sourceTree = "<group>";
+		};
+		D3A0E7E71E950BC700FB26C6 /* Home Screen */ = {
+			isa = PBXGroup;
+			children = (
+				D3A0E7EC1E950BF500FB26C6 /* SAIHomeScreenViewController.swift */,
+			);
+			path = "Home Screen";
+			sourceTree = "<group>";
+		};
+		D3A0E7E81E950BC700FB26C6 /* Iftar */ = {
+			isa = PBXGroup;
+			children = (
+				D3A0E7EE1E950C0700FB26C6 /* SAIIftarViewController.swift */,
+			);
+			path = Iftar;
+			sourceTree = "<group>";
+		};
+		D3A0E7E91E950BC700FB26C6 /* Monthly */ = {
+			isa = PBXGroup;
+			children = (
+				D3A0E7F01E950C1600FB26C6 /* SAIMonthlyViewController.swift */,
+			);
+			path = Monthly;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,8 +238,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				96F7D4591E91346D00B23325 /* ViewController.swift in Sources */,
+				D3A0E7EF1E950C0700FB26C6 /* SAIIftarViewController.swift in Sources */,
+				D3A0E7ED1E950BF500FB26C6 /* SAIHomeScreenViewController.swift in Sources */,
+				D3A0E7EB1E950BE100FB26C6 /* SAIEidViewController.swift in Sources */,
 				96F7D4571E91346D00B23325 /* AppDelegate.swift in Sources */,
 				96F7D46E1E9151E000B23325 /* SAIViewController.swift in Sources */,
+				D3A0E7F11E950C1600FB26C6 /* SAIMonthlyViewController.swift in Sources */,
+				D3A0E7D91E94C95E00FB26C6 /* SAITabBarController.swift in Sources */,
 				96F7D4701E91524100B23325 /* SAIServiceManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,6 +405,7 @@
 				96F7D4671E91346D00B23325 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
