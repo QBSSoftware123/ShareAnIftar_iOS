@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qIj-Tw-8Iz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5NW-lf-ytA">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -55,7 +55,12 @@
                             <constraint firstAttribute="trailingMargin" secondItem="ZQf-az-aQV" secondAttribute="trailing" constant="74" id="hoF-Lr-OYw"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="HhZ-im-BbI"/>
+                    <navigationItem key="navigationItem" id="HhZ-im-BbI">
+                        <barButtonItem key="leftBarButtonItem" image="hamburger" id="d0x-pd-HIw"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="menuItem" destination="d0x-pd-HIw" id="XJA-ZU-xEG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3bD-5j-5Zw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -88,7 +93,12 @@
                             <constraint firstItem="r6Q-Ls-3L8" firstAttribute="leading" secondItem="rbx-nL-nEi" secondAttribute="leadingMargin" constant="57" id="fth-26-FPk"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="SST-CF-fO7"/>
+                    <navigationItem key="navigationItem" id="SST-CF-fO7">
+                        <barButtonItem key="leftBarButtonItem" image="hamburger" id="Gsq-ng-AJ9"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="menuItem" destination="Gsq-ng-AJ9" id="OG7-ME-scE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KRD-jo-RxK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -121,7 +131,12 @@
                             <constraint firstItem="KaH-OS-nS7" firstAttribute="leading" secondItem="yF0-8q-G4e" secondAttribute="leadingMargin" constant="80" id="uh9-GO-Vae"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="bZk-On-BTR"/>
+                    <navigationItem key="navigationItem" id="bZk-On-BTR">
+                        <barButtonItem key="leftBarButtonItem" image="hamburger" id="Ird-tW-UM4"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="menuItem" destination="Ird-tW-UM4" id="2eZ-mS-ZsG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F6N-4j-eqv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -153,7 +168,12 @@
                             <constraint firstItem="6l9-HY-hEL" firstAttribute="centerY" secondItem="gue-Bt-1tY" secondAttribute="centerY" id="oTf-ko-TEb"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="ERU-7I-d1P"/>
+                    <navigationItem key="navigationItem" id="ERU-7I-d1P">
+                        <barButtonItem key="leftBarButtonItem" image="hamburger" id="fOb-yX-ghO"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="menuButton" destination="fOb-yX-ghO" id="YNi-6k-Ftd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o3s-zV-wD5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -178,6 +198,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oec-oL-bqw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-103" y="731"/>
+        </scene>
+        <!--Side Menu Table View Controller-->
+        <scene sceneID="EWk-fK-sHa">
+            <objects>
+                <tableViewController id="hEi-jI-433" customClass="SAISideMenuTableViewController" customModule="ShareAnIftar" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="9DL-zg-Vqi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="TYg-4s-N10">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TYg-4s-N10" id="9Uw-U6-KPc">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="hEi-jI-433" id="Ikr-ud-gx6"/>
+                            <outlet property="delegate" destination="hEi-jI-433" id="lI2-yh-5E8"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Of-0p-TIR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-113" y="1548"/>
         </scene>
         <!--Home-->
         <scene sceneID="xoX-m8-Y1Z">
@@ -236,6 +284,28 @@
             </objects>
             <point key="canvasLocation" x="3276" y="853.22338830584715"/>
         </scene>
+        <!--Reveal View Controller-->
+        <scene sceneID="ZaR-lc-xo3">
+            <objects>
+                <viewController id="5NW-lf-ytA" customClass="SAIRevealViewController" customModule="ShareAnIftar" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pWw-qw-iJi"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qs4-tO-IeB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zVT-kr-5Gn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="qIj-Tw-8Iz" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="XJH-fI-kL8"/>
+                        <segue destination="hEi-jI-433" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="DNp-hE-isa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cV6-vC-0hG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1217" y="731"/>
+        </scene>
         <!--Monthly Kit-->
         <scene sceneID="duu-Jv-LAZ">
             <objects>
@@ -256,4 +326,7 @@
             <point key="canvasLocation" x="3276" y="1607.9460269865069"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="hamburger" width="15" height="12"/>
+    </resources>
 </document>
