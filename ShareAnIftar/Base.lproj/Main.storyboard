@@ -6,9 +6,16 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -46,13 +53,28 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z3f-Ye-EFc">
+                                <rect key="frame" x="0.0" y="64" width="375" height="58"/>
+                                <color key="backgroundColor" red="0.1058823529" green="0.66666666669999997" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="23"/>
+                                <state key="normal" title="Donate">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="yqM-sq-bbx" kind="presentation" id="lcQ-u5-exb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Nih-Gl-Zpa" firstAttribute="top" secondItem="ZQf-az-aQV" secondAttribute="bottom" constant="274" id="ArW-9R-feQ"/>
                             <constraint firstItem="ZQf-az-aQV" firstAttribute="leading" secondItem="5RZ-PY-cpv" secondAttribute="leadingMargin" constant="73" id="JBd-8B-G6Z"/>
                             <constraint firstItem="ZQf-az-aQV" firstAttribute="top" secondItem="6gZ-xZ-5lt" secondAttribute="bottom" constant="259" id="P9e-1w-VWu"/>
+                            <constraint firstAttribute="trailing" secondItem="Z3f-Ye-EFc" secondAttribute="trailing" id="dGF-Xp-zBj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ZQf-az-aQV" secondAttribute="trailing" constant="74" id="hoF-Lr-OYw"/>
+                            <constraint firstItem="Z3f-Ye-EFc" firstAttribute="leading" secondItem="5RZ-PY-cpv" secondAttribute="leading" id="iFn-Mc-IYN"/>
+                            <constraint firstItem="Z3f-Ye-EFc" firstAttribute="top" secondItem="6gZ-xZ-5lt" secondAttribute="bottom" id="ln5-ob-sco"/>
+                            <constraint firstItem="ZQf-az-aQV" firstAttribute="top" secondItem="Z3f-Ye-EFc" secondAttribute="bottom" constant="201" id="n4H-Zb-YJ5"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HhZ-im-BbI">
@@ -65,6 +87,135 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3bD-5j-5Zw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4215.1999999999998" y="71.514242878560722"/>
+        </scene>
+        <!--Iftar Donate View Controller-->
+        <scene sceneID="5y3-SP-VDd">
+            <objects>
+                <viewController id="yqM-sq-bbx" customClass="SAIIftarDonateViewController" customModule="ShareAnIftar" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="K1O-T0-yri"/>
+                        <viewControllerLayoutGuide type="bottom" id="5Ie-qH-sVZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VDs-9x-nsW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7om-MP-ZQd">
+                                <rect key="frame" x="269" y="20" width="90" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="hiE-fz-vhh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Donate">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dimissView:" destination="yqM-sq-bbx" eventType="touchUpInside" id="n5u-ZY-Xfy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JOH-wI-bS5">
+                                <rect key="frame" x="16" y="20" width="83" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="83" id="Wkw-sH-9tv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismissVC:" destination="yqM-sq-bbx" eventType="touchUpInside" id="Sk1-9a-xPq"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Iftar at 250/- only" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQE-9d-cXZ">
+                                <rect key="frame" x="76" y="108" width="223" height="33"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No. of Iftars" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVF-Ql-80P">
+                                <rect key="frame" x="27" y="177" width="100" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Location" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="baE-Sw-SGx">
+                                <rect key="frame" x="8" y="218" width="119" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pay" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9N-ib-3Ca">
+                                <rect key="frame" x="88" y="256" width="39" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="30T-nE-B4M">
+                                <rect key="frame" x="225" y="172" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="cMg-m3-co4"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UJH-rD-b4G">
+                                <rect key="frame" x="225" y="251" width="101" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="101" id="zBt-h0-x6V"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="td6-fQ-qtm">
+                                <rect key="frame" x="186" y="213" width="175" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Select Location"/>
+                                <connections>
+                                    <action selector="selectLocation:" destination="yqM-sq-bbx" eventType="touchUpInside" id="EVe-en-SrB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="30T-nE-B4M" firstAttribute="top" secondItem="dQE-9d-cXZ" secondAttribute="bottom" constant="31" id="0OW-gL-yLa"/>
+                            <constraint firstItem="UJH-rD-b4G" firstAttribute="top" secondItem="td6-fQ-qtm" secondAttribute="bottom" constant="8" symbolic="YES" id="56N-uy-F1s"/>
+                            <constraint firstItem="7om-MP-ZQd" firstAttribute="trailing" secondItem="VDs-9x-nsW" secondAttribute="trailingMargin" id="5gX-EE-MDa"/>
+                            <constraint firstItem="JOH-wI-bS5" firstAttribute="leading" secondItem="VDs-9x-nsW" secondAttribute="leadingMargin" id="6Xx-lg-e1c"/>
+                            <constraint firstItem="30T-nE-B4M" firstAttribute="leading" secondItem="HVF-Ql-80P" secondAttribute="trailing" constant="98.5" id="KQJ-Fl-5LR"/>
+                            <constraint firstItem="HVF-Ql-80P" firstAttribute="top" secondItem="dQE-9d-cXZ" secondAttribute="bottom" constant="36" id="O57-ch-oPC"/>
+                            <constraint firstItem="30T-nE-B4M" firstAttribute="top" secondItem="VDs-9x-nsW" secondAttribute="top" constant="172" id="RZP-d1-gwq"/>
+                            <constraint firstItem="UJH-rD-b4G" firstAttribute="centerY" secondItem="h9N-ib-3Ca" secondAttribute="centerY" id="StC-aU-omb"/>
+                            <constraint firstItem="HVF-Ql-80P" firstAttribute="leading" secondItem="VDs-9x-nsW" secondAttribute="leadingMargin" constant="11" id="U3h-Ql-4Sd"/>
+                            <constraint firstItem="JOH-wI-bS5" firstAttribute="top" secondItem="K1O-T0-yri" secondAttribute="bottom" id="UYv-Sa-htq"/>
+                            <constraint firstItem="td6-fQ-qtm" firstAttribute="leading" secondItem="baE-Sw-SGx" secondAttribute="trailing" constant="59" id="Vaf-Jn-nPK"/>
+                            <constraint firstItem="td6-fQ-qtm" firstAttribute="centerX" secondItem="30T-nE-B4M" secondAttribute="centerX" id="XTV-0h-g6W"/>
+                            <constraint firstItem="JOH-wI-bS5" firstAttribute="firstBaseline" secondItem="7om-MP-ZQd" secondAttribute="baseline" id="XgF-df-RLh"/>
+                            <constraint firstItem="baE-Sw-SGx" firstAttribute="top" secondItem="HVF-Ql-80P" secondAttribute="bottom" constant="20" id="YMS-OK-PXv"/>
+                            <constraint firstItem="dQE-9d-cXZ" firstAttribute="leading" secondItem="VDs-9x-nsW" secondAttribute="leadingMargin" constant="60" id="ZhD-Zj-YAG"/>
+                            <constraint firstItem="baE-Sw-SGx" firstAttribute="trailing" secondItem="HVF-Ql-80P" secondAttribute="trailing" id="amK-0k-m4B"/>
+                            <constraint firstItem="30T-nE-B4M" firstAttribute="centerY" secondItem="HVF-Ql-80P" secondAttribute="centerY" id="cBz-es-zlL"/>
+                            <constraint firstItem="dQE-9d-cXZ" firstAttribute="top" secondItem="K1O-T0-yri" secondAttribute="bottom" constant="88" id="clU-1i-gHs"/>
+                            <constraint firstItem="dQE-9d-cXZ" firstAttribute="top" secondItem="7om-MP-ZQd" secondAttribute="bottom" constant="58" id="d8y-RZ-soa"/>
+                            <constraint firstItem="baE-Sw-SGx" firstAttribute="leading" secondItem="VDs-9x-nsW" secondAttribute="leadingMargin" constant="-8" id="edc-N4-cP5"/>
+                            <constraint firstItem="JOH-wI-bS5" firstAttribute="baseline" secondItem="7om-MP-ZQd" secondAttribute="firstBaseline" id="fow-F6-XnY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dQE-9d-cXZ" secondAttribute="trailing" constant="60" id="gi9-xe-ozE"/>
+                            <constraint firstItem="JOH-wI-bS5" firstAttribute="top" secondItem="7om-MP-ZQd" secondAttribute="top" id="m6o-3y-MRM"/>
+                            <constraint firstItem="30T-nE-B4M" firstAttribute="leading" secondItem="UJH-rD-b4G" secondAttribute="leading" id="twf-80-cTi"/>
+                            <constraint firstItem="baE-Sw-SGx" firstAttribute="trailing" secondItem="h9N-ib-3Ca" secondAttribute="trailing" id="uIg-tx-Uov"/>
+                            <constraint firstItem="h9N-ib-3Ca" firstAttribute="top" secondItem="baE-Sw-SGx" secondAttribute="bottom" constant="18" id="ut1-Ef-fis"/>
+                            <constraint firstItem="h9N-ib-3Ca" firstAttribute="leading" secondItem="VDs-9x-nsW" secondAttribute="leadingMargin" constant="72" id="ygC-ol-ctU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UJH-rD-b4G" secondAttribute="trailing" constant="33.5" id="zyD-sL-6ES"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="selectLocationButton" destination="td6-fQ-qtm" id="CMy-wi-LxU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hju-52-wv0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5184.8000000000002" y="71.514242878560722"/>
         </scene>
         <!--Eid View Controller-->
         <scene sceneID="gqH-oO-ysx">
@@ -84,12 +235,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f9l-Bi-Boe">
+                                <rect key="frame" x="0.0" y="64" width="375" height="58"/>
+                                <color key="backgroundColor" red="0.1058823529" green="0.66666666669999997" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="23"/>
+                                <state key="normal" title="Donate">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="r6Q-Ls-3L8" firstAttribute="top" secondItem="f9l-Bi-Boe" secondAttribute="bottom" constant="201" id="81j-lt-Ryb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="r6Q-Ls-3L8" secondAttribute="trailing" constant="58" id="93M-L9-71c"/>
                             <constraint firstItem="r6Q-Ls-3L8" firstAttribute="top" secondItem="WPK-MM-XYp" secondAttribute="bottom" constant="259" id="JEO-nG-85N"/>
+                            <constraint firstItem="f9l-Bi-Boe" firstAttribute="top" secondItem="WPK-MM-XYp" secondAttribute="bottom" id="JhE-Fj-DnH"/>
                             <constraint firstItem="2f3-2Z-zQL" firstAttribute="top" secondItem="r6Q-Ls-3L8" secondAttribute="bottom" constant="274" id="Wcp-EG-Eb1"/>
+                            <constraint firstItem="f9l-Bi-Boe" firstAttribute="leading" secondItem="rbx-nL-nEi" secondAttribute="leading" id="ZHW-DC-fJG"/>
+                            <constraint firstAttribute="trailing" secondItem="f9l-Bi-Boe" secondAttribute="trailing" id="eFZ-y6-7qL"/>
                             <constraint firstItem="r6Q-Ls-3L8" firstAttribute="leading" secondItem="rbx-nL-nEi" secondAttribute="leadingMargin" constant="57" id="fth-26-FPk"/>
                         </constraints>
                     </view>
@@ -122,12 +285,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpV-dH-Fh9">
+                                <rect key="frame" x="0.0" y="64" width="375" height="58"/>
+                                <color key="backgroundColor" red="0.1058823529" green="0.66666666669999997" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="23"/>
+                                <state key="normal" title="Donate">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="KaH-OS-nS7" firstAttribute="top" secondItem="vBM-1r-XBW" secondAttribute="bottom" constant="259" id="EY9-fE-wCZ"/>
+                            <constraint firstItem="KaH-OS-nS7" firstAttribute="top" secondItem="hpV-dH-Fh9" secondAttribute="bottom" constant="201" id="HFe-Pc-hVv"/>
+                            <constraint firstItem="hpV-dH-Fh9" firstAttribute="top" secondItem="vBM-1r-XBW" secondAttribute="bottom" id="IgJ-ly-TFA"/>
                             <constraint firstItem="m4w-7v-oBs" firstAttribute="top" secondItem="KaH-OS-nS7" secondAttribute="bottom" constant="274" id="KXX-45-FLt"/>
                             <constraint firstAttribute="trailingMargin" secondItem="KaH-OS-nS7" secondAttribute="trailing" constant="81" id="jMv-ct-fcq"/>
+                            <constraint firstItem="hpV-dH-Fh9" firstAttribute="leading" secondItem="yF0-8q-G4e" secondAttribute="leading" id="jsY-z2-dch"/>
+                            <constraint firstAttribute="trailing" secondItem="hpV-dH-Fh9" secondAttribute="trailing" id="n6Q-66-IK9"/>
                             <constraint firstItem="KaH-OS-nS7" firstAttribute="leading" secondItem="yF0-8q-G4e" secondAttribute="leadingMargin" constant="80" id="uh9-GO-Vae"/>
                         </constraints>
                     </view>

@@ -23,6 +23,7 @@
 		D3A0E7FA1E95276900FB26C6 /* SAIRevealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A0E7F91E95276900FB26C6 /* SAIRevealViewController.swift */; };
 		D3A0E7FC1E9527EF00FB26C6 /* SAISideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A0E7FB1E9527EF00FB26C6 /* SAISideMenuTableViewController.swift */; };
 		D3A0E7FF1E953A0600FB26C6 /* SAIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A0E7FE1E953A0600FB26C6 /* SAIConstants.swift */; };
+		D3A0E8021E96432D00FB26C6 /* SAIIftarDonateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A0E8011E96432D00FB26C6 /* SAIIftarDonateViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		D3A0E7F91E95276900FB26C6 /* SAIRevealViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAIRevealViewController.swift; sourceTree = "<group>"; };
 		D3A0E7FB1E9527EF00FB26C6 /* SAISideMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAISideMenuTableViewController.swift; sourceTree = "<group>"; };
 		D3A0E7FE1E953A0600FB26C6 /* SAIConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAIConstants.swift; sourceTree = "<group>"; };
+		D3A0E8011E96432D00FB26C6 /* SAIIftarDonateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAIIftarDonateViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 		D3A0E7E81E950BC700FB26C6 /* Iftar */ = {
 			isa = PBXGroup;
 			children = (
+				D3A0E8001E96430C00FB26C6 /* Donate */,
 				D3A0E7EE1E950C0700FB26C6 /* SAIIftarViewController.swift */,
 			);
 			path = Iftar;
@@ -195,6 +198,14 @@
 				D3A0E7FE1E953A0600FB26C6 /* SAIConstants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		D3A0E8001E96430C00FB26C6 /* Donate */ = {
+			isa = PBXGroup;
+			children = (
+				D3A0E8011E96432D00FB26C6 /* SAIIftarDonateViewController.swift */,
+			);
+			path = Donate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +285,7 @@
 				D3A0E7EF1E950C0700FB26C6 /* SAIIftarViewController.swift in Sources */,
 				D3A0E7ED1E950BF500FB26C6 /* SAIHomeScreenViewController.swift in Sources */,
 				D3A0E7FF1E953A0600FB26C6 /* SAIConstants.swift in Sources */,
+				D3A0E8021E96432D00FB26C6 /* SAIIftarDonateViewController.swift in Sources */,
 				D3A0E7EB1E950BE100FB26C6 /* SAIEidViewController.swift in Sources */,
 				96F7D4571E91346D00B23325 /* AppDelegate.swift in Sources */,
 				D3A0E7FC1E9527EF00FB26C6 /* SAISideMenuTableViewController.swift in Sources */,
