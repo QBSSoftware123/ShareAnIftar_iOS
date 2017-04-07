@@ -14,6 +14,8 @@ class SAIIftarViewController: SAIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        
         // Do any additional setup after loading the view.
         if self.revealViewController() != nil {
             menuItem.target = self.revealViewController()

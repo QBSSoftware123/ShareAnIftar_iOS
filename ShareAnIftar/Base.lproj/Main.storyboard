@@ -35,7 +35,7 @@
             </objects>
             <point key="canvasLocation" x="-104" y="17"/>
         </scene>
-        <!--Iftar View Controller-->
+        <!--Share An Iftar-->
         <scene sceneID="4Rf-1A-xTa">
             <objects>
                 <viewController id="rna-tq-jEJ" customClass="SAIIftarViewController" customModule="ShareAnIftar" customModuleProvider="target" sceneMemberID="viewController">
@@ -61,7 +61,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="yqM-sq-bbx" kind="presentation" id="lcQ-u5-exb"/>
+                                    <segue destination="yqM-sq-bbx" kind="presentation" identifier="IftarVC" id="lcQ-u5-exb"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -77,7 +77,7 @@
                             <constraint firstItem="ZQf-az-aQV" firstAttribute="top" secondItem="Z3f-Ye-EFc" secondAttribute="bottom" constant="201" id="n4H-Zb-YJ5"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="HhZ-im-BbI">
+                    <navigationItem key="navigationItem" title="Share An Iftar" id="HhZ-im-BbI">
                         <barButtonItem key="leftBarButtonItem" image="hamburger" id="d0x-pd-HIw"/>
                     </navigationItem>
                     <connections>
@@ -207,14 +207,15 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="VCTitle" destination="dQE-9d-cXZ" id="ZcA-QE-4Y4"/>
                         <outlet property="selectLocationButton" destination="td6-fQ-qtm" id="CMy-wi-LxU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hju-52-wv0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6210" y="-64"/>
+            <point key="canvasLocation" x="6250" y="429"/>
         </scene>
-        <!--Eid View Controller-->
+        <!--Share An Iftar-->
         <scene sceneID="gqH-oO-ysx">
             <objects>
                 <viewController id="VTR-U1-Ggn" customClass="SAIEidViewController" customModule="ShareAnIftar" customModuleProvider="target" sceneMemberID="viewController">
@@ -239,6 +240,9 @@
                                 <state key="normal" title="Donate">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="yqM-sq-bbx" kind="presentation" identifier="EidVC" id="VPr-AF-fL4"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -253,7 +257,7 @@
                             <constraint firstItem="r6Q-Ls-3L8" firstAttribute="leading" secondItem="rbx-nL-nEi" secondAttribute="leadingMargin" constant="57" id="fth-26-FPk"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="SST-CF-fO7">
+                    <navigationItem key="navigationItem" title="Share An Iftar" id="SST-CF-fO7">
                         <barButtonItem key="leftBarButtonItem" image="hamburger" id="Gsq-ng-AJ9"/>
                     </navigationItem>
                     <connections>
@@ -264,7 +268,7 @@
             </objects>
             <point key="canvasLocation" x="5185" y="614"/>
         </scene>
-        <!--Monthly View Controller-->
+        <!--Share An Iftar-->
         <scene sceneID="1kg-i0-N00">
             <objects>
                 <viewController id="wLb-pS-iHx" customClass="SAIMonthlyViewController" customModule="ShareAnIftar" customModuleProvider="target" sceneMemberID="viewController">
@@ -289,6 +293,9 @@
                                 <state key="normal" title="Donate">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="yqM-sq-bbx" kind="presentation" identifier="MonthlyVC" id="SYu-PA-5nN"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -303,7 +310,7 @@
                             <constraint firstItem="KaH-OS-nS7" firstAttribute="leading" secondItem="yF0-8q-G4e" secondAttribute="leadingMargin" constant="80" id="uh9-GO-Vae"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="bZk-On-BTR">
+                    <navigationItem key="navigationItem" title="Share An Iftar" id="bZk-On-BTR">
                         <barButtonItem key="leftBarButtonItem" image="hamburger" id="Ird-tW-UM4"/>
                     </navigationItem>
                     <connections>
@@ -314,7 +321,7 @@
             </objects>
             <point key="canvasLocation" x="5185" y="1284"/>
         </scene>
-        <!--Home Screen View Controller-->
+        <!--Share An Iftar-->
         <scene sceneID="xNo-UA-QdP">
             <objects>
                 <viewController id="rAJ-yv-Yw2" customClass="SAIHomeScreenViewController" customModule="ShareAnIftar" customModuleProvider="target" sceneMemberID="viewController">
@@ -340,7 +347,7 @@
                             <constraint firstItem="6l9-HY-hEL" firstAttribute="centerY" secondItem="gue-Bt-1tY" secondAttribute="centerY" id="oTf-ko-TEb"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="ERU-7I-d1P">
+                    <navigationItem key="navigationItem" title="Share An Iftar" id="ERU-7I-d1P">
                         <barButtonItem key="leftBarButtonItem" image="hamburger" id="fOb-yX-ghO"/>
                     </navigationItem>
                     <connections>
@@ -589,7 +596,7 @@
         <scene sceneID="xoX-m8-Y1Z">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="X34-aM-Qah" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" id="edv-Fq-a8i"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="home_green30x30" id="edv-Fq-a8i"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZZA-3X-6aT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -608,7 +615,7 @@
         <scene sceneID="OVC-Ed-gln">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Pd6-Zf-FXd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Iftar Kit" id="1lv-RZ-JSr"/>
+                    <tabBarItem key="tabBarItem" title="Iftar Kit" image="dates_green30x30" id="1lv-RZ-JSr"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1H0-5P-qQL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -627,7 +634,7 @@
         <scene sceneID="6vW-Tq-Pqc">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IFy-7q-qIJ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Eid Kit" id="9gf-gW-Ubd"/>
+                    <tabBarItem key="tabBarItem" title="Eid Kit" image="eidkit_green30x30" id="9gf-gW-Ubd"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6dv-Q1-TFB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -668,7 +675,7 @@
         <scene sceneID="duu-Jv-LAZ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qhz-z9-i3L" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Monthly Kit" id="yNl-yt-8tb"/>
+                    <tabBarItem key="tabBarItem" title="Monthly Kit" image="ramdankit_green30x30" id="yNl-yt-8tb"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="CWX-6N-1xN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -686,6 +693,14 @@
     </scenes>
     <resources>
         <image name="6.shareaniftarlogo" width="851" height="396"/>
+        <image name="dates_green30x30" width="30" height="30"/>
+        <image name="eidkit_green30x30" width="30" height="30"/>
         <image name="hamburger" width="15" height="12"/>
+        <image name="home_green30x30" width="30" height="30"/>
+        <image name="ramdankit_green30x30" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="SYu-PA-5nN"/>
+    </inferredMetricsTieBreakers>
+    <color key="tintColor" red="0.12941176469999999" green="0.58823529409999997" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
 </document>

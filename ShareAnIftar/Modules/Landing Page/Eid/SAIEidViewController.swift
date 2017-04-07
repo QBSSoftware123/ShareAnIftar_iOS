@@ -11,14 +11,28 @@ import UIKit
 class SAIEidViewController: SAIViewController {
 
     @IBOutlet weak var menuItem: UIBarButtonItem!
-    override func viewDidLoad() {
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
+        
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         
         // Do any additional setup after loading the view.
         if self.revealViewController() != nil {
             menuItem.target = self.revealViewController()
             menuItem.action = #selector(SWRevealViewController.revealToggle(_:))
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
+    }
+    // MARK: - Prepare for Segue Method
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.identifier == SAISegueIdentifiers.SAIEidSegueIdentifiers
+        {
+            let donateVC : SAIIftarDonateViewController = segue.destination as! SAIIftarDonateViewController
+            // Setting the flag to identify View Controller.
+            donateVC.eidVC = true
         }
     }
 }

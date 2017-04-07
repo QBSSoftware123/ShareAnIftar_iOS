@@ -13,6 +13,8 @@ class SAIHomeScreenViewController: SAIViewController {
     @IBOutlet weak var menuButton: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
 
         // Do any additional setup after loading the view.
         if self.revealViewController() != nil {

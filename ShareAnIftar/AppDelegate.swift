@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         UINavigationBar.appearance().tintColor = UIColor.white
         UINavigationBar.appearance().barTintColor = SAIColorConstants.SAIAppColor
+        UITabBar.appearance().tintColor = SAIColorConstants.SAIAppGreenColor
 
         return true
     }

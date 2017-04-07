@@ -13,9 +13,18 @@ class SAIIftarDonateViewController: SAIViewController {
     // IBOutlet for Select Location Button
     @IBOutlet weak var selectLocationButton: UIButton!
     
+    // Flag to Check Eid ViewController
+    var eidVC : Bool = false
+    
+    // Flag to Check Monthly ViewController
+    var monthlyVC : Bool = false
+    
+    // View Controller Title
+    @IBOutlet weak var VCTitle: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Load the view with blue gradient color.
         addBlueGradientColor(GradientColor: SAIGradientColorConstants.SAIBlueGradient)
         
@@ -23,6 +32,16 @@ class SAIIftarDonateViewController: SAIViewController {
         selectLocationButton.layer.cornerRadius = 5
         selectLocationButton.layer.borderWidth = 1
         selectLocationButton.layer.borderColor = SAIColorConstants.SAIAppColor.cgColor
+        
+        // Set the title of the View Controller 
+        if eidVC
+        {
+            VCTitle.text = "Edit Kits at 600/-"
+        }
+        if monthlyVC
+        {
+            VCTitle.text = "Monthly Kits at 2000/-"
+        }
         
     }
     @IBAction func selectLocation(_ sender: Any)

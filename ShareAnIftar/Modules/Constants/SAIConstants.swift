@@ -26,6 +26,13 @@ struct SAIStoryBoardIdentifiers
     static let SAIGemViewControllerIdentifier = "GemVC"
 }
 
+//MARK: - Segue Identifiers Constants
+struct SAISegueIdentifiers
+{
+    static let SAIEidSegueIdentifiers = "EidVC"
+    static let SAIMonthlySegueIdentifier = "MonthlyVC"
+}
+
 //MARK: - Gradient Color Constants
 struct SAIGradientColorConstants
 {
