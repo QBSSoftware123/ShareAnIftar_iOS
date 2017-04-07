@@ -24,6 +24,9 @@
 		D3A0E7FC1E9527EF00FB26C6 /* SAISideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A0E7FB1E9527EF00FB26C6 /* SAISideMenuTableViewController.swift */; };
 		D3A0E7FF1E953A0600FB26C6 /* SAIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A0E7FE1E953A0600FB26C6 /* SAIConstants.swift */; };
 		D3A0E8021E96432D00FB26C6 /* SAIIftarDonateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A0E8011E96432D00FB26C6 /* SAIIftarDonateViewController.swift */; };
+		D3A0E8081E978CD800FB26C6 /* SAIFundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A0E8071E978CD800FB26C6 /* SAIFundViewController.swift */; };
+		D3A0E80C1E978D5900FB26C6 /* SAIGemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A0E80B1E978D5900FB26C6 /* SAIGemViewController.swift */; };
+		D3A0E80E1E978D6900FB26C6 /* SAIVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A0E80D1E978D6900FB26C6 /* SAIVideoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +51,9 @@
 		D3A0E7FB1E9527EF00FB26C6 /* SAISideMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAISideMenuTableViewController.swift; sourceTree = "<group>"; };
 		D3A0E7FE1E953A0600FB26C6 /* SAIConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAIConstants.swift; sourceTree = "<group>"; };
 		D3A0E8011E96432D00FB26C6 /* SAIIftarDonateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAIIftarDonateViewController.swift; sourceTree = "<group>"; };
+		D3A0E8071E978CD800FB26C6 /* SAIFundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAIFundViewController.swift; sourceTree = "<group>"; };
+		D3A0E80B1E978D5900FB26C6 /* SAIGemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAIGemViewController.swift; sourceTree = "<group>"; };
+		D3A0E80D1E978D6900FB26C6 /* SAIVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAIVideoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +110,7 @@
 		96F7D4691E91510D00B23325 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				D3A0E8031E97719300FB26C6 /* Side Panel View Controllers */,
 				D3A0E7FD1E9539ED00FB26C6 /* Constants */,
 				D3A0E7E51E950B9600FB26C6 /* Landing Page */,
 				96F7D46C1E91515E00B23325 /* Base */,
@@ -208,6 +215,40 @@
 			path = Donate;
 			sourceTree = "<group>";
 		};
+		D3A0E8031E97719300FB26C6 /* Side Panel View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D3A0E80A1E978D4700FB26C6 /* Video */,
+				D3A0E8091E978D2F00FB26C6 /* Gem */,
+				D3A0E8061E978CAA00FB26C6 /* Fund */,
+			);
+			path = "Side Panel View Controllers";
+			sourceTree = "<group>";
+		};
+		D3A0E8061E978CAA00FB26C6 /* Fund */ = {
+			isa = PBXGroup;
+			children = (
+				D3A0E8071E978CD800FB26C6 /* SAIFundViewController.swift */,
+			);
+			path = Fund;
+			sourceTree = "<group>";
+		};
+		D3A0E8091E978D2F00FB26C6 /* Gem */ = {
+			isa = PBXGroup;
+			children = (
+				D3A0E80B1E978D5900FB26C6 /* SAIGemViewController.swift */,
+			);
+			path = Gem;
+			sourceTree = "<group>";
+		};
+		D3A0E80A1E978D4700FB26C6 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				D3A0E80D1E978D6900FB26C6 /* SAIVideoViewController.swift */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -286,15 +327,18 @@
 				D3A0E7ED1E950BF500FB26C6 /* SAIHomeScreenViewController.swift in Sources */,
 				D3A0E7FF1E953A0600FB26C6 /* SAIConstants.swift in Sources */,
 				D3A0E8021E96432D00FB26C6 /* SAIIftarDonateViewController.swift in Sources */,
+				D3A0E80E1E978D6900FB26C6 /* SAIVideoViewController.swift in Sources */,
 				D3A0E7EB1E950BE100FB26C6 /* SAIEidViewController.swift in Sources */,
 				96F7D4571E91346D00B23325 /* AppDelegate.swift in Sources */,
 				D3A0E7FC1E9527EF00FB26C6 /* SAISideMenuTableViewController.swift in Sources */,
 				96F7D46E1E9151E000B23325 /* SAIViewController.swift in Sources */,
 				D3A0E7FA1E95276900FB26C6 /* SAIRevealViewController.swift in Sources */,
+				D3A0E80C1E978D5900FB26C6 /* SAIGemViewController.swift in Sources */,
 				D3A0E7F11E950C1600FB26C6 /* SAIMonthlyViewController.swift in Sources */,
 				D3A0E7F81E951A5A00FB26C6 /* SWRevealViewController.m in Sources */,
 				D3A0E7D91E94C95E00FB26C6 /* SAITabBarController.swift in Sources */,
 				96F7D4701E91524100B23325 /* SAIServiceManager.swift in Sources */,
+				D3A0E8081E978CD800FB26C6 /* SAIFundViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

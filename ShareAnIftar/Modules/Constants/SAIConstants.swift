@@ -14,6 +14,23 @@ import UIKit
 struct SAIColorConstants
 {
     static let SAIAppColor = UIColor.init(colorLiteralRed: 33.0 / 255.0 , green: 150.0 / 255.0 , blue:  243.0 / 255.0, alpha: 1.0)
+    static let SAIAppGreenColor = UIColor.init(colorLiteralRed: 27.0 / 255.0 , green: 170.0 / 255.0 , blue:  43.0 / 255.0, alpha: 1.0)
+}
+
+//MARK: - Story Board Constants
+struct SAIStoryBoardIdentifiers
+{
+    static let SAIStoryBoardMain = "Main"
+    static let SAIFundViewControllerIdentifier = "FundVC"
+    static let SAIVideoViewControllerIdentifier = "VideoVC"
+    static let SAIGemViewControllerIdentifier = "GemVC"
+}
+
+//MARK: - Gradient Color Constants
+struct SAIGradientColorConstants
+{
+    static let SAIGreenGradient = "Green"
+    static let SAIBlueGradient = "Blue"
 }
 
 //Picker Constants

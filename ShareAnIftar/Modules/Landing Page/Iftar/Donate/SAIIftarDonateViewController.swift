@@ -17,7 +17,7 @@ class SAIIftarDonateViewController: SAIViewController {
         super.viewDidLoad()
 
         // Load the view with blue gradient color.
-        addBlueGradientColor()
+        addBlueGradientColor(GradientColor: SAIGradientColorConstants.SAIBlueGradient)
         
         // Round Edged Button
         selectLocationButton.layer.cornerRadius = 5
