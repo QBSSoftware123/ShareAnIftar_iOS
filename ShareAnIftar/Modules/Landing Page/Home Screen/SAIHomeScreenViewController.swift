@@ -10,17 +10,29 @@ import UIKit
 
 class SAIHomeScreenViewController: SAIViewController {
 
+    // Outlet for Side Panel
     @IBOutlet weak var menuButton: UIBarButtonItem!
-    override func viewDidLoad() {
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        
+        // Setting the background color of the view controller to AppColor
+        self.view.backgroundColor = SAIColorConstants.SAIAppColor
 
-        // Do any additional setup after loading the view.
+        // Side Panel Button Action.
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
             menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
+    }
+    
+    // MARK: -  Share Action Button
+    @IBAction func shareButtonAction(_ sender: Any)
+    {
+        self.tabBarController?.selectedIndex = 1
     }
 }

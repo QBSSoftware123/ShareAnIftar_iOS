@@ -281,6 +281,7 @@
 				TargetAttributes = {
 					96F7D4521E91346D00B23325 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 7NAZG4PL36;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
@@ -460,6 +461,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 7NAZG4PL36;
 				INFOPLIST_FILE = ShareAnIftar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = QBS.ShareAnIftar;
@@ -475,6 +477,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 7NAZG4PL36;
 				INFOPLIST_FILE = ShareAnIftar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = QBS.ShareAnIftar;
