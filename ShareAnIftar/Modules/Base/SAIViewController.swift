@@ -10,6 +10,9 @@ import UIKit
 
 class SAIViewController: UIViewController {
     
+    // Webview to load HTML Pages.
+    @IBOutlet weak var htmlWebView: UIWebView!
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -37,6 +40,14 @@ class SAIViewController: UIViewController {
         
         self.view.layer.insertSublayer(gradient, at: 0)
 
+    }
+    
+    //MARK: - Loading HTML Mehods
+    func loadHTML (pageName: String)
+    {
+        let url = Bundle.main.url(forResource: pageName, withExtension: "html")
+        let myRequest = NSURLRequest(url: url!)
+        self.htmlWebView.loadRequest(myRequest as URLRequest)
     }
     
     @IBAction func dismissVC(_ sender: Any)

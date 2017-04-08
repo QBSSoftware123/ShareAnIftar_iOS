@@ -14,6 +14,9 @@ class SAIMonthlyViewController: SAIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Load HTML Page
+        loadHTML(pageName: "monthlykits")
+        
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
 
         // Do any additional setup after loading the view.

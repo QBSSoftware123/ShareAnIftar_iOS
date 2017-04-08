@@ -14,6 +14,9 @@
 		96F7D4611E91346D00B23325 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96F7D45F1E91346D00B23325 /* LaunchScreen.storyboard */; };
 		96F7D46E1E9151E000B23325 /* SAIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F7D46D1E9151E000B23325 /* SAIViewController.swift */; };
 		96F7D4701E91524100B23325 /* SAIServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F7D46F1E91524100B23325 /* SAIServiceManager.swift */; };
+		96F7D4751E990F9600B23325 /* iftar.html in Resources */ = {isa = PBXBuildFile; fileRef = 96F7D4741E990F9600B23325 /* iftar.html */; };
+		96F7D4781E99119600B23325 /* eidkit.html in Resources */ = {isa = PBXBuildFile; fileRef = 96F7D4761E99119600B23325 /* eidkit.html */; };
+		96F7D4791E99119600B23325 /* monthlykits.html in Resources */ = {isa = PBXBuildFile; fileRef = 96F7D4771E99119600B23325 /* monthlykits.html */; };
 		D3A0E7D91E94C95E00FB26C6 /* SAITabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A0E7D81E94C95E00FB26C6 /* SAITabBarController.swift */; };
 		D3A0E7EB1E950BE100FB26C6 /* SAIEidViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A0E7EA1E950BE100FB26C6 /* SAIEidViewController.swift */; };
 		D3A0E7ED1E950BF500FB26C6 /* SAIHomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A0E7EC1E950BF500FB26C6 /* SAIHomeScreenViewController.swift */; };
@@ -39,6 +42,9 @@
 		96F7D4621E91346D00B23325 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96F7D46D1E9151E000B23325 /* SAIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAIViewController.swift; sourceTree = "<group>"; };
 		96F7D46F1E91524100B23325 /* SAIServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAIServiceManager.swift; sourceTree = "<group>"; };
+		96F7D4741E990F9600B23325 /* iftar.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = iftar.html; sourceTree = "<group>"; };
+		96F7D4761E99119600B23325 /* eidkit.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = eidkit.html; sourceTree = "<group>"; };
+		96F7D4771E99119600B23325 /* monthlykits.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = monthlykits.html; sourceTree = "<group>"; };
 		D3A0E7D81E94C95E00FB26C6 /* SAITabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAITabBarController.swift; sourceTree = "<group>"; };
 		D3A0E7EA1E950BE100FB26C6 /* SAIEidViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAIEidViewController.swift; sourceTree = "<group>"; };
 		D3A0E7EC1E950BF500FB26C6 /* SAIHomeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAIHomeScreenViewController.swift; sourceTree = "<group>"; };
@@ -127,9 +133,20 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		96F7D4711E990A0F00B23325 /* HTML Pages */ = {
+			isa = PBXGroup;
+			children = (
+				96F7D4761E99119600B23325 /* eidkit.html */,
+				96F7D4771E99119600B23325 /* monthlykits.html */,
+				96F7D4741E990F9600B23325 /* iftar.html */,
+			);
+			path = "HTML Pages";
+			sourceTree = "<group>";
+		};
 		D3A0E7E51E950B9600FB26C6 /* Landing Page */ = {
 			isa = PBXGroup;
 			children = (
+				96F7D4711E990A0F00B23325 /* HTML Pages */,
 				D3A0E7E61E950BC700FB26C6 /* Eid */,
 				D3A0E7E71E950BC700FB26C6 /* Home Screen */,
 				D3A0E7E81E950BC700FB26C6 /* Iftar */,
@@ -313,6 +330,9 @@
 				96F7D4611E91346D00B23325 /* LaunchScreen.storyboard in Resources */,
 				96F7D45E1E91346D00B23325 /* Assets.xcassets in Resources */,
 				96F7D45C1E91346D00B23325 /* Main.storyboard in Resources */,
+				96F7D4751E990F9600B23325 /* iftar.html in Resources */,
+				96F7D4781E99119600B23325 /* eidkit.html in Resources */,
+				96F7D4791E99119600B23325 /* monthlykits.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

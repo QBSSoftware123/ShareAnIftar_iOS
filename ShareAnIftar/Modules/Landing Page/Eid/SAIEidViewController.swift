@@ -16,6 +16,9 @@ class SAIEidViewController: SAIViewController {
     {
         super.viewDidLoad()
         
+        // Load HTML Page
+        loadHTML(pageName: "eidkit")
+        
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         
         // Do any additional setup after loading the view.
