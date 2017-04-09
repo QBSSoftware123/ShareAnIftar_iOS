@@ -30,6 +30,12 @@
 		D3A0E8081E978CD800FB26C6 /* SAIFundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A0E8071E978CD800FB26C6 /* SAIFundViewController.swift */; };
 		D3A0E80C1E978D5900FB26C6 /* SAIGemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A0E80B1E978D5900FB26C6 /* SAIGemViewController.swift */; };
 		D3A0E80E1E978D6900FB26C6 /* SAIVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A0E80D1E978D6900FB26C6 /* SAIVideoViewController.swift */; };
+		D3A0E8431E9A358E00FB26C6 /* KCFABManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A0E83C1E9A358E00FB26C6 /* KCFABManager.swift */; };
+		D3A0E8441E9A358E00FB26C6 /* KCFABViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A0E83D1E9A358E00FB26C6 /* KCFABViewController.swift */; };
+		D3A0E8451E9A358E00FB26C6 /* KCFABWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A0E83E1E9A358E00FB26C6 /* KCFABWindow.swift */; };
+		D3A0E8461E9A358E00FB26C6 /* KCFloatingActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A0E8401E9A358E00FB26C6 /* KCFloatingActionButton.swift */; };
+		D3A0E8471E9A358E00FB26C6 /* KCFloatingActionButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A0E8411E9A358E00FB26C6 /* KCFloatingActionButtonDelegate.swift */; };
+		D3A0E8481E9A358E00FB26C6 /* KCFloatingActionButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A0E8421E9A358E00FB26C6 /* KCFloatingActionButtonItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +66,13 @@
 		D3A0E8071E978CD800FB26C6 /* SAIFundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAIFundViewController.swift; sourceTree = "<group>"; };
 		D3A0E80B1E978D5900FB26C6 /* SAIGemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAIGemViewController.swift; sourceTree = "<group>"; };
 		D3A0E80D1E978D6900FB26C6 /* SAIVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAIVideoViewController.swift; sourceTree = "<group>"; };
+		D3A0E83C1E9A358E00FB26C6 /* KCFABManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KCFABManager.swift; sourceTree = "<group>"; };
+		D3A0E83D1E9A358E00FB26C6 /* KCFABViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KCFABViewController.swift; sourceTree = "<group>"; };
+		D3A0E83E1E9A358E00FB26C6 /* KCFABWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KCFABWindow.swift; sourceTree = "<group>"; };
+		D3A0E83F1E9A358E00FB26C6 /* KCFloatingActionButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCFloatingActionButton.h; sourceTree = "<group>"; };
+		D3A0E8401E9A358E00FB26C6 /* KCFloatingActionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KCFloatingActionButton.swift; sourceTree = "<group>"; };
+		D3A0E8411E9A358E00FB26C6 /* KCFloatingActionButtonDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KCFloatingActionButtonDelegate.swift; sourceTree = "<group>"; };
+		D3A0E8421E9A358E00FB26C6 /* KCFloatingActionButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KCFloatingActionButtonItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +204,7 @@
 		D3A0E7F21E9519F100FB26C6 /* ExternalLibs */ = {
 			isa = PBXGroup;
 			children = (
+				D3A0E83B1E9A355400FB26C6 /* Floating Button */,
 				D3A0E7F31E951A1400FB26C6 /* Side Menu */,
 			);
 			path = ExternalLibs;
@@ -264,6 +278,20 @@
 				D3A0E80D1E978D6900FB26C6 /* SAIVideoViewController.swift */,
 			);
 			path = Video;
+			sourceTree = "<group>";
+		};
+		D3A0E83B1E9A355400FB26C6 /* Floating Button */ = {
+			isa = PBXGroup;
+			children = (
+				D3A0E83C1E9A358E00FB26C6 /* KCFABManager.swift */,
+				D3A0E83D1E9A358E00FB26C6 /* KCFABViewController.swift */,
+				D3A0E83E1E9A358E00FB26C6 /* KCFABWindow.swift */,
+				D3A0E83F1E9A358E00FB26C6 /* KCFloatingActionButton.h */,
+				D3A0E8401E9A358E00FB26C6 /* KCFloatingActionButton.swift */,
+				D3A0E8411E9A358E00FB26C6 /* KCFloatingActionButtonDelegate.swift */,
+				D3A0E8421E9A358E00FB26C6 /* KCFloatingActionButtonItem.swift */,
+			);
+			path = "Floating Button";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,15 +374,21 @@
 				96F7D4591E91346D00B23325 /* ViewController.swift in Sources */,
 				D3A0E7EF1E950C0700FB26C6 /* SAIIftarViewController.swift in Sources */,
 				D3A0E7ED1E950BF500FB26C6 /* SAIHomeScreenViewController.swift in Sources */,
+				D3A0E8451E9A358E00FB26C6 /* KCFABWindow.swift in Sources */,
 				D3A0E7FF1E953A0600FB26C6 /* SAIConstants.swift in Sources */,
 				D3A0E8021E96432D00FB26C6 /* SAIIftarDonateViewController.swift in Sources */,
+				D3A0E8431E9A358E00FB26C6 /* KCFABManager.swift in Sources */,
 				D3A0E80E1E978D6900FB26C6 /* SAIVideoViewController.swift in Sources */,
+				D3A0E8471E9A358E00FB26C6 /* KCFloatingActionButtonDelegate.swift in Sources */,
 				D3A0E7EB1E950BE100FB26C6 /* SAIEidViewController.swift in Sources */,
 				96F7D4571E91346D00B23325 /* AppDelegate.swift in Sources */,
 				D3A0E7FC1E9527EF00FB26C6 /* SAISideMenuTableViewController.swift in Sources */,
 				96F7D46E1E9151E000B23325 /* SAIViewController.swift in Sources */,
 				D3A0E7FA1E95276900FB26C6 /* SAIRevealViewController.swift in Sources */,
+				D3A0E8461E9A358E00FB26C6 /* KCFloatingActionButton.swift in Sources */,
+				D3A0E8481E9A358E00FB26C6 /* KCFloatingActionButtonItem.swift in Sources */,
 				D3A0E80C1E978D5900FB26C6 /* SAIGemViewController.swift in Sources */,
+				D3A0E8441E9A358E00FB26C6 /* KCFABViewController.swift in Sources */,
 				D3A0E7F11E950C1600FB26C6 /* SAIMonthlyViewController.swift in Sources */,
 				D3A0E7F81E951A5A00FB26C6 /* SWRevealViewController.m in Sources */,
 				D3A0E7D91E94C95E00FB26C6 /* SAITabBarController.swift in Sources */,

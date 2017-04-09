@@ -23,11 +23,18 @@ class SAIHomeScreenViewController: SAIViewController {
         self.view.backgroundColor = SAIColorConstants.SAIAppColor
 
         // Side Panel Button Action.
-        if self.revealViewController() != nil {
+        if self.revealViewController() != nil
+        {
             menuButton.target = self.revealViewController()
             menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
+        
+        // Adding Floating Button.
+        let floatButton = KCFloatingActionButton()
+        floatButton.buttonColor = SAIColorConstants.SAIAppGreenColor
+        floatButton.addItem(title: "Share An Iftar")
+        self.view.addSubview(floatButton)
     }
     
     // MARK: -  Share Action Button
