@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B6E434B1E9A82DC00AB15D0 /* SIARequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6E434A1E9A82DC00AB15D0 /* SIARequestProtocol.swift */; };
+		7B6E434D1E9A830E00AB15D0 /* SIAHTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6E434C1E9A830E00AB15D0 /* SIAHTTPMethod.swift */; };
+		7B6E434F1E9A8B0D00AB15D0 /* SIANetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6E434E1E9A8B0D00AB15D0 /* SIANetworkRequest.swift */; };
+		7B6E43511E9A98C400AB15D0 /* SIANetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6E43501E9A98C400AB15D0 /* SIANetworkService.swift */; };
 		96F7D4571E91346D00B23325 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F7D4561E91346D00B23325 /* AppDelegate.swift */; };
 		96F7D4591E91346D00B23325 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F7D4581E91346D00B23325 /* ViewController.swift */; };
 		96F7D45C1E91346D00B23325 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96F7D45A1E91346D00B23325 /* Main.storyboard */; };
 		96F7D45E1E91346D00B23325 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96F7D45D1E91346D00B23325 /* Assets.xcassets */; };
 		96F7D4611E91346D00B23325 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96F7D45F1E91346D00B23325 /* LaunchScreen.storyboard */; };
 		96F7D46E1E9151E000B23325 /* SAIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F7D46D1E9151E000B23325 /* SAIViewController.swift */; };
-		96F7D4701E91524100B23325 /* SAIServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F7D46F1E91524100B23325 /* SAIServiceManager.swift */; };
 		96F7D4751E990F9600B23325 /* iftar.html in Resources */ = {isa = PBXBuildFile; fileRef = 96F7D4741E990F9600B23325 /* iftar.html */; };
 		96F7D4781E99119600B23325 /* eidkit.html in Resources */ = {isa = PBXBuildFile; fileRef = 96F7D4761E99119600B23325 /* eidkit.html */; };
 		96F7D4791E99119600B23325 /* monthlykits.html in Resources */ = {isa = PBXBuildFile; fileRef = 96F7D4771E99119600B23325 /* monthlykits.html */; };
@@ -39,6 +42,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7B6E434A1E9A82DC00AB15D0 /* SIARequestProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SIARequestProtocol.swift; sourceTree = "<group>"; };
+		7B6E434C1E9A830E00AB15D0 /* SIAHTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SIAHTTPMethod.swift; sourceTree = "<group>"; };
+		7B6E434E1E9A8B0D00AB15D0 /* SIANetworkRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SIANetworkRequest.swift; sourceTree = "<group>"; };
+		7B6E43501E9A98C400AB15D0 /* SIANetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SIANetworkService.swift; sourceTree = "<group>"; };
 		96F7D4531E91346D00B23325 /* ShareAnIftar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareAnIftar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96F7D4561E91346D00B23325 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96F7D4581E91346D00B23325 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,7 +54,6 @@
 		96F7D4601E91346D00B23325 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		96F7D4621E91346D00B23325 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96F7D46D1E9151E000B23325 /* SAIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAIViewController.swift; sourceTree = "<group>"; };
-		96F7D46F1E91524100B23325 /* SAIServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAIServiceManager.swift; sourceTree = "<group>"; };
 		96F7D4741E990F9600B23325 /* iftar.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = iftar.html; sourceTree = "<group>"; };
 		96F7D4761E99119600B23325 /* eidkit.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = eidkit.html; sourceTree = "<group>"; };
 		96F7D4771E99119600B23325 /* monthlykits.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = monthlykits.html; sourceTree = "<group>"; };
@@ -121,7 +127,10 @@
 		96F7D4681E9150F200B23325 /* Service Manager */ = {
 			isa = PBXGroup;
 			children = (
-				96F7D46F1E91524100B23325 /* SAIServiceManager.swift */,
+				7B6E434C1E9A830E00AB15D0 /* SIAHTTPMethod.swift */,
+				7B6E434A1E9A82DC00AB15D0 /* SIARequestProtocol.swift */,
+				7B6E434E1E9A8B0D00AB15D0 /* SIANetworkRequest.swift */,
+				7B6E43501E9A98C400AB15D0 /* SIANetworkService.swift */,
 			);
 			path = "Service Manager";
 			sourceTree = "<group>";
@@ -373,6 +382,7 @@
 			files = (
 				96F7D4591E91346D00B23325 /* ViewController.swift in Sources */,
 				D3A0E7EF1E950C0700FB26C6 /* SAIIftarViewController.swift in Sources */,
+				7B6E43511E9A98C400AB15D0 /* SIANetworkService.swift in Sources */,
 				D3A0E7ED1E950BF500FB26C6 /* SAIHomeScreenViewController.swift in Sources */,
 				D3A0E8451E9A358E00FB26C6 /* KCFABWindow.swift in Sources */,
 				D3A0E7FF1E953A0600FB26C6 /* SAIConstants.swift in Sources */,
@@ -384,15 +394,17 @@
 				96F7D4571E91346D00B23325 /* AppDelegate.swift in Sources */,
 				D3A0E7FC1E9527EF00FB26C6 /* SAISideMenuTableViewController.swift in Sources */,
 				96F7D46E1E9151E000B23325 /* SAIViewController.swift in Sources */,
+				7B6E434D1E9A830E00AB15D0 /* SIAHTTPMethod.swift in Sources */,
 				D3A0E7FA1E95276900FB26C6 /* SAIRevealViewController.swift in Sources */,
 				D3A0E8461E9A358E00FB26C6 /* KCFloatingActionButton.swift in Sources */,
 				D3A0E8481E9A358E00FB26C6 /* KCFloatingActionButtonItem.swift in Sources */,
 				D3A0E80C1E978D5900FB26C6 /* SAIGemViewController.swift in Sources */,
+				7B6E434B1E9A82DC00AB15D0 /* SIARequestProtocol.swift in Sources */,
 				D3A0E8441E9A358E00FB26C6 /* KCFABViewController.swift in Sources */,
 				D3A0E7F11E950C1600FB26C6 /* SAIMonthlyViewController.swift in Sources */,
 				D3A0E7F81E951A5A00FB26C6 /* SWRevealViewController.m in Sources */,
+				7B6E434F1E9A8B0D00AB15D0 /* SIANetworkRequest.swift in Sources */,
 				D3A0E7D91E94C95E00FB26C6 /* SAITabBarController.swift in Sources */,
-				96F7D4701E91524100B23325 /* SAIServiceManager.swift in Sources */,
 				D3A0E8081E978CD800FB26C6 /* SAIFundViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
