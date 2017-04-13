@@ -29,10 +29,5 @@ class SAISideMenuTableViewController: UITableViewController {
             let gemVC = storyBoard.instantiateViewController(withIdentifier: SAIStoryBoardIdentifiers.SAIGemViewControllerIdentifier)
             self.present(gemVC, animated: true, completion: nil)
         }
-        if (indexPath.row == 3)
-        {
-            let videoVC = storyBoard.instantiateViewController(withIdentifier: SAIStoryBoardIdentifiers.SAIVideoViewControllerIdentifier)
-            self.present(videoVC, animated: true, completion: nil)
-        }
     }
 }
