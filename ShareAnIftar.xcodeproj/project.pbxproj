@@ -11,6 +11,8 @@
 		7B6E434D1E9A830E00AB15D0 /* SIAHTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6E434C1E9A830E00AB15D0 /* SIAHTTPMethod.swift */; };
 		7B6E434F1E9A8B0D00AB15D0 /* SIANetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6E434E1E9A8B0D00AB15D0 /* SIANetworkRequest.swift */; };
 		7B6E43511E9A98C400AB15D0 /* SIANetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6E43501E9A98C400AB15D0 /* SIANetworkService.swift */; };
+		7BA55E2C1ECE088E00A3052A /* Services.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7BA55E2B1ECE088E00A3052A /* Services.plist */; };
+		7BA55E2E1ECE0B1C00A3052A /* SIATransactionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA55E2D1ECE0B1C00A3052A /* SIATransactionManager.swift */; };
 		96F7D4571E91346D00B23325 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F7D4561E91346D00B23325 /* AppDelegate.swift */; };
 		96F7D4591E91346D00B23325 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F7D4581E91346D00B23325 /* ViewController.swift */; };
 		96F7D45C1E91346D00B23325 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96F7D45A1E91346D00B23325 /* Main.storyboard */; };
@@ -46,6 +48,8 @@
 		7B6E434C1E9A830E00AB15D0 /* SIAHTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SIAHTTPMethod.swift; sourceTree = "<group>"; };
 		7B6E434E1E9A8B0D00AB15D0 /* SIANetworkRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SIANetworkRequest.swift; sourceTree = "<group>"; };
 		7B6E43501E9A98C400AB15D0 /* SIANetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SIANetworkService.swift; sourceTree = "<group>"; };
+		7BA55E2B1ECE088E00A3052A /* Services.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Services.plist; sourceTree = "<group>"; };
+		7BA55E2D1ECE0B1C00A3052A /* SIATransactionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SIATransactionManager.swift; sourceTree = "<group>"; };
 		96F7D4531E91346D00B23325 /* ShareAnIftar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareAnIftar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96F7D4561E91346D00B23325 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96F7D4581E91346D00B23325 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -130,7 +134,9 @@
 				7B6E434C1E9A830E00AB15D0 /* SIAHTTPMethod.swift */,
 				7B6E434A1E9A82DC00AB15D0 /* SIARequestProtocol.swift */,
 				7B6E434E1E9A8B0D00AB15D0 /* SIANetworkRequest.swift */,
+				7BA55E2D1ECE0B1C00A3052A /* SIATransactionManager.swift */,
 				7B6E43501E9A98C400AB15D0 /* SIANetworkService.swift */,
+				7BA55E2B1ECE088E00A3052A /* Services.plist */,
 			);
 			path = "Service Manager";
 			sourceTree = "<group>";
@@ -367,6 +373,7 @@
 				96F7D4611E91346D00B23325 /* LaunchScreen.storyboard in Resources */,
 				96F7D45E1E91346D00B23325 /* Assets.xcassets in Resources */,
 				96F7D45C1E91346D00B23325 /* Main.storyboard in Resources */,
+				7BA55E2C1ECE088E00A3052A /* Services.plist in Resources */,
 				96F7D4751E990F9600B23325 /* iftar.html in Resources */,
 				96F7D4781E99119600B23325 /* eidkit.html in Resources */,
 				96F7D4791E99119600B23325 /* monthlykits.html in Resources */,
@@ -380,6 +387,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BA55E2E1ECE0B1C00A3052A /* SIATransactionManager.swift in Sources */,
 				96F7D4591E91346D00B23325 /* ViewController.swift in Sources */,
 				D3A0E7EF1E950C0700FB26C6 /* SAIIftarViewController.swift in Sources */,
 				7B6E43511E9A98C400AB15D0 /* SIANetworkService.swift in Sources */,

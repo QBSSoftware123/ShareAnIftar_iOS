@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>services</key>
+	<dict>
+		<key>validate_otp</key>
+		<dict>
+			<key>otp</key>
+			<true/>
+			<key>user_id</key>
+			<string>YES</string>
+		</dict>
+		<key>generate_otp</key>
+		<dict>
+			<key>user_name</key>
+			<true/>
+			<key>phone</key>
+			<true/>
+		</dict>
+		<key>smile_counter</key>
+		<dict/>
+		<key>user_profile</key>
+		<dict>
+			<key>user_id</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
