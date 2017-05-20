@@ -31,14 +31,16 @@ class SIATransactionManager: NSObject {
     //----------------------------------------------
     // Construct service URL with parameters
     //----------------------------------------------
-    func serviceURLFor(service: String) -> String {
+    func serviceURLFor(service: String, parameters: String) -> String {
         var serviceURL: String?
         
         switch service {
-        case "validate_otp", "generate_otp", "user_profile":
+        case "validate_otp", "user_profile":
             serviceURL = constructURLFor(service: service)
         case "smile_counter":
             serviceURL = "\(baseURL)\(service).php"
+        case "generate_otp":
+            serviceURL = "\(baseURL)\(service).php?\(parameters)"
         default:
             // Error handling
             break

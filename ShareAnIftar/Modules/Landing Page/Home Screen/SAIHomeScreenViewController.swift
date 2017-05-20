@@ -13,6 +13,11 @@ class SAIHomeScreenViewController: SAIViewController {
     // Outlet for Side Panel
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
+    // Outlet for Counter
+    @IBOutlet var counterTextField: UITextField!
+    
+    var counterValue : String = ""
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -35,6 +40,31 @@ class SAIHomeScreenViewController: SAIViewController {
         floatButton.buttonColor = SAIColorConstants.SAIAppGreenColor
         floatButton.addItem(title: "Share An Iftar")
         self.view.addSubview(floatButton)
+        
+        loadCounter()
+        
+    }
+    
+    func loadCounter()
+    {
+        
+        SIANetworkService.defaultManger.sentRequestFor(serviceName: "smile_counter", withParameters: "No", completionHandler:{(response:Any?, error:Error?) in
+            
+            //Display on main queue
+            DispatchQueue.main.async { [unowned self] in
+                
+                //Remove Progress
+               // HUD.hide()
+                
+                //Populate the data
+                let responseDict : [String:Any] = response as! [String:Any]
+                self.counterValue = responseDict["count"] as! String
+                self.counterTextField.text = self.counterValue
+                print(self.counterValue)
+               // print("Response: \(responseDict)")
+                
+            }
+        })
     }
     
     // MARK: -  Share Action Button

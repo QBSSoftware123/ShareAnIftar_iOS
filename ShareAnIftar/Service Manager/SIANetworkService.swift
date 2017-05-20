@@ -12,14 +12,23 @@
 import Foundation
 
 class SIANetworkService: NSObject {
+    
     private var task: URLSessionDataTask?
+    
+    //Single Ton Default Manager
+    static let defaultManger = SIANetworkService()
+    
+    // LoggedIn Variable
+    var userLoggedIn : String?
     
     //-------------------------------------------------------------------------
     // Use the below function to make network calls and parse the JSON response
     //-------------------------------------------------------------------------
-    func sentRequestFor(serviceName: String, withParameters: [String: AnyObject]?) {
+
+    func sentRequestFor(serviceName: String, withParameters: String, completionHandler:@escaping (_ response:Any?,_ errorResponse:Error?)->Void) -> Void
+    {
         let sharedTransactionManager = SIATransactionManager.sharedTransactionManager
-        let url = sharedTransactionManager.serviceURLFor(service: serviceName)
+        let url = sharedTransactionManager.serviceURLFor(service: serviceName, parameters: withParameters)
         // TODO: Replace replacementCode ("#@!$%") with actual service parameters
 
         let serviceURL = URL.init(string: url)
@@ -31,6 +40,7 @@ class SIANetworkService: NSObject {
                 do {
                     let responseData = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers)
                     print("Response: \(responseData)")
+                    completionHandler (responseData,error)
                     // Parse the JSON after this into your model
 
                 } catch {

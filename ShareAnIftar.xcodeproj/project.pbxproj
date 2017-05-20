@@ -11,6 +11,8 @@
 		7B6E434D1E9A830E00AB15D0 /* SIAHTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6E434C1E9A830E00AB15D0 /* SIAHTTPMethod.swift */; };
 		7B6E434F1E9A8B0D00AB15D0 /* SIANetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6E434E1E9A8B0D00AB15D0 /* SIANetworkRequest.swift */; };
 		7B6E43511E9A98C400AB15D0 /* SIANetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6E43501E9A98C400AB15D0 /* SIANetworkService.swift */; };
+		7B8982ED1ED077D300B01B19 /* SAILoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8982EC1ED077D300B01B19 /* SAILoginViewController.swift */; };
+		7B8982EF1ED086A200B01B19 /* SAIOTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8982EE1ED086A200B01B19 /* SAIOTPViewController.swift */; };
 		7BA55E2C1ECE088E00A3052A /* Services.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7BA55E2B1ECE088E00A3052A /* Services.plist */; };
 		7BA55E2E1ECE0B1C00A3052A /* SIATransactionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA55E2D1ECE0B1C00A3052A /* SIATransactionManager.swift */; };
 		96F7D4571E91346D00B23325 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F7D4561E91346D00B23325 /* AppDelegate.swift */; };
@@ -48,6 +50,8 @@
 		7B6E434C1E9A830E00AB15D0 /* SIAHTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SIAHTTPMethod.swift; sourceTree = "<group>"; };
 		7B6E434E1E9A8B0D00AB15D0 /* SIANetworkRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SIANetworkRequest.swift; sourceTree = "<group>"; };
 		7B6E43501E9A98C400AB15D0 /* SIANetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SIANetworkService.swift; sourceTree = "<group>"; };
+		7B8982EC1ED077D300B01B19 /* SAILoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAILoginViewController.swift; sourceTree = "<group>"; };
+		7B8982EE1ED086A200B01B19 /* SAIOTPViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAIOTPViewController.swift; sourceTree = "<group>"; };
 		7BA55E2B1ECE088E00A3052A /* Services.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Services.plist; sourceTree = "<group>"; };
 		7BA55E2D1ECE0B1C00A3052A /* SIATransactionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SIATransactionManager.swift; sourceTree = "<group>"; };
 		96F7D4531E91346D00B23325 /* ShareAnIftar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareAnIftar.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,6 +100,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7B8982EB1ED077BC00B01B19 /* Login Page */ = {
+			isa = PBXGroup;
+			children = (
+				7B8982EC1ED077D300B01B19 /* SAILoginViewController.swift */,
+				7B8982EE1ED086A200B01B19 /* SAIOTPViewController.swift */,
+			);
+			path = "Login Page";
+			sourceTree = "<group>";
+		};
 		96F7D44A1E91346D00B23325 = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +157,7 @@
 		96F7D4691E91510D00B23325 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				7B8982EB1ED077BC00B01B19 /* Login Page */,
 				D3A0E8031E97719300FB26C6 /* Side Panel View Controllers */,
 				D3A0E7FD1E9539ED00FB26C6 /* Constants */,
 				D3A0E7E51E950B9600FB26C6 /* Landing Page */,
@@ -391,6 +405,7 @@
 				96F7D4591E91346D00B23325 /* ViewController.swift in Sources */,
 				D3A0E7EF1E950C0700FB26C6 /* SAIIftarViewController.swift in Sources */,
 				7B6E43511E9A98C400AB15D0 /* SIANetworkService.swift in Sources */,
+				7B8982ED1ED077D300B01B19 /* SAILoginViewController.swift in Sources */,
 				D3A0E7ED1E950BF500FB26C6 /* SAIHomeScreenViewController.swift in Sources */,
 				D3A0E8451E9A358E00FB26C6 /* KCFABWindow.swift in Sources */,
 				D3A0E7FF1E953A0600FB26C6 /* SAIConstants.swift in Sources */,
@@ -409,6 +424,7 @@
 				D3A0E80C1E978D5900FB26C6 /* SAIGemViewController.swift in Sources */,
 				7B6E434B1E9A82DC00AB15D0 /* SIARequestProtocol.swift in Sources */,
 				D3A0E8441E9A358E00FB26C6 /* KCFABViewController.swift in Sources */,
+				7B8982EF1ED086A200B01B19 /* SAIOTPViewController.swift in Sources */,
 				D3A0E7F11E950C1600FB26C6 /* SAIMonthlyViewController.swift in Sources */,
 				D3A0E7F81E951A5A00FB26C6 /* SWRevealViewController.m in Sources */,
 				7B6E434F1E9A8B0D00AB15D0 /* SIANetworkRequest.swift in Sources */,

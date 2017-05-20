@@ -19,6 +19,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().tintColor = UIColor.white
         UINavigationBar.appearance().barTintColor = SAIColorConstants.SAIAppColor
         UITabBar.appearance().tintColor = SAIColorConstants.SAIAppGreenColor
+        
+        //retrive
+        let loggedIn : String? = UserDefaults.standard.string(forKey: "LoggedIn")
+        
+        if loggedIn == "YES"
+        {
+            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            self.window?.rootViewController = mainStoryboard.instantiateViewController(withIdentifier: "TabBarVC")
+        }
+        else
+        {
+            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            self.window?.rootViewController = mainStoryboard.instantiateViewController(withIdentifier: "LoginVC")
+        }
+        
+
 
         return true
     }
@@ -26,6 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
+        
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
