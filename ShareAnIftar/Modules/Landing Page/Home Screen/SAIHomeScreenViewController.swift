@@ -16,6 +16,10 @@ class SAIHomeScreenViewController: SAIViewController {
     // Outlet for Counter
     @IBOutlet var counterTextField: UITextField!
     
+    
+    // Constant for Storyboard refrence
+    let storyBoard : UIStoryboard = UIStoryboard (name: SAIStoryBoardIdentifiers.SAIStoryBoardMain , bundle: nil)
+    
     var counterValue : String = ""
     
     override func viewDidLoad()
@@ -72,4 +76,9 @@ class SAIHomeScreenViewController: SAIViewController {
     {
         self.tabBarController?.selectedIndex = 1
     }
+    
+    @IBAction func showUserProfile(_ sender: Any)
+    {
+    }
+    
 }

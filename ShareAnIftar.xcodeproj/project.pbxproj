@@ -19,6 +19,12 @@
 		7B8982F91ED176FE00B01B19 /* SAIDuaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B8982F71ED176FE00B01B19 /* SAIDuaTableViewCell.xib */; };
 		7B8982FC1ED17D5600B01B19 /* SAIHadithTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8982FA1ED17D5600B01B19 /* SAIHadithTableViewCell.swift */; };
 		7B8982FD1ED17D5600B01B19 /* SAIHadithTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B8982FB1ED17D5600B01B19 /* SAIHadithTableViewCell.xib */; };
+		7B8983001ED18FCA00B01B19 /* SAIPromotersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8982FF1ED18FCA00B01B19 /* SAIPromotersViewController.swift */; };
+		7B8983071ED1A47300B01B19 /* SAIInitiativesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8983061ED1A47300B01B19 /* SAIInitiativesViewController.swift */; };
+		7B89830B1ED1A4D700B01B19 /* SAIInitiativesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8983091ED1A4D700B01B19 /* SAIInitiativesTableViewCell.swift */; };
+		7B89830C1ED1A4D700B01B19 /* SAIInitiativesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B89830A1ED1A4D700B01B19 /* SAIInitiativesTableViewCell.xib */; };
+		7B89830E1ED1A95D00B01B19 /* SAICompanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B89830D1ED1A95D00B01B19 /* SAICompanyViewController.swift */; };
+		7B8983111ED1BBF400B01B19 /* SAIUserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8983101ED1BBF400B01B19 /* SAIUserProfileViewController.swift */; };
 		7BA55E2C1ECE088E00A3052A /* Services.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7BA55E2B1ECE088E00A3052A /* Services.plist */; };
 		7BA55E2E1ECE0B1C00A3052A /* SIATransactionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA55E2D1ECE0B1C00A3052A /* SIATransactionManager.swift */; };
 		96F7D4571E91346D00B23325 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F7D4561E91346D00B23325 /* AppDelegate.swift */; };
@@ -64,6 +70,12 @@
 		7B8982F71ED176FE00B01B19 /* SAIDuaTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SAIDuaTableViewCell.xib; sourceTree = "<group>"; };
 		7B8982FA1ED17D5600B01B19 /* SAIHadithTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAIHadithTableViewCell.swift; sourceTree = "<group>"; };
 		7B8982FB1ED17D5600B01B19 /* SAIHadithTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SAIHadithTableViewCell.xib; sourceTree = "<group>"; };
+		7B8982FF1ED18FCA00B01B19 /* SAIPromotersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAIPromotersViewController.swift; sourceTree = "<group>"; };
+		7B8983061ED1A47300B01B19 /* SAIInitiativesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAIInitiativesViewController.swift; sourceTree = "<group>"; };
+		7B8983091ED1A4D700B01B19 /* SAIInitiativesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAIInitiativesTableViewCell.swift; sourceTree = "<group>"; };
+		7B89830A1ED1A4D700B01B19 /* SAIInitiativesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SAIInitiativesTableViewCell.xib; sourceTree = "<group>"; };
+		7B89830D1ED1A95D00B01B19 /* SAICompanyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAICompanyViewController.swift; sourceTree = "<group>"; };
+		7B8983101ED1BBF400B01B19 /* SAIUserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAIUserProfileViewController.swift; sourceTree = "<group>"; };
 		7BA55E2B1ECE088E00A3052A /* Services.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Services.plist; sourceTree = "<group>"; };
 		7BA55E2D1ECE0B1C00A3052A /* SIATransactionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SIATransactionManager.swift; sourceTree = "<group>"; };
 		96F7D4531E91346D00B23325 /* ShareAnIftar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareAnIftar.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,6 +151,41 @@
 			path = "Hadith Cell";
 			sourceTree = "<group>";
 		};
+		7B8982FE1ED18FB100B01B19 /* Promoters */ = {
+			isa = PBXGroup;
+			children = (
+				7B8982FF1ED18FCA00B01B19 /* SAIPromotersViewController.swift */,
+			);
+			path = Promoters;
+			sourceTree = "<group>";
+		};
+		7B8983011ED19AF000B01B19 /* Initiatives */ = {
+			isa = PBXGroup;
+			children = (
+				7B8983081ED1A4C100B01B19 /* Cell */,
+				7B8983061ED1A47300B01B19 /* SAIInitiativesViewController.swift */,
+				7B89830D1ED1A95D00B01B19 /* SAICompanyViewController.swift */,
+			);
+			path = Initiatives;
+			sourceTree = "<group>";
+		};
+		7B8983081ED1A4C100B01B19 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				7B8983091ED1A4D700B01B19 /* SAIInitiativesTableViewCell.swift */,
+				7B89830A1ED1A4D700B01B19 /* SAIInitiativesTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		7B89830F1ED1BBE600B01B19 /* User Profile */ = {
+			isa = PBXGroup;
+			children = (
+				7B8983101ED1BBF400B01B19 /* SAIUserProfileViewController.swift */,
+			);
+			path = "User Profile";
+			sourceTree = "<group>";
+		};
 		96F7D44A1E91346D00B23325 = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +234,7 @@
 		96F7D4691E91510D00B23325 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				7B89830F1ED1BBE600B01B19 /* User Profile */,
 				7B8982EB1ED077BC00B01B19 /* Login Page */,
 				D3A0E8031E97719300FB26C6 /* Side Panel View Controllers */,
 				D3A0E7FD1E9539ED00FB26C6 /* Constants */,
@@ -308,6 +356,8 @@
 		D3A0E8031E97719300FB26C6 /* Side Panel View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7B8983011ED19AF000B01B19 /* Initiatives */,
+				7B8982FE1ED18FB100B01B19 /* Promoters */,
 				D3A0E80A1E978D4700FB26C6 /* Video */,
 				D3A0E8091E978D2F00FB26C6 /* Gem */,
 				D3A0E8061E978CAA00FB26C6 /* Fund */,
@@ -421,6 +471,7 @@
 				96F7D4611E91346D00B23325 /* LaunchScreen.storyboard in Resources */,
 				96F7D45E1E91346D00B23325 /* Assets.xcassets in Resources */,
 				7B8982FD1ED17D5600B01B19 /* SAIHadithTableViewCell.xib in Resources */,
+				7B89830C1ED1A4D700B01B19 /* SAIInitiativesTableViewCell.xib in Resources */,
 				7B8982F91ED176FE00B01B19 /* SAIDuaTableViewCell.xib in Resources */,
 				96F7D45C1E91346D00B23325 /* Main.storyboard in Resources */,
 				7BA55E2C1ECE088E00A3052A /* Services.plist in Resources */,
@@ -440,6 +491,7 @@
 				7BA55E2E1ECE0B1C00A3052A /* SIATransactionManager.swift in Sources */,
 				96F7D4591E91346D00B23325 /* ViewController.swift in Sources */,
 				D3A0E7EF1E950C0700FB26C6 /* SAIIftarViewController.swift in Sources */,
+				7B8983071ED1A47300B01B19 /* SAIInitiativesViewController.swift in Sources */,
 				7B6E43511E9A98C400AB15D0 /* SIANetworkService.swift in Sources */,
 				7B8982ED1ED077D300B01B19 /* SAILoginViewController.swift in Sources */,
 				D3A0E7ED1E950BF500FB26C6 /* SAIHomeScreenViewController.swift in Sources */,
@@ -448,11 +500,14 @@
 				D3A0E8021E96432D00FB26C6 /* SAIIftarDonateViewController.swift in Sources */,
 				D3A0E8431E9A358E00FB26C6 /* KCFABManager.swift in Sources */,
 				7B8982F11ED16F6C00B01B19 /* SAIHadithViewController.swift in Sources */,
+				7B89830E1ED1A95D00B01B19 /* SAICompanyViewController.swift in Sources */,
 				D3A0E80E1E978D6900FB26C6 /* SAIVideoViewController.swift in Sources */,
 				D3A0E8471E9A358E00FB26C6 /* KCFloatingActionButtonDelegate.swift in Sources */,
 				D3A0E7EB1E950BE100FB26C6 /* SAIEidViewController.swift in Sources */,
+				7B89830B1ED1A4D700B01B19 /* SAIInitiativesTableViewCell.swift in Sources */,
 				7B8982F81ED176FE00B01B19 /* SAIDuaTableViewCell.swift in Sources */,
 				96F7D4571E91346D00B23325 /* AppDelegate.swift in Sources */,
+				7B8983111ED1BBF400B01B19 /* SAIUserProfileViewController.swift in Sources */,
 				D3A0E7FC1E9527EF00FB26C6 /* SAISideMenuTableViewController.swift in Sources */,
 				96F7D46E1E9151E000B23325 /* SAIViewController.swift in Sources */,
 				7B6E434D1E9A830E00AB15D0 /* SIAHTTPMethod.swift in Sources */,
@@ -465,6 +520,7 @@
 				D3A0E8441E9A358E00FB26C6 /* KCFABViewController.swift in Sources */,
 				7B8982EF1ED086A200B01B19 /* SAIOTPViewController.swift in Sources */,
 				D3A0E7F11E950C1600FB26C6 /* SAIMonthlyViewController.swift in Sources */,
+				7B8983001ED18FCA00B01B19 /* SAIPromotersViewController.swift in Sources */,
 				D3A0E7F81E951A5A00FB26C6 /* SWRevealViewController.m in Sources */,
 				7B6E434F1E9A8B0D00AB15D0 /* SIANetworkRequest.swift in Sources */,
 				D3A0E7D91E94C95E00FB26C6 /* SAITabBarController.swift in Sources */,
