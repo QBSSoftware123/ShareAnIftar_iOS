@@ -25,6 +25,8 @@
 		7B89830C1ED1A4D700B01B19 /* SAIInitiativesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B89830A1ED1A4D700B01B19 /* SAIInitiativesTableViewCell.xib */; };
 		7B89830E1ED1A95D00B01B19 /* SAICompanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B89830D1ED1A95D00B01B19 /* SAICompanyViewController.swift */; };
 		7B8983111ED1BBF400B01B19 /* SAIUserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8983101ED1BBF400B01B19 /* SAIUserProfileViewController.swift */; };
+		7B8983151ED1C97300B01B19 /* SAIAboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8983141ED1C97300B01B19 /* SAIAboutViewController.swift */; };
+		7B8983171ED1D00000B01B19 /* about.html in Resources */ = {isa = PBXBuildFile; fileRef = 7B8983161ED1D00000B01B19 /* about.html */; };
 		7BA55E2C1ECE088E00A3052A /* Services.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7BA55E2B1ECE088E00A3052A /* Services.plist */; };
 		7BA55E2E1ECE0B1C00A3052A /* SIATransactionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA55E2D1ECE0B1C00A3052A /* SIATransactionManager.swift */; };
 		96F7D4571E91346D00B23325 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F7D4561E91346D00B23325 /* AppDelegate.swift */; };
@@ -76,6 +78,8 @@
 		7B89830A1ED1A4D700B01B19 /* SAIInitiativesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SAIInitiativesTableViewCell.xib; sourceTree = "<group>"; };
 		7B89830D1ED1A95D00B01B19 /* SAICompanyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAICompanyViewController.swift; sourceTree = "<group>"; };
 		7B8983101ED1BBF400B01B19 /* SAIUserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAIUserProfileViewController.swift; sourceTree = "<group>"; };
+		7B8983141ED1C97300B01B19 /* SAIAboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAIAboutViewController.swift; sourceTree = "<group>"; };
+		7B8983161ED1D00000B01B19 /* about.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = about.html; sourceTree = "<group>"; };
 		7BA55E2B1ECE088E00A3052A /* Services.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Services.plist; sourceTree = "<group>"; };
 		7BA55E2D1ECE0B1C00A3052A /* SIATransactionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SIATransactionManager.swift; sourceTree = "<group>"; };
 		96F7D4531E91346D00B23325 /* ShareAnIftar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareAnIftar.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -186,6 +190,14 @@
 			path = "User Profile";
 			sourceTree = "<group>";
 		};
+		7B8983131ED1C95E00B01B19 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				7B8983141ED1C97300B01B19 /* SAIAboutViewController.swift */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
 		96F7D44A1E91346D00B23325 = {
 			isa = PBXGroup;
 			children = (
@@ -256,6 +268,7 @@
 		96F7D4711E990A0F00B23325 /* HTML Pages */ = {
 			isa = PBXGroup;
 			children = (
+				7B8983161ED1D00000B01B19 /* about.html */,
 				96F7D4761E99119600B23325 /* eidkit.html */,
 				96F7D4771E99119600B23325 /* monthlykits.html */,
 				96F7D4741E990F9600B23325 /* iftar.html */,
@@ -356,6 +369,7 @@
 		D3A0E8031E97719300FB26C6 /* Side Panel View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7B8983131ED1C95E00B01B19 /* About */,
 				7B8983011ED19AF000B01B19 /* Initiatives */,
 				7B8982FE1ED18FB100B01B19 /* Promoters */,
 				D3A0E80A1E978D4700FB26C6 /* Video */,
@@ -476,6 +490,7 @@
 				96F7D45C1E91346D00B23325 /* Main.storyboard in Resources */,
 				7BA55E2C1ECE088E00A3052A /* Services.plist in Resources */,
 				96F7D4751E990F9600B23325 /* iftar.html in Resources */,
+				7B8983171ED1D00000B01B19 /* about.html in Resources */,
 				96F7D4781E99119600B23325 /* eidkit.html in Resources */,
 				96F7D4791E99119600B23325 /* monthlykits.html in Resources */,
 			);
@@ -521,6 +536,7 @@
 				7B8982EF1ED086A200B01B19 /* SAIOTPViewController.swift in Sources */,
 				D3A0E7F11E950C1600FB26C6 /* SAIMonthlyViewController.swift in Sources */,
 				7B8983001ED18FCA00B01B19 /* SAIPromotersViewController.swift in Sources */,
+				7B8983151ED1C97300B01B19 /* SAIAboutViewController.swift in Sources */,
 				D3A0E7F81E951A5A00FB26C6 /* SWRevealViewController.m in Sources */,
 				7B6E434F1E9A8B0D00AB15D0 /* SIANetworkRequest.swift in Sources */,
 				D3A0E7D91E94C95E00FB26C6 /* SAITabBarController.swift in Sources */,

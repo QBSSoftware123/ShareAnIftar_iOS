@@ -593,6 +593,47 @@
             </objects>
             <point key="canvasLocation" x="9711.2000000000007" y="-889.20539730134942"/>
         </scene>
+        <!--About Us-->
+        <scene sceneID="6ez-DL-dST">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="yUa-OI-lzR" customClass="SAIAboutViewController" customModule="ShareAnIftar" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nxY-u9-4ln"/>
+                        <viewControllerLayoutGuide type="bottom" id="4qz-44-G6c"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PEx-1t-KIy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zHS-bf-Je6">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zHS-bf-Je6" firstAttribute="leading" secondItem="PEx-1t-KIy" secondAttribute="leading" id="EQN-XC-bkz"/>
+                            <constraint firstItem="4qz-44-G6c" firstAttribute="top" secondItem="zHS-bf-Je6" secondAttribute="bottom" id="GpR-Kj-ta5"/>
+                            <constraint firstItem="zHS-bf-Je6" firstAttribute="top" secondItem="nxY-u9-4ln" secondAttribute="bottom" id="Zi3-Fw-wbn"/>
+                            <constraint firstAttribute="trailing" secondItem="zHS-bf-Je6" secondAttribute="trailing" id="dWA-PN-dQe"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="About Us" id="BgR-4n-aqm">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="zZK-TC-PYj">
+                            <connections>
+                                <action selector="dismissVC:" destination="yUa-OI-lzR" id="8Mp-VB-Eiq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="htmlWebView" destination="zHS-bf-Je6" id="Cb3-KF-idp"/>
+                        <outlet property="webView" destination="zHS-bf-Je6" id="SpT-Uo-3EH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jEa-ZF-WG8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="824.79999999999995" y="2526.3868065967017"/>
+        </scene>
         <!--Share An Iftar-->
         <scene sceneID="gqH-oO-ysx">
             <objects>
@@ -1047,6 +1088,9 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="6l3-Wj-37w" secondAttribute="trailing" constant="96" id="z4L-4i-puQ"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="GZU-Fy-zhi" kind="show" id="HlB-Bw-roA"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -1193,7 +1237,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jey-f6-Oq2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1429.5999999999999" y="2247.5262368815593"/>
+            <point key="canvasLocation" x="2368.8000000000002" y="2247.5262368815593"/>
         </scene>
         <!--Hadith of the Day-->
         <scene sceneID="U9K-2L-pW7">
@@ -1468,7 +1512,7 @@ We request you to kindly provide us your valuable feedback by writing to us in t
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PCN-2v-S14" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1624.8" y="2948.2758620689656"/>
+            <point key="canvasLocation" x="2564" y="2948.2758620689656"/>
         </scene>
         <!--Our Initiatives-->
         <scene sceneID="SKV-Wx-R9d">
@@ -1525,7 +1569,7 @@ We request you to kindly provide us your valuable feedback by writing to us in t
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EjG-Rv-O7k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3436" y="2949.1754122938532"/>
+            <point key="canvasLocation" x="4375.1999999999998" y="2949.1754122938532"/>
         </scene>
         <!--Company View Controller-->
         <scene sceneID="CC1-7P-urT">
@@ -1558,7 +1602,7 @@ We request you to kindly provide us your valuable feedback by writing to us in t
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HLG-3J-Fpb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4229.6000000000004" y="2948.2758620689656"/>
+            <point key="canvasLocation" x="5168.8000000000002" y="2948.2758620689656"/>
         </scene>
         <!--Monthly Kit-->
         <scene sceneID="duu-Jv-LAZ">
@@ -1595,7 +1639,7 @@ We request you to kindly provide us your valuable feedback by writing to us in t
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V6g-zv-dLL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="686" y="2248"/>
+            <point key="canvasLocation" x="1624.8" y="2247.5262368815593"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="m5f-Di-y7x">
@@ -1669,7 +1713,7 @@ We request you to kindly provide us your valuable feedback by writing to us in t
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b4F-Jq-vGO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="685.60000000000002" y="2947.3763118440784"/>
+            <point key="canvasLocation" x="1624.8" y="2947.3763118440784"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OPd-HC-XNb">
@@ -1687,7 +1731,7 @@ We request you to kindly provide us your valuable feedback by writing to us in t
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rGW-uR-P76" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2496.8000000000002" y="2949.1754122938532"/>
+            <point key="canvasLocation" x="3436" y="2949.1754122938532"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AIC-cT-AxN">
@@ -1706,6 +1750,24 @@ We request you to kindly provide us your valuable feedback by writing to us in t
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7ZL-OQ-k1c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="8773.6000000000004" y="-888.30584707646187"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="QZ3-n0-VbX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GZU-Fy-zhi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NXd-c1-1oz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="yUa-OI-lzR" kind="relationship" relationship="rootViewController" id="wPs-lT-Hgg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IxB-Hl-WIH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-114.40000000000001" y="2526.3868065967017"/>
         </scene>
     </scenes>
     <resources>
