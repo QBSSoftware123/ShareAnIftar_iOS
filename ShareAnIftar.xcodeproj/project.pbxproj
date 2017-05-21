@@ -13,6 +13,12 @@
 		7B6E43511E9A98C400AB15D0 /* SIANetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6E43501E9A98C400AB15D0 /* SIANetworkService.swift */; };
 		7B8982ED1ED077D300B01B19 /* SAILoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8982EC1ED077D300B01B19 /* SAILoginViewController.swift */; };
 		7B8982EF1ED086A200B01B19 /* SAIOTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8982EE1ED086A200B01B19 /* SAIOTPViewController.swift */; };
+		7B8982F11ED16F6C00B01B19 /* SAIHadithViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8982F01ED16F6C00B01B19 /* SAIHadithViewController.swift */; };
+		7B8982F31ED16F8000B01B19 /* SAIDuaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8982F21ED16F8000B01B19 /* SAIDuaViewController.swift */; };
+		7B8982F81ED176FE00B01B19 /* SAIDuaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8982F61ED176FE00B01B19 /* SAIDuaTableViewCell.swift */; };
+		7B8982F91ED176FE00B01B19 /* SAIDuaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B8982F71ED176FE00B01B19 /* SAIDuaTableViewCell.xib */; };
+		7B8982FC1ED17D5600B01B19 /* SAIHadithTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8982FA1ED17D5600B01B19 /* SAIHadithTableViewCell.swift */; };
+		7B8982FD1ED17D5600B01B19 /* SAIHadithTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B8982FB1ED17D5600B01B19 /* SAIHadithTableViewCell.xib */; };
 		7BA55E2C1ECE088E00A3052A /* Services.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7BA55E2B1ECE088E00A3052A /* Services.plist */; };
 		7BA55E2E1ECE0B1C00A3052A /* SIATransactionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA55E2D1ECE0B1C00A3052A /* SIATransactionManager.swift */; };
 		96F7D4571E91346D00B23325 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F7D4561E91346D00B23325 /* AppDelegate.swift */; };
@@ -52,6 +58,12 @@
 		7B6E43501E9A98C400AB15D0 /* SIANetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SIANetworkService.swift; sourceTree = "<group>"; };
 		7B8982EC1ED077D300B01B19 /* SAILoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAILoginViewController.swift; sourceTree = "<group>"; };
 		7B8982EE1ED086A200B01B19 /* SAIOTPViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAIOTPViewController.swift; sourceTree = "<group>"; };
+		7B8982F01ED16F6C00B01B19 /* SAIHadithViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAIHadithViewController.swift; sourceTree = "<group>"; };
+		7B8982F21ED16F8000B01B19 /* SAIDuaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAIDuaViewController.swift; sourceTree = "<group>"; };
+		7B8982F61ED176FE00B01B19 /* SAIDuaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAIDuaTableViewCell.swift; sourceTree = "<group>"; };
+		7B8982F71ED176FE00B01B19 /* SAIDuaTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SAIDuaTableViewCell.xib; sourceTree = "<group>"; };
+		7B8982FA1ED17D5600B01B19 /* SAIHadithTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAIHadithTableViewCell.swift; sourceTree = "<group>"; };
+		7B8982FB1ED17D5600B01B19 /* SAIHadithTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SAIHadithTableViewCell.xib; sourceTree = "<group>"; };
 		7BA55E2B1ECE088E00A3052A /* Services.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Services.plist; sourceTree = "<group>"; };
 		7BA55E2D1ECE0B1C00A3052A /* SIATransactionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SIATransactionManager.swift; sourceTree = "<group>"; };
 		96F7D4531E91346D00B23325 /* ShareAnIftar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareAnIftar.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,6 +119,24 @@
 				7B8982EE1ED086A200B01B19 /* SAIOTPViewController.swift */,
 			);
 			path = "Login Page";
+			sourceTree = "<group>";
+		};
+		7B8982F41ED176D600B01B19 /* Dua Cell */ = {
+			isa = PBXGroup;
+			children = (
+				7B8982F61ED176FE00B01B19 /* SAIDuaTableViewCell.swift */,
+				7B8982F71ED176FE00B01B19 /* SAIDuaTableViewCell.xib */,
+			);
+			path = "Dua Cell";
+			sourceTree = "<group>";
+		};
+		7B8982F51ED176D600B01B19 /* Hadith Cell */ = {
+			isa = PBXGroup;
+			children = (
+				7B8982FA1ED17D5600B01B19 /* SAIHadithTableViewCell.swift */,
+				7B8982FB1ED17D5600B01B19 /* SAIHadithTableViewCell.xib */,
+			);
+			path = "Hadith Cell";
 			sourceTree = "<group>";
 		};
 		96F7D44A1E91346D00B23325 = {
@@ -296,7 +326,11 @@
 		D3A0E8091E978D2F00FB26C6 /* Gem */ = {
 			isa = PBXGroup;
 			children = (
+				7B8982F41ED176D600B01B19 /* Dua Cell */,
+				7B8982F51ED176D600B01B19 /* Hadith Cell */,
 				D3A0E80B1E978D5900FB26C6 /* SAIGemViewController.swift */,
+				7B8982F01ED16F6C00B01B19 /* SAIHadithViewController.swift */,
+				7B8982F21ED16F8000B01B19 /* SAIDuaViewController.swift */,
 			);
 			path = Gem;
 			sourceTree = "<group>";
@@ -386,6 +420,8 @@
 			files = (
 				96F7D4611E91346D00B23325 /* LaunchScreen.storyboard in Resources */,
 				96F7D45E1E91346D00B23325 /* Assets.xcassets in Resources */,
+				7B8982FD1ED17D5600B01B19 /* SAIHadithTableViewCell.xib in Resources */,
+				7B8982F91ED176FE00B01B19 /* SAIDuaTableViewCell.xib in Resources */,
 				96F7D45C1E91346D00B23325 /* Main.storyboard in Resources */,
 				7BA55E2C1ECE088E00A3052A /* Services.plist in Resources */,
 				96F7D4751E990F9600B23325 /* iftar.html in Resources */,
@@ -411,9 +447,11 @@
 				D3A0E7FF1E953A0600FB26C6 /* SAIConstants.swift in Sources */,
 				D3A0E8021E96432D00FB26C6 /* SAIIftarDonateViewController.swift in Sources */,
 				D3A0E8431E9A358E00FB26C6 /* KCFABManager.swift in Sources */,
+				7B8982F11ED16F6C00B01B19 /* SAIHadithViewController.swift in Sources */,
 				D3A0E80E1E978D6900FB26C6 /* SAIVideoViewController.swift in Sources */,
 				D3A0E8471E9A358E00FB26C6 /* KCFloatingActionButtonDelegate.swift in Sources */,
 				D3A0E7EB1E950BE100FB26C6 /* SAIEidViewController.swift in Sources */,
+				7B8982F81ED176FE00B01B19 /* SAIDuaTableViewCell.swift in Sources */,
 				96F7D4571E91346D00B23325 /* AppDelegate.swift in Sources */,
 				D3A0E7FC1E9527EF00FB26C6 /* SAISideMenuTableViewController.swift in Sources */,
 				96F7D46E1E9151E000B23325 /* SAIViewController.swift in Sources */,
@@ -422,6 +460,7 @@
 				D3A0E8461E9A358E00FB26C6 /* KCFloatingActionButton.swift in Sources */,
 				D3A0E8481E9A358E00FB26C6 /* KCFloatingActionButtonItem.swift in Sources */,
 				D3A0E80C1E978D5900FB26C6 /* SAIGemViewController.swift in Sources */,
+				7B8982FC1ED17D5600B01B19 /* SAIHadithTableViewCell.swift in Sources */,
 				7B6E434B1E9A82DC00AB15D0 /* SIARequestProtocol.swift in Sources */,
 				D3A0E8441E9A358E00FB26C6 /* KCFABViewController.swift in Sources */,
 				7B8982EF1ED086A200B01B19 /* SAIOTPViewController.swift in Sources */,
@@ -430,6 +469,7 @@
 				7B6E434F1E9A8B0D00AB15D0 /* SIANetworkRequest.swift in Sources */,
 				D3A0E7D91E94C95E00FB26C6 /* SAITabBarController.swift in Sources */,
 				D3A0E8081E978CD800FB26C6 /* SAIFundViewController.swift in Sources */,
+				7B8982F31ED16F8000B01B19 /* SAIDuaViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

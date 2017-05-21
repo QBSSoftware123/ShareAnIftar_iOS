@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HadithCell" rowHeight="194" id="KGk-i7-Jjw" customClass="SAIHadithTableViewCell" customModule="ShareAnIftar" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="389" height="194"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="389" height="194"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSY-1s-lN8">
+                        <rect key="frame" x="124" y="8" width="142" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="142" id="gtX-ss-wqJ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Our Lord! Accept (this service) from us: For Thou art the All-Hearing, the All-knowing [2:127]" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Frr-Lw-KqV">
+                        <rect key="frame" x="4" y="36" width="383" height="106"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" priority="750" constant="106" id="p13-OF-Ct0"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="63T-DV-thk">
+                        <rect key="frame" x="4" y="150" width="94" height="34"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="34" id="7bJ-KH-zpa"/>
+                            <constraint firstAttribute="width" constant="94" id="Fub-KR-lA1"/>
+                        </constraints>
+                        <state key="normal" title="Read More..."/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ma0-de-ZIa">
+                        <rect key="frame" x="333" y="150" width="40" height="35"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="0Ts-fd-2oA"/>
+                        </constraints>
+                        <state key="normal" title="Share"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="Frr-Lw-KqV" secondAttribute="trailing" constant="-6" id="04c-BL-QUm"/>
+                    <constraint firstItem="ma0-de-ZIa" firstAttribute="baseline" secondItem="63T-DV-thk" secondAttribute="baseline" constant="0.5" id="39x-IK-BHM"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="ma0-de-ZIa" secondAttribute="trailing" constant="8" id="NHx-na-eXU"/>
+                    <constraint firstItem="hSY-1s-lN8" firstAttribute="centerX" secondItem="Frr-Lw-KqV" secondAttribute="centerX" id="Yiw-vJ-zjk"/>
+                    <constraint firstItem="hSY-1s-lN8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="lHB-4y-FF1"/>
+                    <constraint firstItem="ma0-de-ZIa" firstAttribute="top" secondItem="Frr-Lw-KqV" secondAttribute="bottom" constant="8" id="mzo-Cj-fhs"/>
+                    <constraint firstItem="Frr-Lw-KqV" firstAttribute="leading" secondItem="63T-DV-thk" secondAttribute="leading" id="nKB-pE-DTL"/>
+                    <constraint firstItem="Frr-Lw-KqV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-4" id="ur9-Y3-Rhl"/>
+                    <constraint firstItem="63T-DV-thk" firstAttribute="top" secondItem="Frr-Lw-KqV" secondAttribute="bottom" constant="8" id="vQ6-C5-WvP"/>
+                    <constraint firstItem="Frr-Lw-KqV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="36" id="wpV-q3-qQZ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="36.5" y="67"/>
+        </tableViewCell>
+    </objects>
+</document>

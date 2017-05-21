@@ -21,8 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBar.appearance().tintColor = SAIColorConstants.SAIAppGreenColor
         
         //retrive
-        let loggedIn : String? = UserDefaults.standard.string(forKey: "LoggedIn")
-        
+     //   let loggedIn : String? = UserDefaults.standard.string(forKey: "LoggedIn")
+    /*
         if loggedIn == "YES"
         {
             let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -34,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.window?.rootViewController = mainStoryboard.instantiateViewController(withIdentifier: "LoginVC")
         }
         
-
+*/
 
         return true
     }

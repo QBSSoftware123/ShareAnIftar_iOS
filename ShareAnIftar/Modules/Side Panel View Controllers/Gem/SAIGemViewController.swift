@@ -8,12 +8,12 @@
 
 import UIKit
 
-class SAIGemViewController: SAIViewController {
+class SAIGemViewController: SAITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        addBlueGradientColor(GradientColor:  SAIGradientColorConstants.SAIBlueGradient)
+       // addBlueGradientColor(GradientColor:  SAIGradientColorConstants.SAIBlueGradient)
     }
 }
