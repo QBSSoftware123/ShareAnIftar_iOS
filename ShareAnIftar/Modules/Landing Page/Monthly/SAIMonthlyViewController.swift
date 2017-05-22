@@ -15,7 +15,7 @@ class SAIMonthlyViewController: SAIViewController {
         super.viewDidLoad()
         
         // Load HTML Page
-        loadHTML(pageName: "monthlykits")
+        loadHTML(pageName: "ramadankit1")
         
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
 

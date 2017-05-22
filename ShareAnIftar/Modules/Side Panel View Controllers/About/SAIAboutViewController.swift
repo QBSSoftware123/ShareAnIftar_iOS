@@ -17,7 +17,7 @@ class SAIAboutViewController: SAIViewController {
         // Do any additional setup after loading the view.
                 navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         
-        loadHTML(pageName: "about")
+        loadHTML(pageName: "about1")
     }
 
     @IBAction override func dismissVC(_ sender: Any)

@@ -41,4 +41,4 @@ struct SAIGradientColorConstants
 }
 
 //Picker Constants
-let SAISortByPickerList = ["Bangalore","Mysore","Mandya","Belgaum"]
+let SAISortByPickerList = ["Bangalore","Bandhalli","Jagamkote","Mysore","Tumkur","Yadgir"]

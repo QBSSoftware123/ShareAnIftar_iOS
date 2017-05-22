@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SAIIftarDonateViewController: SAIViewController {
+class SAIIftarDonateViewController: SAIViewController , UITextFieldDelegate {
     
     // IBOutlet for Select Location Button
     @IBOutlet weak var selectLocationButton: UIButton!
@@ -22,12 +22,17 @@ class SAIIftarDonateViewController: SAIViewController {
     // View Controller Title
     @IBOutlet weak var VCTitle: UILabel!
     
+    @IBOutlet weak var totalAmount: UILabel!
+    
+    @IBOutlet weak var iftarCountTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Load the view with blue gradient color.
         addBlueGradientColor(GradientColor: SAIGradientColorConstants.SAIBlueGradient)
         
+        self.iftarCountTextField.delegate = self
         // Round Edged Button
         selectLocationButton.layer.cornerRadius = 5
         selectLocationButton.layer.borderWidth = 1
@@ -75,11 +80,42 @@ class SAIIftarDonateViewController: SAIViewController {
         alertController.addAction(location3)
 
         
+        let location4 = UIAlertAction(title: SAISortByPickerList[4], style: .default, handler:{ action -> Void in
+            let titleString =  SAISortByPickerList[4]
+            self.selectLocationButton.setTitle(titleString, for: .normal)
+        })
+        alertController.addAction(location4)
+        
+        let location5 = UIAlertAction(title: SAISortByPickerList[5], style: .default, handler:{ action -> Void in
+            let titleString =  SAISortByPickerList[5]
+            self.selectLocationButton.setTitle(titleString, for: .normal)
+        })
+        alertController.addAction(location5)
+        
         present(alertController, animated: true, completion: {
             let view = (alertController.view.superview?.subviews[1])! as UIView
             view.isUserInteractionEnabled = true
             view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.alertControllerBackgroundTapped)))
         })
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField)
+    {
+    }
+    
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        return true
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        print("Sallam2")
+/*
+        let a = self.iftarCountTextField.text
+        let conversionRate = 70
+        let b = Int(a!)! * conversionRate //use Double(a!)! instead of Int(a!)! if your are using a floating point value for "conversionRate" variable.
+        totalAmount.text = ("\(b)")
+ */
+                return true;
     }
     
     func alertControllerBackgroundTapped()

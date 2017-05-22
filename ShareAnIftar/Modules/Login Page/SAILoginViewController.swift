@@ -9,7 +9,7 @@
 import UIKit
 
 class SAILoginViewController: UIViewController {
-
+    var userID : String?
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,7 +23,7 @@ class SAILoginViewController: UIViewController {
     
     @IBAction func generateOTP(_ sender: Any)
     {
-        SIANetworkService.defaultManger.sentRequestFor(serviceName: "generate_otp", withParameters: "user_name=Karthik&phone=9738953613", completionHandler:{(response:Any?, error:Error?) in
+        SIANetworkService.defaultManger.sentRequestFor(serviceName: "generate_otp", withParameters: "user_name=Tauqeer&phone=9945760839", completionHandler:{(response:Any?, error:Error?) in
             
             //Display on main queue
             DispatchQueue.main.async { [unowned self] in
@@ -34,12 +34,16 @@ class SAILoginViewController: UIViewController {
                 //Populate the data
                 let responseDict : [String:Any] = response as! [String:Any]
                 //self.counterValue = responseDict["count"] as! String
-               // self.counterTextField.text = self.counterValue
-               // print(self.counterValue)
-                 print("Response: \(responseDict)")
+                // self.counterTextField.text = self.counterValue
+                // print(self.counterValue)
+                self.userID = responseDict ["user_id"] as? String
+                UserDefaults.standard.set(self.userID, forKey: "UserID") //setObject
+                print("\(String(describing: self.userID))")
+
+                print("Response: \(responseDict)")
                 
             }
         })
-
+        
     }
 }

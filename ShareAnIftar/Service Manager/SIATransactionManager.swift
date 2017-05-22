@@ -35,11 +35,13 @@ class SIATransactionManager: NSObject {
         var serviceURL: String?
         
         switch service {
-        case "validate_otp", "user_profile":
+        case  "user_profile":
             serviceURL = constructURLFor(service: service)
         case "smile_counter":
             serviceURL = "\(baseURL)\(service).php"
         case "generate_otp":
+            serviceURL = "\(baseURL)\(service).php?\(parameters)"
+        case "validate_otp":
             serviceURL = "\(baseURL)\(service).php?\(parameters)"
         default:
             // Error handling
