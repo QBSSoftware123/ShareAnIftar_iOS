@@ -52,20 +52,24 @@ class SAIHomeScreenViewController: SAIViewController {
     func loadCounter()
     {
         
+        //Add progress before you start fetching
+        HUD.show(HUDContentType.labeledRotatingImage(image:  UIImage(named: "progress_circular"), title:"" , subtitle:"Fetching Count…"))
+        
+        
         SIANetworkService.defaultManger.sentRequestFor(serviceName: "smile_counter", withParameters: "No", completionHandler:{(response:Any?, error:Error?) in
             
             //Display on main queue
             DispatchQueue.main.async { [unowned self] in
-                
                 //Remove Progress
-               // HUD.hide()
+                HUD.hide()
+                
                 
                 //Populate the data
                 let responseDict : [String:Any] = response as! [String:Any]
                 self.counterValue = responseDict["count"] as! String
                 self.counterTextField.text = self.counterValue
                 print(self.counterValue)
-               // print("Response: \(responseDict)")
+                // print("Response: \(responseDict)")
                 
             }
         })

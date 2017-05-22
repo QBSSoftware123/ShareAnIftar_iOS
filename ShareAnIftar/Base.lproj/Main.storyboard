@@ -812,7 +812,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="12345" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HQC-Sk-gSh">
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="...." borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HQC-Sk-gSh">
                                 <rect key="frame" x="114" y="445" width="146" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" priority="750" constant="146" id="QjK-hu-V9e"/>
@@ -1462,7 +1462,7 @@
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OJr-FH-xVv">
                                         <rect key="frame" x="8" y="18" width="327" height="469"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <mutableString key="text">Note from the Promoters
+                                        <string key="text">Note from the Promoters
 
   Assalaamu Alaikum Wa Rahmatullahi Wa Barakatuhu Brothers and Sisters.
   It gives us great pleasure in launching this app for the benefit of the Ummah.
@@ -1470,7 +1470,7 @@
   We have humbly tried to ensure seamless fundraising and donation distribution system through this app and have launched a very basic version of the same.
 There are a lot of enhancements and features which have been added and will be continuously added in the time to come, in sha’Allah. 
 We request you to kindly provide us your valuable feedback by writing to us in the donation section or reach us at +91 9986 021 214.\n\n We would be happy to receive your feedback and answer any queries that you may have.
-    Team – Empowering Ummah Inc.,</mutableString>
+    Team – Empowering Ummah Inc.,</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>

@@ -29,6 +29,23 @@
 		7B8983171ED1D00000B01B19 /* about.html in Resources */ = {isa = PBXBuildFile; fileRef = 7B8983161ED1D00000B01B19 /* about.html */; };
 		7BA55E2C1ECE088E00A3052A /* Services.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7BA55E2B1ECE088E00A3052A /* Services.plist */; };
 		7BA55E2E1ECE0B1C00A3052A /* SIATransactionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA55E2D1ECE0B1C00A3052A /* SIATransactionManager.swift */; };
+		7BC0FC291ED319A7008E845D /* FrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0FC171ED319A7008E845D /* FrameView.swift */; };
+		7BC0FC2A1ED319A7008E845D /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0FC181ED319A7008E845D /* HUD.swift */; };
+		7BC0FC2B1ED319A7008E845D /* PKHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0FC1A1ED319A7008E845D /* PKHUD.swift */; };
+		7BC0FC2C1ED319A7008E845D /* PKHUDAnimating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0FC1B1ED319A7008E845D /* PKHUDAnimating.swift */; };
+		7BC0FC2D1ED319A7008E845D /* PKHUDAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0FC1C1ED319A7008E845D /* PKHUDAnimation.swift */; };
+		7BC0FC2E1ED319A7008E845D /* PKHUDAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0FC1D1ED319A7008E845D /* PKHUDAssets.swift */; };
+		7BC0FC2F1ED319A7008E845D /* PKHUDErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0FC1E1ED319A7008E845D /* PKHUDErrorView.swift */; };
+		7BC0FC301ED319A7008E845D /* PKHUDProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0FC1F1ED319A7008E845D /* PKHUDProgressView.swift */; };
+		7BC0FC311ED319A7008E845D /* PKHUDRotatingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0FC201ED319A7008E845D /* PKHUDRotatingImageView.swift */; };
+		7BC0FC321ED319A7008E845D /* PKHUDSquareBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0FC211ED319A7008E845D /* PKHUDSquareBaseView.swift */; };
+		7BC0FC331ED319A7008E845D /* PKHUDSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0FC221ED319A7008E845D /* PKHUDSuccessView.swift */; };
+		7BC0FC341ED319A7008E845D /* PKHUDSystemActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0FC231ED319A7008E845D /* PKHUDSystemActivityIndicatorView.swift */; };
+		7BC0FC351ED319A7008E845D /* PKHUDTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0FC241ED319A7008E845D /* PKHUDTextView.swift */; };
+		7BC0FC361ED319A7008E845D /* PKHUDWideBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0FC251ED319A7008E845D /* PKHUDWideBaseView.swift */; };
+		7BC0FC371ED319A7008E845D /* PKImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BC0FC261ED319A7008E845D /* PKImages.xcassets */; };
+		7BC0FC381ED319A7008E845D /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0FC271ED319A7008E845D /* Window.swift */; };
+		7BC0FC391ED319A7008E845D /* WindowRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0FC281ED319A7008E845D /* WindowRootViewController.swift */; };
 		96F7D4571E91346D00B23325 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F7D4561E91346D00B23325 /* AppDelegate.swift */; };
 		96F7D4591E91346D00B23325 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F7D4581E91346D00B23325 /* ViewController.swift */; };
 		96F7D45C1E91346D00B23325 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96F7D45A1E91346D00B23325 /* Main.storyboard */; };
@@ -82,6 +99,24 @@
 		7B8983161ED1D00000B01B19 /* about.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = about.html; sourceTree = "<group>"; };
 		7BA55E2B1ECE088E00A3052A /* Services.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Services.plist; sourceTree = "<group>"; };
 		7BA55E2D1ECE0B1C00A3052A /* SIATransactionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SIATransactionManager.swift; sourceTree = "<group>"; };
+		7BC0FC171ED319A7008E845D /* FrameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrameView.swift; sourceTree = "<group>"; };
+		7BC0FC181ED319A7008E845D /* HUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUD.swift; sourceTree = "<group>"; };
+		7BC0FC191ED319A7008E845D /* PKHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKHUD.h; sourceTree = "<group>"; };
+		7BC0FC1A1ED319A7008E845D /* PKHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUD.swift; sourceTree = "<group>"; };
+		7BC0FC1B1ED319A7008E845D /* PKHUDAnimating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUDAnimating.swift; sourceTree = "<group>"; };
+		7BC0FC1C1ED319A7008E845D /* PKHUDAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUDAnimation.swift; sourceTree = "<group>"; };
+		7BC0FC1D1ED319A7008E845D /* PKHUDAssets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUDAssets.swift; sourceTree = "<group>"; };
+		7BC0FC1E1ED319A7008E845D /* PKHUDErrorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUDErrorView.swift; sourceTree = "<group>"; };
+		7BC0FC1F1ED319A7008E845D /* PKHUDProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUDProgressView.swift; sourceTree = "<group>"; };
+		7BC0FC201ED319A7008E845D /* PKHUDRotatingImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUDRotatingImageView.swift; sourceTree = "<group>"; };
+		7BC0FC211ED319A7008E845D /* PKHUDSquareBaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUDSquareBaseView.swift; sourceTree = "<group>"; };
+		7BC0FC221ED319A7008E845D /* PKHUDSuccessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUDSuccessView.swift; sourceTree = "<group>"; };
+		7BC0FC231ED319A7008E845D /* PKHUDSystemActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUDSystemActivityIndicatorView.swift; sourceTree = "<group>"; };
+		7BC0FC241ED319A7008E845D /* PKHUDTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUDTextView.swift; sourceTree = "<group>"; };
+		7BC0FC251ED319A7008E845D /* PKHUDWideBaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUDWideBaseView.swift; sourceTree = "<group>"; };
+		7BC0FC261ED319A7008E845D /* PKImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = PKImages.xcassets; sourceTree = "<group>"; };
+		7BC0FC271ED319A7008E845D /* Window.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
+		7BC0FC281ED319A7008E845D /* WindowRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowRootViewController.swift; sourceTree = "<group>"; };
 		96F7D4531E91346D00B23325 /* ShareAnIftar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareAnIftar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96F7D4561E91346D00B23325 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96F7D4581E91346D00B23325 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -196,6 +231,31 @@
 				7B8983141ED1C97300B01B19 /* SAIAboutViewController.swift */,
 			);
 			path = About;
+			sourceTree = "<group>";
+		};
+		7BC0FC161ED31992008E845D /* PK HUD */ = {
+			isa = PBXGroup;
+			children = (
+				7BC0FC171ED319A7008E845D /* FrameView.swift */,
+				7BC0FC181ED319A7008E845D /* HUD.swift */,
+				7BC0FC191ED319A7008E845D /* PKHUD.h */,
+				7BC0FC1A1ED319A7008E845D /* PKHUD.swift */,
+				7BC0FC1B1ED319A7008E845D /* PKHUDAnimating.swift */,
+				7BC0FC1C1ED319A7008E845D /* PKHUDAnimation.swift */,
+				7BC0FC1D1ED319A7008E845D /* PKHUDAssets.swift */,
+				7BC0FC1E1ED319A7008E845D /* PKHUDErrorView.swift */,
+				7BC0FC1F1ED319A7008E845D /* PKHUDProgressView.swift */,
+				7BC0FC201ED319A7008E845D /* PKHUDRotatingImageView.swift */,
+				7BC0FC211ED319A7008E845D /* PKHUDSquareBaseView.swift */,
+				7BC0FC221ED319A7008E845D /* PKHUDSuccessView.swift */,
+				7BC0FC231ED319A7008E845D /* PKHUDSystemActivityIndicatorView.swift */,
+				7BC0FC241ED319A7008E845D /* PKHUDTextView.swift */,
+				7BC0FC251ED319A7008E845D /* PKHUDWideBaseView.swift */,
+				7BC0FC261ED319A7008E845D /* PKImages.xcassets */,
+				7BC0FC271ED319A7008E845D /* Window.swift */,
+				7BC0FC281ED319A7008E845D /* WindowRootViewController.swift */,
+			);
+			path = "PK HUD";
 			sourceTree = "<group>";
 		};
 		96F7D44A1E91346D00B23325 = {
@@ -324,6 +384,7 @@
 		D3A0E7F21E9519F100FB26C6 /* ExternalLibs */ = {
 			isa = PBXGroup;
 			children = (
+				7BC0FC161ED31992008E845D /* PK HUD */,
 				D3A0E83B1E9A355400FB26C6 /* Floating Button */,
 				D3A0E7F31E951A1400FB26C6 /* Side Menu */,
 			);
@@ -488,6 +549,7 @@
 				7B89830C1ED1A4D700B01B19 /* SAIInitiativesTableViewCell.xib in Resources */,
 				7B8982F91ED176FE00B01B19 /* SAIDuaTableViewCell.xib in Resources */,
 				96F7D45C1E91346D00B23325 /* Main.storyboard in Resources */,
+				7BC0FC371ED319A7008E845D /* PKImages.xcassets in Resources */,
 				7BA55E2C1ECE088E00A3052A /* Services.plist in Resources */,
 				96F7D4751E990F9600B23325 /* iftar.html in Resources */,
 				7B8983171ED1D00000B01B19 /* about.html in Resources */,
@@ -508,13 +570,17 @@
 				D3A0E7EF1E950C0700FB26C6 /* SAIIftarViewController.swift in Sources */,
 				7B8983071ED1A47300B01B19 /* SAIInitiativesViewController.swift in Sources */,
 				7B6E43511E9A98C400AB15D0 /* SIANetworkService.swift in Sources */,
+				7BC0FC331ED319A7008E845D /* PKHUDSuccessView.swift in Sources */,
 				7B8982ED1ED077D300B01B19 /* SAILoginViewController.swift in Sources */,
 				D3A0E7ED1E950BF500FB26C6 /* SAIHomeScreenViewController.swift in Sources */,
 				D3A0E8451E9A358E00FB26C6 /* KCFABWindow.swift in Sources */,
+				7BC0FC291ED319A7008E845D /* FrameView.swift in Sources */,
 				D3A0E7FF1E953A0600FB26C6 /* SAIConstants.swift in Sources */,
+				7BC0FC321ED319A7008E845D /* PKHUDSquareBaseView.swift in Sources */,
 				D3A0E8021E96432D00FB26C6 /* SAIIftarDonateViewController.swift in Sources */,
 				D3A0E8431E9A358E00FB26C6 /* KCFABManager.swift in Sources */,
 				7B8982F11ED16F6C00B01B19 /* SAIHadithViewController.swift in Sources */,
+				7BC0FC2E1ED319A7008E845D /* PKHUDAssets.swift in Sources */,
 				7B89830E1ED1A95D00B01B19 /* SAICompanyViewController.swift in Sources */,
 				D3A0E80E1E978D6900FB26C6 /* SAIVideoViewController.swift in Sources */,
 				D3A0E8471E9A358E00FB26C6 /* KCFloatingActionButtonDelegate.swift in Sources */,
@@ -524,20 +590,32 @@
 				96F7D4571E91346D00B23325 /* AppDelegate.swift in Sources */,
 				7B8983111ED1BBF400B01B19 /* SAIUserProfileViewController.swift in Sources */,
 				D3A0E7FC1E9527EF00FB26C6 /* SAISideMenuTableViewController.swift in Sources */,
+				7BC0FC2B1ED319A7008E845D /* PKHUD.swift in Sources */,
 				96F7D46E1E9151E000B23325 /* SAIViewController.swift in Sources */,
 				7B6E434D1E9A830E00AB15D0 /* SIAHTTPMethod.swift in Sources */,
+				7BC0FC2C1ED319A7008E845D /* PKHUDAnimating.swift in Sources */,
 				D3A0E7FA1E95276900FB26C6 /* SAIRevealViewController.swift in Sources */,
 				D3A0E8461E9A358E00FB26C6 /* KCFloatingActionButton.swift in Sources */,
 				D3A0E8481E9A358E00FB26C6 /* KCFloatingActionButtonItem.swift in Sources */,
+				7BC0FC361ED319A7008E845D /* PKHUDWideBaseView.swift in Sources */,
 				D3A0E80C1E978D5900FB26C6 /* SAIGemViewController.swift in Sources */,
 				7B8982FC1ED17D5600B01B19 /* SAIHadithTableViewCell.swift in Sources */,
 				7B6E434B1E9A82DC00AB15D0 /* SIARequestProtocol.swift in Sources */,
 				D3A0E8441E9A358E00FB26C6 /* KCFABViewController.swift in Sources */,
+				7BC0FC2F1ED319A7008E845D /* PKHUDErrorView.swift in Sources */,
 				7B8982EF1ED086A200B01B19 /* SAIOTPViewController.swift in Sources */,
+				7BC0FC301ED319A7008E845D /* PKHUDProgressView.swift in Sources */,
 				D3A0E7F11E950C1600FB26C6 /* SAIMonthlyViewController.swift in Sources */,
+				7BC0FC2D1ED319A7008E845D /* PKHUDAnimation.swift in Sources */,
 				7B8983001ED18FCA00B01B19 /* SAIPromotersViewController.swift in Sources */,
+				7BC0FC351ED319A7008E845D /* PKHUDTextView.swift in Sources */,
 				7B8983151ED1C97300B01B19 /* SAIAboutViewController.swift in Sources */,
+				7BC0FC311ED319A7008E845D /* PKHUDRotatingImageView.swift in Sources */,
+				7BC0FC341ED319A7008E845D /* PKHUDSystemActivityIndicatorView.swift in Sources */,
+				7BC0FC381ED319A7008E845D /* Window.swift in Sources */,
 				D3A0E7F81E951A5A00FB26C6 /* SWRevealViewController.m in Sources */,
+				7BC0FC391ED319A7008E845D /* WindowRootViewController.swift in Sources */,
+				7BC0FC2A1ED319A7008E845D /* HUD.swift in Sources */,
 				7B6E434F1E9A8B0D00AB15D0 /* SIANetworkRequest.swift in Sources */,
 				D3A0E7D91E94C95E00FB26C6 /* SAITabBarController.swift in Sources */,
 				D3A0E8081E978CD800FB26C6 /* SAIFundViewController.swift in Sources */,
