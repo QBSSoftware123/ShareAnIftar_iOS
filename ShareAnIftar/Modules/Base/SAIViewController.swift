@@ -47,7 +47,13 @@ class SAIViewController: UIViewController {
     {
         let url = Bundle.main.url(forResource: pageName, withExtension: "html")
         let myRequest = NSURLRequest(url: url!)
-        self.htmlWebView.loadRequest(myRequest as URLRequest)
+        DispatchQueue.global(qos: .background).async {
+            // Background Thread
+            DispatchQueue.main.async {
+                // Run UI Updates
+                self.htmlWebView.loadRequest(myRequest as URLRequest)
+            }
+        }
     }
     
     @IBAction func dismissVC(_ sender: Any)
