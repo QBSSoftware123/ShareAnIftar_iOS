@@ -49,10 +49,12 @@ class SAIIftarDonateViewController: SAIViewController , UITextFieldDelegate {
         if eidVC
         {
             VCTitle.text = "Edit Kits at 600/-"
+            totalAmount.text = "600"
         }
         if monthlyVC
         {
             VCTitle.text = "Monthly Kits at 2000/-"
+            totalAmount.text = "2000"
         }
         
     }
@@ -106,23 +108,94 @@ class SAIIftarDonateViewController: SAIViewController , UITextFieldDelegate {
         })
     }
     
-    func textFieldDidEndEditing(_ textField: UITextField)
-    {
+    
+    func updateTextLabelValue() {
+        if let value = textLabelValue {
+            totalAmount.text = numberFormatter.string(from: NSNumber(value: value))
+        } else {
+            totalAmount.text = ""
+        }
     }
     
-    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-        return true
+    var textLabelValue: Int32? {
+        if let value = textFieldValue {
+            if eidVC
+            {
+                return value * 600
+            }
+            if monthlyVC
+            {
+                return value * 2100
+            }
+            return value * 70
+        } else {
+            return nil
+        }
     }
     
+    let numberFormatter: NumberFormatter = { // Using closure for creating the number formatter
+        let nf = NumberFormatter()
+        nf.numberStyle = .none
+        nf.minimumFractionDigits = 0
+        nf.maximumFractionDigits = 0
+        return nf
+    }()
+
+    
+    var textFieldValue: Int32? {
+        didSet {
+            updateTextLabelValue()
+        }
+    }
+
+    // MARK: Delegate functions
+//    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+//        print("Current Text: \(textField.text)")
+//        print("Replacement Text: \(string)")
+//        // if "textField.text" and "replacementString" have dot(.), then reject the entry, otherwise accept it
+//        let existingTextHasDecimalSeparator = textField.text?.range(of: ".")
+//        let replacementStringHasDecimalSeparator = string.range(of: ".")
+//        
+//        let characterSet = NSCharacterSet.init(charactersIn: "0123456789")
+//        let result = string.rangeOfCharacter(from: characterSet as CharacterSet, options: .caseInsensitive, range: string.startIndex..<string.endIndex)
+//        
+//        if existingTextHasDecimalSeparator != nil &&
+//            replacementStringHasDecimalSeparator != nil &&
+//            result != nil {
+//            return false
+//        }
+//        else {
+//            return true
+//        }
+//    }
+//  
+    @IBAction func textFieldEditingChanged(_ sender: UITextField) {
+        if let text = sender.text, let value = Double(text) {
+            textFieldValue = Int32(value)
+        } else {
+            textFieldValue = nil
+        }
+    }
+  
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        print("Sallam2")
-/*
-        let a = self.iftarCountTextField.text
-        let conversionRate = 70
-        let b = Int(a!)! * conversionRate //use Double(a!)! instead of Int(a!)! if your are using a floating point value for "conversionRate" variable.
-        totalAmount.text = ("\(b)")
- */
-                return true;
+        print("Current Text: \(textField.text)")
+        print("Replacement Text: \(string)")
+        // if "textField.text" and "replacementString" have dot(.), then reject the entry, otherwise accept it
+        let existingTextHasDecimalSeparator = textField.text?.range(of: ".")
+        let replacementStringHasDecimalSeparator = string.range(of: ".")
+        
+        let characterSet = NSCharacterSet.init(charactersIn: "0123456789")
+        let result = string.rangeOfCharacter(from: characterSet as CharacterSet, options: .caseInsensitive, range: string.startIndex..<string.endIndex)
+        
+        if existingTextHasDecimalSeparator != nil &&
+            replacementStringHasDecimalSeparator != nil &&
+            result != nil {
+            return false
+        }
+        else {
+            return true
+        }
+
     }
     
     func alertControllerBackgroundTapped()

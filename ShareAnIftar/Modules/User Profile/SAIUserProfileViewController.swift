@@ -8,10 +8,16 @@
 
 import UIKit
 
-class userProfileModel
+class Model
 {
-    var donationDes : [String] = []
-    var donationAmt : [AnyObject] = []
+    var description: String = ""
+    var value: String = ""
+    
+    init(withDescription description: String?, andValue value: String?) {
+        self.description = description!
+        self.value = value!
+    }
+
 }
 
 class SAIUserProfileViewController: UIViewController , UITableViewDelegate , UITableViewDataSource
@@ -19,9 +25,11 @@ class SAIUserProfileViewController: UIViewController , UITableViewDelegate , UIT
 
     @IBOutlet weak var userDataTableView: UITableView!
     
-    var userModel : userProfileModel?
-    
+    var testModel = [Model]()
     var userId : Int = 0
+    var dataArray : Array = ["","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""]
+    var dataArray1 = ["Total Donations","Total Eid Kits","Total Iftar Kits","Total Ramadan Kits Donated","Total Daily Kits","Total Monthly Kits","Total Donations Towards Education"]
+       var dataArray2 = ["0","0","0","0","0","0","0"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,17 +54,17 @@ class SAIUserProfileViewController: UIViewController , UITableViewDelegate , UIT
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-      return 7
+      return dataArray1.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell : SAIUserTableViewCell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! SAIUserTableViewCell
         
-            cell.donationDescription.text  = "Some Description"
-                //userModel?.donationDes [indexPath.row]
+            cell.donationDescription.text  = dataArray1 [indexPath.row]
+        //userModel?.donationDes [indexPath.row]
        
-            cell.donationData.text = "222"
+            cell.donationData.text = dataArray2 [indexPath.row]
                 //userModel?.donationAmt [indexPath.row] as! String?
         return cell
     }
@@ -83,6 +91,19 @@ class SAIUserProfileViewController: UIViewController , UITableViewDelegate , UIT
 //                self.counterValue = responseDict["count"] as! String
 //                self.counterTextField.text = self.counterValue
 //                print(self.counterValue)
+                
+                for (desc, value) in responseDict
+                {
+                    self.testModel.append(Model.init(withDescription: desc, andValue: value as? String))
+                }
+                
+                print("\nMODEL\n")
+                for test in self.testModel {
+                    self.dataArray = [test.value]
+                    print("\(test.value)")
+                }
+                print("DataArray:\(self.dataArray)")
+                
                  print("Response: \(responseDict)")
                 
             }

@@ -152,6 +152,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
+                                    <action selector="textFieldEditingChanged:" destination="yqM-sq-bbx" eventType="editingChanged" id="khq-ZJ-p7E"/>
                                     <outlet property="delegate" destination="yqM-sq-bbx" id="4Iv-Qk-5hd"/>
                                 </connections>
                             </textField>
@@ -184,7 +185,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="30T-nE-B4M" firstAttribute="top" secondItem="dQE-9d-cXZ" secondAttribute="bottom" constant="31" id="0OW-gL-yLa"/>
                             <constraint firstItem="vHc-wg-4sP" firstAttribute="centerX" secondItem="td6-fQ-qtm" secondAttribute="centerX" id="2yK-JL-MFU"/>
@@ -227,7 +228,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hju-52-wv0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6957.6000000000004" y="307.1964017991005"/>
+            <point key="canvasLocation" x="6932" y="330"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="xst-hY-Z2G">
@@ -446,7 +447,7 @@
                                     <constraint firstAttribute="height" constant="170" id="wZa-OP-tcv"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Karthik" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ai2-SX-gg6">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tauqeer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ai2-SX-gg6">
                                 <rect key="frame" x="25" y="276" width="324" height="21"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                 <nil key="textColor"/>
