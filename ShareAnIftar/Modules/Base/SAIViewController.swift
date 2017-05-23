@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SAIViewController: UIViewController {
+class SAIViewController: UIViewController , UIWebViewDelegate{
     
     // Webview to load HTML Pages.
     @IBOutlet weak var htmlWebView: UIWebView!
@@ -18,6 +18,11 @@ class SAIViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        if (htmlWebView != nil)
+        {
+            self.htmlWebView.delegate = self
+        }
 
     }
     
@@ -45,6 +50,8 @@ class SAIViewController: UIViewController {
     //MARK: - Loading HTML Mehods
     func loadHTML (pageName: String)
     {
+        HUD.show(HUDContentType.labeledRotatingImage(image:  UIImage(named: "progress_circular"), title:"" , subtitle:"Fetching…"))
+
         let url = Bundle.main.url(forResource: pageName, withExtension: "html")
         let myRequest = NSURLRequest(url: url!)
         DispatchQueue.global(qos: .background).async {
@@ -55,6 +62,12 @@ class SAIViewController: UIViewController {
             }
         }
     }
+    
+    func webViewDidFinishLoad(_ webView: UIWebView)
+    {
+      HUD.hide()
+    }
+    
     
     @IBAction func dismissVC(_ sender: Any)
     {

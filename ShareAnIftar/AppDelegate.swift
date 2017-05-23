@@ -19,22 +19,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().tintColor = UIColor.white
         UINavigationBar.appearance().barTintColor = SAIColorConstants.SAIAppColor
         UITabBar.appearance().tintColor = SAIColorConstants.SAIAppGreenColor
-     /*
-        //retrive
-        let loggedIn : String? = UserDefaults.standard.string(forKey: "LoggedIn")
-    
-        if loggedIn == "YES"
-        {
-            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            self.window?.rootViewController = mainStoryboard.instantiateViewController(withIdentifier: "TabBarVC")
-        }
-        else
-        {
-            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            self.window?.rootViewController = mainStoryboard.instantiateViewController(withIdentifier: "LoginVC")
-        }
         
-*/
+        IQKeyboardManager.sharedManager().enable = true
+     
+        //retrive
+//        let loggedIn : String? = UserDefaults.standard.string(forKey: "LoggedIn")
+//    
+//        if loggedIn == "YES"
+//        {
+//            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//            self.window?.rootViewController = mainStoryboard.instantiateViewController(withIdentifier: "TabBarVC")
+//        }
+//        else
+//        {
+//            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//            self.window?.rootViewController = mainStoryboard.instantiateViewController(withIdentifier: "LoginVC")
+//        }
+        
+    
 
         return true
     }

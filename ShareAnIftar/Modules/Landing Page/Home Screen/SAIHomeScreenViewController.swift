@@ -39,14 +39,35 @@ class SAIHomeScreenViewController: SAIViewController {
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
         
-        // Adding Floating Button.
-        let floatButton = KCFloatingActionButton()
-        floatButton.buttonColor = SAIColorConstants.SAIAppGreenColor
-        floatButton.addItem(title: "Share An Iftar")
-        self.view.addSubview(floatButton)
+//        // Adding Floating Button.
+//        let floatButton = KCFloatingActionButton()
+//        floatButton.buttonColor = SAIColorConstants.SAIAppGreenColor
+//        let tap = UITapGestureRecognizer(target: self, action:#selector(handleTap))
+//        
+//        floatButton.addGestureRecognizer(tap)
+//        floatButton.addItem(title: "Call Us")
+//        self.view.addSubview(floatButton)
+        
+        let fab = KCFloatingActionButton()
+        fab.addItem("I got a handler", icon: nil, handler: { item in
+            let alert = UIAlertController(title: "Hey", message: "I'm hungry...", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Me too", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            fab.close()
+        })
+        self.view.addSubview(fab)
         
         loadCounter()
         
+    }
+    
+    func callUs ()
+    {
+        print("Sallam")
+    }
+    
+    func handleTap() {
+        print("tapped")
     }
     
     func loadCounter()

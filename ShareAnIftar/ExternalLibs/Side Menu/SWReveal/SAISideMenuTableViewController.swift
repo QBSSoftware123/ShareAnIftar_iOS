@@ -19,12 +19,8 @@ class SAISideMenuTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
         if (indexPath.row == 1)
-        {
-            let fundVC = storyBoard.instantiateViewController(withIdentifier: SAIStoryBoardIdentifiers.SAIFundViewControllerIdentifier)
-            self.present(fundVC, animated: true, completion: nil)
-        }
-        if (indexPath.row == 2)
         {
             let gemVC = storyBoard.instantiateViewController(withIdentifier: SAIStoryBoardIdentifiers.SAIGemViewControllerIdentifier)
             self.present(gemVC, animated: true, completion: nil)
