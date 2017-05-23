@@ -54,7 +54,7 @@ class SAIIftarDonateViewController: SAIViewController , UITextFieldDelegate {
         if monthlyVC
         {
             VCTitle.text = "Monthly Kits at 2000/-"
-            totalAmount.text = "2000"
+            totalAmount.text = "2100"
         }
         
     }
@@ -127,7 +127,7 @@ class SAIIftarDonateViewController: SAIViewController , UITextFieldDelegate {
             {
                 return value * 2100
             }
-            return value * 70
+            return value * 50
         } else {
             return nil
         }
