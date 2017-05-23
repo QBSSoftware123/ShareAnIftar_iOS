@@ -38,6 +38,13 @@ class SAIIftarDonateViewController: SAIViewController , UITextFieldDelegate {
         selectLocationButton.layer.borderWidth = 1
         selectLocationButton.layer.borderColor = SAIColorConstants.SAIAppColor.cgColor
         
+        totalAmount.layer.cornerRadius = 5
+        totalAmount.layer.borderWidth = 1
+        totalAmount.layer.borderColor = SAIColorConstants.SAIAppColor.cgColor
+        
+        iftarCountTextField.keyboardType = UIKeyboardType.numberPad
+
+        
         // Set the title of the View Controller 
         if eidVC
         {

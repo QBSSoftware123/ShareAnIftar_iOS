@@ -10,10 +10,19 @@ import UIKit
 
 class SAILoginViewController: UIViewController {
     var userID : String?
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var phoneNumberTextField: UITextField!
+    var userName = ""
+    var phoneNumber = ""
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        phoneNumberTextField.keyboardType = UIKeyboardType.numberPad
+        self.navigationController?.isNavigationBarHidden = false
+
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,8 +31,22 @@ class SAILoginViewController: UIViewController {
     }
     
     @IBAction func generateOTP(_ sender: Any)
+        
     {
-        SIANetworkService.defaultManger.sentRequestFor(serviceName: "generate_otp", withParameters: "user_name=Tauqeer&phone=9945760839", completionHandler:{(response:Any?, error:Error?) in
+        
+        self.userName = nameTextField.text!
+        self.phoneNumber = phoneNumberTextField.text!
+        
+         if phoneNumberTextField.text?.characters.count != 10
+         {
+            let alert = UIAlertController(title: "Invalid Number", message: "Please Enter 10-Digit Number", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Dimiss", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+        
+        // Hit the service!
+        SIANetworkService.defaultManger.sentRequestFor(serviceName: "generate_otp", withParameters: "user_name=\(userName)&phone=\(phoneNumber)", completionHandler:{(response:Any?, error:Error?) in
             
             //Display on main queue
             DispatchQueue.main.async { [unowned self] in
@@ -33,9 +56,6 @@ class SAILoginViewController: UIViewController {
                 
                 //Populate the data
                 let responseDict : [String:Any] = response as! [String:Any]
-                //self.counterValue = responseDict["count"] as! String
-                // self.counterTextField.text = self.counterValue
-                // print(self.counterValue)
                 self.userID = responseDict ["user_id"] as? String
                 UserDefaults.standard.set(self.userID, forKey: "UserID") //setObject
                 print("\(String(describing: self.userID))")
@@ -46,4 +66,11 @@ class SAILoginViewController: UIViewController {
         })
         
     }
+    
+    @IBAction func skipButton(_ sender: Any)
+    {
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        self.view.window?.rootViewController = mainStoryboard.instantiateViewController(withIdentifier: "TabBarVC")
+    }
+    
 }

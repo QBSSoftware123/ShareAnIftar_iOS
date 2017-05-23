@@ -24,6 +24,7 @@ class SAIOTPViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        OTPTextField.keyboardType = UIKeyboardType.numberPad
     }
     
     @IBAction func done(_ sender: Any)
@@ -64,6 +65,9 @@ class SAIOTPViewController: UIViewController {
                         if (responseDict["result"] as! String == "reg_success")
                         {
                          print("Alhamdulillah")
+//                            UserDefaults.standard.set(self.userID, forKey: "UserID") //setObject
+                            UserDefaults.standard.set("YES", forKey: "LoggedIn")
+
                         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                         self.view.window?.rootViewController = mainStoryboard.instantiateViewController(withIdentifier: "TabBarVC")
                         }

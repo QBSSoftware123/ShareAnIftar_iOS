@@ -23,18 +23,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.sharedManager().enable = true
      
         //retrive
-//        let loggedIn : String? = UserDefaults.standard.string(forKey: "LoggedIn")
-//    
-//        if loggedIn == "YES"
-//        {
-//            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//            self.window?.rootViewController = mainStoryboard.instantiateViewController(withIdentifier: "TabBarVC")
-//        }
-//        else
-//        {
-//            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//            self.window?.rootViewController = mainStoryboard.instantiateViewController(withIdentifier: "LoginVC")
-//        }
+        let loggedIn : String? = UserDefaults.standard.string(forKey: "LoggedIn")
+    
+        if loggedIn == "YES"
+        {
+            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            self.window?.rootViewController = mainStoryboard.instantiateViewController(withIdentifier: "TabBarVC")
+        }
+        else
+        {
+            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            self.window?.rootViewController = mainStoryboard.instantiateViewController(withIdentifier: "LoginVC")
+        }
         
     
 

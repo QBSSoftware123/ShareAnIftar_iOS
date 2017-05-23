@@ -334,6 +334,19 @@ open class KCFloatingActionButton: UIView {
         closed = true
     }
 
+    
+    
+    open func callUs(phoneNumber:String) {
+        
+        if let phoneCallURL = URL(string: "tel://\(phoneNumber)") {
+            
+            let application:UIApplication = UIApplication.shared
+            if (application.canOpenURL(phoneCallURL)) {
+                application.open(phoneCallURL, options: [:], completionHandler: nil)
+            }
+        }
+    }
+    
     /**
         Items open or close.
     */

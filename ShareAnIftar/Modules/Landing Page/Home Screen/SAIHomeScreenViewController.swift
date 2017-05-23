@@ -8,10 +8,10 @@
 
 import UIKit
 
-class SAIHomeScreenViewController: SAIViewController {
+class SAIHomeScreenViewController: SAIViewController ,SWRevealViewControllerDelegate {
 
     // Outlet for Side Panel
-    @IBOutlet weak var menuButton: UIBarButtonItem!
+    @IBOutlet var menuButton: UIBarButtonItem!
     
     // Outlet for Counter
     @IBOutlet var counterTextField: UITextField!
@@ -49,11 +49,12 @@ class SAIHomeScreenViewController: SAIViewController {
 //        self.view.addSubview(floatButton)
         
         let fab = KCFloatingActionButton()
-        fab.addItem("I got a handler", icon: nil, handler: { item in
-            let alert = UIAlertController(title: "Hey", message: "I'm hungry...", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Me too", style: .default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-            fab.close()
+        fab.buttonColor = SAIColorConstants.SAIAppGreenColor
+        fab.addItem("Call Us", icon: nil, handler: { item in
+//            let alert = UIAlertController(title: "Hey Call Us On...", message: "9986021214", preferredStyle: .alert)
+//            alert.addAction(UIAlertAction(title: "9986021214", style: .default, handler: nil))
+//            self.present(alert, animated: true, completion: nil)
+            fab.callUs(phoneNumber: "9986021214")
         })
         self.view.addSubview(fab)
         
