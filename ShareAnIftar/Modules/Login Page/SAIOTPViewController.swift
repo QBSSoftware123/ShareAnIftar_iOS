@@ -30,7 +30,7 @@ class SAIOTPViewController: UIViewController {
     @IBAction func done(_ sender: Any)
     {
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        self.view.window?.rootViewController = mainStoryboard.instantiateViewController(withIdentifier: "TabBarVC")
+        self.view.window?.rootViewController = mainStoryboard.instantiateViewController(withIdentifier: "SWRevealViewController")
     }
     @IBAction func submitOTP(_ sender: Any)
     {
@@ -69,7 +69,7 @@ class SAIOTPViewController: UIViewController {
                             UserDefaults.standard.set("YES", forKey: "LoggedIn")
 
                         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                        self.view.window?.rootViewController = mainStoryboard.instantiateViewController(withIdentifier: "TabBarVC")
+                        self.view.window?.rootViewController = mainStoryboard.instantiateViewController(withIdentifier: "SWRevealViewController")
                         }
                         else
                         {

@@ -14,7 +14,7 @@ class SAIIftarViewController: SAIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        loadHTML (pageName: "iftar1")
+        loadHTML (pageName: "iftar2")
         
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         

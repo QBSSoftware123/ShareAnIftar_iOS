@@ -16,4 +16,19 @@ class SAITabBarController: UITabBarController {
 
         // Do any additional setup after loading the view.
     }
+    
+    func refreshViewDetails() {
+        
+        let selectedViewController = self.selectedViewController
+        if(selectedViewController is UINavigationController)
+        {
+            let navigationController = self.selectedViewController as! UINavigationController!
+            let refreshVC = navigationController?.topViewController
+            if refreshVC is SAIViewController {
+                (refreshVC as? SAIViewController)?.refreshViewDetails()
+            }
+        }
+        
+    }
+
 }

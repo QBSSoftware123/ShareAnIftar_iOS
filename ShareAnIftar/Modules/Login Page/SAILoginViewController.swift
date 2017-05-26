@@ -70,7 +70,7 @@ class SAILoginViewController: UIViewController {
     @IBAction func skipButton(_ sender: Any)
     {
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        self.view.window?.rootViewController = mainStoryboard.instantiateViewController(withIdentifier: "TabBarVC")
+        self.view.window?.rootViewController = mainStoryboard.instantiateViewController(withIdentifier: "SWRevealViewController")
     }
     
 }

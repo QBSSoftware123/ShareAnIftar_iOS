@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if loggedIn == "YES"
         {
             let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            self.window?.rootViewController = mainStoryboard.instantiateViewController(withIdentifier: "TabBarVC")
+            self.window?.rootViewController = mainStoryboard.instantiateViewController(withIdentifier: "SWRevealViewController")
         }
         else
         {
@@ -54,6 +54,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillEnterForeground(_ application: UIApplication) {
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+//        let refreshVC = self.window?.rootViewController as? SAIRevealViewController
+//        refreshVC?.refreshDetailView()
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {

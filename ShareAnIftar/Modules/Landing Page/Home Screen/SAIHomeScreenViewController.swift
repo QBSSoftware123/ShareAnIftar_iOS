@@ -62,6 +62,11 @@ class SAIHomeScreenViewController: SAIViewController ,SWRevealViewControllerDele
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+
+    }
+    
     func callUs ()
     {
         print("Sallam")
@@ -92,7 +97,7 @@ class SAIHomeScreenViewController: SAIViewController ,SWRevealViewControllerDele
                 self.counterTextField.text = self.counterValue
                 print(self.counterValue)
                 // print("Response: \(responseDict)")
-                
+              
             }
         })
     }
@@ -105,6 +110,20 @@ class SAIHomeScreenViewController: SAIViewController ,SWRevealViewControllerDele
     
     @IBAction func showUserProfile(_ sender: Any)
     {
+      print ("Alhamdulillah")
+                 let isLoggedIn : String? = UserDefaults.standard.string(forKey: "LoggedIn")
+                        if (isLoggedIn != nil)
+                        {
+                        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                        let targetViewController = storyboard.instantiateViewController(withIdentifier: "UserProfileVC") as?SAIUserProfileViewController
+                        self.navigationController?.pushViewController(targetViewController!, animated: true)
+                        
+                        }
+                     else
+                        {
+                            let loginVC = storyBoard.instantiateViewController(withIdentifier: "LoginVC")
+                            self.present(loginVC, animated: true, completion: nil)
+        }
+
     }
-    
 }

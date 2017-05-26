@@ -26,6 +26,30 @@ class SAIIftarDonateViewController: SAIViewController , UITextFieldDelegate {
     
     @IBOutlet weak var iftarCountTextField: UITextField!
     
+//    self.accessCode = @"AVFT65DF54AD51TFDA";
+//    self.merchantId = @"99763";
+//    self.amount = @"10";
+//    self.currency = @"INR";
+//    self.redirectUrl = @"http://shareaniftar.com/ccavResponseHandler.php";
+//    self.cancelUrl = @"http://shareaniftar.com/ccavResponseHandler.php";
+//    self.rsaKeyUrl = @"http://www.shareaniftar.com/GetRSA.php";
+    
+    var accessCode = "AVFT65DF54AD51TFDA"
+    var merchantId = "99763"
+    var amount = ""
+    var currency = "INR"
+    var orderId : uint!
+    var redirectUrl = "http://shareaniftar.com/ccavResponseHandler.php"
+    var cancelUrl = "http://shareaniftar.com/ccavResponseHandler.php"
+    var rsaKeyUrl = "http://www.shareaniftar.com/GetRSA.php"
+    var delivery_address = ""
+    var delivery_name = "iOS"
+    var merchant_param2 = ""
+    var merchant_param3 = ""
+    var merchant_param4 = ""
+    var merchant_param5 = ""
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,7 +68,8 @@ class SAIIftarDonateViewController: SAIViewController , UITextFieldDelegate {
         
         iftarCountTextField.keyboardType = UIKeyboardType.numberPad
 
-        
+        let randomNumber = arc4random () % 9999999 + 1
+        self.orderId = randomNumber
         // Set the title of the View Controller 
         if eidVC
         {
@@ -197,7 +222,48 @@ class SAIIftarDonateViewController: SAIViewController , UITextFieldDelegate {
         }
 
     }
+    var webCC : CCWebViewController?
     
+    @IBAction func donateAction(_ sender: Any)
+    {
+        let storyBoard : UIStoryboard = UIStoryboard (name: SAIStoryBoardIdentifiers.SAIStoryBoardMain , bundle: nil)
+        webCC  = storyBoard.instantiateViewController(withIdentifier: "CCWebViewController") as? CCWebViewController
+        webCC?.accessCode = self.accessCode
+        webCC?.cancelUrl = self.cancelUrl
+        webCC?.orderId = self.orderId
+        webCC?.amount = self.totalAmount.text
+        webCC?.currency = "INR"
+        webCC?.merchantId = self.merchantId
+        webCC?.redirectUrl =  self.redirectUrl
+        webCC?.cancelUrl = self.cancelUrl
+        webCC?.rsaKeyUrl = self.rsaKeyUrl
+        if eidVC
+        {
+            webCC?.delivery_address = selectLocationButton.titleLabel?.text
+            webCC?.merchant_param2 = "Eid Kit"
+            webCC?.merchant_param3 = "General"
+            webCC?.merchant_param4 = iftarCountTextField.text
+            webCC?.merchant_param5 = "77"
+        }
+        if monthlyVC
+        {
+            webCC?.delivery_address = selectLocationButton.titleLabel?.text
+            webCC?.merchant_param2 = "Ramdan Kit"
+            webCC?.merchant_param3 = "General"
+            webCC?.merchant_param4 = iftarCountTextField.text
+            webCC?.merchant_param5 = "77"
+        }
+        else
+        {
+            webCC?.delivery_address = selectLocationButton.titleLabel?.text
+            webCC?.merchant_param2 = "Iftar"
+            webCC?.merchant_param3 = "General"
+            webCC?.merchant_param4 = iftarCountTextField.text
+            webCC?.merchant_param5 = "77"
+        }
+        self.present(webCC!, animated: true, completion: nil)
+        
+    }
     func alertControllerBackgroundTapped()
     {
         self.dismiss(animated: true, completion: nil)

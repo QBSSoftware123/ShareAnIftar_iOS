@@ -71,7 +71,14 @@ class SAIUserProfileViewController: UIViewController , UITableViewDelegate , UIT
     
     func fetchUserProfile ()
     {
-        
+//        let isLoggedIn : String? = UserDefaults.standard.string(forKey: "LoggedIn")
+//        if (isLoggedIn == nil)
+//        {
+//            HUD.flash(.label("Please Register to Access User Profile"), delay: 4.0) { _ in
+//                print("Register.")
+//            }
+//            dismiss(animated: true, completion: nil)
+//        }
         // http://shareaniftar.com/api/user_profile.php?user_id=7
         
         //Add progress before you start fetching
@@ -110,10 +117,5 @@ class SAIUserProfileViewController: UIViewController , UITableViewDelegate , UIT
         })
 
         
-    }
-
-    @IBAction func dimissVC(_ sender: Any)
-    {
-        dismiss(animated: true, completion: nil)
     }
 }

@@ -13,6 +13,16 @@ class SAIViewController: UIViewController , UIWebViewDelegate{
     // Webview to load HTML Pages.
     @IBOutlet weak var htmlWebView: UIWebView!
     
+    //Side Bar
+    var revealVC:SWRevealViewController?
+    
+    //Side Bar Revealed
+    var isSideBarRevealed:Bool = false
+    
+    //Blank View
+    var blankView = UIView()
+
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -23,7 +33,63 @@ class SAIViewController: UIViewController , UIWebViewDelegate{
         {
             self.htmlWebView.delegate = self
         }
+        
+//        //Configure for the side bar
+//        if(self.isSideBarMenuRequired() && self.revealVC == nil)
+//        {
+//            self.initialiseSideBarMenu()
+//        }
 
+    }
+    
+    func refreshViewDetails() {
+        //Do Nothing but invokes during the right time, refresh and load
+    }
+    
+    func isSideBarMenuRequired()->Bool {
+        //By Default returns false
+        return false
+    }
+    
+    //MARK : - Side Bar Menu
+    func initialiseSideBarMenu() {
+        
+        let rightBarButtonItem = UIBarButtonItem()
+        rightBarButtonItem.image = UIImage(named: "Hamburger")
+        if revealViewController() != nil {
+            self.revealVC = revealViewController()
+            rightBarButtonItem.target = self
+            rightBarButtonItem.action = #selector(toggleSideBar)
+            
+            self.revealVC?.rightViewRevealWidth = 150
+            
+            view.addGestureRecognizer((self.revealVC?.panGestureRecognizer())!)
+            self.navigationItem.leftBarButtonItem = rightBarButtonItem
+        }
+    }
+    
+    //Toggle Side Bar
+    func toggleSideBar()
+    {
+        self.isSideBarRevealed = !(self.isSideBarRevealed)
+        revealViewController().revealToggle(nil)
+        
+        if(self.isSideBarRevealed)
+        {
+            self.blankView = UIView(frame: self.view.bounds)
+            self.view.addSubview(blankView)
+            
+            blankView.isUserInteractionEnabled = true
+            blankView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.handleTap)))
+        }
+        else
+        {
+            blankView.removeFromSuperview()
+        }
+    }
+    
+    func handleTap(gestureRecognizer: UIGestureRecognizer) {
+        self.toggleSideBar()
     }
     
     //MARK: - Method to add gradient color
