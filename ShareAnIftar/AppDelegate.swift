@@ -21,7 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBar.appearance().tintColor = SAIColorConstants.SAIAppGreenColor
         
         IQKeyboardManager.sharedManager().enable = true
-     
+        
+        Thread.sleep(forTimeInterval: 1.0)
+       
+
         //retrive
         let loggedIn : String? = UserDefaults.standard.string(forKey: "LoggedIn")
     

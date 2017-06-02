@@ -23,12 +23,18 @@ class Model
 class SAIUserProfileViewController: UIViewController , UITableViewDelegate , UITableViewDataSource
 {
 
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var userDataTableView: UITableView!
     
     var testModel = [Model]()
+    var valuesArray = [AnyObject]()
+
+    
     var userId : Int = 0
+    
+    
     var dataArray : Array = ["","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""]
-    var dataArray1 = ["Total Donations","Total Eid Kits","Total Iftar Kits","Total Ramadan Kits Donated","Total Daily Kits","Total Monthly Kits","Total Donations Towards Education"]
+    var dataArray1 = ["Total Iftar Kits","Total Daily Kits","Total Donations","Total Monthly Kits","Total Eid Kits","Total Ramadan Kits","Total Donations Towards Education"]
        var dataArray2 = ["0","0","0","0","0","0","0"]
     
     override func viewDidLoad() {
@@ -63,8 +69,13 @@ class SAIUserProfileViewController: UIViewController , UITableViewDelegate , UIT
         
             cell.donationDescription.text  = dataArray1 [indexPath.row]
         //userModel?.donationDes [indexPath.row]
-       
+        
+        if valuesArray.count == 0 {
             cell.donationData.text = dataArray2 [indexPath.row]
+        }
+        else{
+            cell.donationData.text = valuesArray [indexPath.row] as? String
+        }
                 //userModel?.donationAmt [indexPath.row] as! String?
         return cell
     }
@@ -101,8 +112,38 @@ class SAIUserProfileViewController: UIViewController , UITableViewDelegate , UIT
                 
                 for (desc, value) in responseDict
                 {
+                    if desc == "total_donation"
+                    {
+                        self.valuesArray.append((value as AnyObject) as! String as AnyObject)
+                    }
+                    if desc == "eid_kit"
+                    {
+                       self.valuesArray.append((value as AnyObject) as! String as AnyObject)
+                    }
+                    if desc == "iftar_kit"
+                    {
+                        self.valuesArray.append((value as AnyObject) as! String as AnyObject)
+                    }
+                    if desc == "ramadan_kit"
+                    {
+                        self.valuesArray.append((value as AnyObject) as! String as AnyObject)
+                    }
+                    if desc == "daily"
+                    {
+                        self.valuesArray.append((value as AnyObject) as! String as AnyObject)
+                    }
+                    if desc == "monthly_kit"
+                    {
+                        self.valuesArray.append((value as AnyObject) as! String as AnyObject)
+                    }
+                    if desc == "education"
+                    {
+                        self.valuesArray.append((value as AnyObject) as! String as AnyObject)
+                    }
                     self.testModel.append(Model.init(withDescription: desc, andValue: value as? String))
                 }
+                
+                print("ValueArray:\(self.valuesArray)")
                 
                 print("\nMODEL\n")
                 for test in self.testModel {
@@ -112,6 +153,7 @@ class SAIUserProfileViewController: UIViewController , UITableViewDelegate , UIT
                 print("DataArray:\(self.dataArray)")
                 
                  print("Response: \(responseDict)")
+                self.tableView.reloadData()
                 
             }
         })

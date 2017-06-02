@@ -16,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="389" height="194"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="389" height="194"/>
+                <rect key="frame" x="0.0" y="0.0" width="389" height="193.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSY-1s-lN8">
@@ -51,6 +51,9 @@
                             <constraint firstAttribute="height" constant="35" id="0Ts-fd-2oA"/>
                         </constraints>
                         <state key="normal" title="Share"/>
+                        <connections>
+                            <action selector="hadithShare:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="poC-H6-3UJ"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>
@@ -66,6 +69,11 @@
                     <constraint firstItem="Frr-Lw-KqV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="36" id="wpV-q3-qQZ"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="hadithText" destination="Frr-Lw-KqV" id="8L2-ix-sZw"/>
+                <outlet property="readMore" destination="63T-DV-thk" id="d6k-rq-y5n"/>
+                <outlet property="shareHadith" destination="ma0-de-ZIa" id="1Lq-jG-JNT"/>
+            </connections>
             <point key="canvasLocation" x="36.5" y="67"/>
         </tableViewCell>
     </objects>

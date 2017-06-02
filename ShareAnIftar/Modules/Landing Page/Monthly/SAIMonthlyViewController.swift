@@ -9,6 +9,8 @@
 import UIKit
 
 class SAIMonthlyViewController: SAIViewController {
+    var boolValue : Bool = false
+    let storyBoard : UIStoryboard = UIStoryboard (name: SAIStoryBoardIdentifiers.SAIStoryBoardMain , bundle: nil)
 
     @IBOutlet weak var menuItem: UIBarButtonItem!
     override func viewDidLoad() {
@@ -26,14 +28,20 @@ class SAIMonthlyViewController: SAIViewController {
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
     }
-    // MARK: - Prepare for Segue Method
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    
+    @IBAction func donateButtonAction(_ sender: Any)
     {
-        if segue.identifier == SAISegueIdentifiers.SAIMonthlySegueIdentifier
+        
+        let isLoggedIn : String? = UserDefaults.standard.string(forKey: "LoggedIn")
+        if (isLoggedIn != nil)
         {
-            let donateVC : SAIIftarDonateViewController = segue.destination as! SAIIftarDonateViewController
-            // Setting the flag to identify View Controller
-            donateVC.monthlyVC = true
+            let monthlyDonateVC = storyBoard.instantiateViewController(withIdentifier: "monthlyDonateVC")
+            self.present(monthlyDonateVC, animated: true, completion: nil)
+        }
+        else
+        {
+            let loginVC = storyBoard.instantiateViewController(withIdentifier: "LoginVC")
+            self.navigationController?.present(loginVC, animated: true, completion: nil)
         }
     }
 }

@@ -23,6 +23,6 @@
     @property (strong, nonatomic) NSString * merchant_param2;
     @property (strong, nonatomic) NSString * merchant_param3;
     @property (strong, nonatomic) NSString * merchant_param4;
-    @property (strong, nonatomic) NSString * merchant_param5;
+    @property (nonatomic, assign) NSInteger merchant_param5;
 
 @end

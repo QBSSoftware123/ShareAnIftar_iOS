@@ -55,6 +55,9 @@
                             <constraint firstAttribute="height" constant="35" id="CMX-Lt-mDY"/>
                         </constraints>
                         <state key="normal" title="Share"/>
+                        <connections>
+                            <action selector="shareToWhatsApp:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="qxF-pG-Bxc"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ev9-S8-CEK">
                         <rect key="frame" x="8" y="225" width="94" height="34"/>
@@ -87,6 +90,10 @@
                     <constraint firstItem="gTJ-bB-MVc" firstAttribute="leading" secondItem="ihs-dl-yf5" secondAttribute="leading" id="yOK-Qt-QID"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="duaText" destination="gTJ-bB-MVc" id="9Oh-VG-JeM"/>
+                <outlet property="readMore" destination="Ev9-S8-CEK" id="Fsf-Yf-ras"/>
+            </connections>
             <point key="canvasLocation" x="47.5" y="39.5"/>
         </tableViewCell>
     </objects>

@@ -11,7 +11,8 @@ import UIKit
 class SAIEidViewController: SAIViewController {
 
     @IBOutlet weak var menuItem: UIBarButtonItem!
-    
+    let storyBoard : UIStoryboard = UIStoryboard (name: SAIStoryBoardIdentifiers.SAIStoryBoardMain , bundle: nil)
+
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -28,14 +29,21 @@ class SAIEidViewController: SAIViewController {
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
     }
-    // MARK: - Prepare for Segue Method
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+
+    @IBAction func donateAction(_ sender: Any)
     {
-        if segue.identifier == SAISegueIdentifiers.SAIEidSegueIdentifiers
+        
+        let isLoggedIn : String? = UserDefaults.standard.string(forKey: "LoggedIn")
+        if (isLoggedIn != nil)
         {
-            let donateVC : SAIIftarDonateViewController = segue.destination as! SAIIftarDonateViewController
-            // Setting the flag to identify View Controller.
-            donateVC.eidVC = true
+            let gemVC = storyBoard.instantiateViewController(withIdentifier: "eidDonateVC")
+            self.present(gemVC, animated: true, completion: nil)
+            
+        }
+        else
+        {
+            let loginVC = storyBoard.instantiateViewController(withIdentifier: "LoginVC")
+            self.navigationController?.present(loginVC, animated: true, completion: nil)
         }
     }
 }

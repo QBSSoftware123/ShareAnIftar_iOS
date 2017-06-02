@@ -52,6 +52,53 @@ class SAIInitiativesViewController: UIViewController , UITableViewDataSource, UI
         dismiss(animated: true, completion: nil)
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+        if indexPath.row == 0
+        {
+            self.openURL(orgURL: "http://www.Sharealife.in")
+        }
+        if indexPath.row == 1
+        {
+            print("Alhamdulillah")
+             self.openURL(orgURL: "http://www.Bookmyiftar.com")
+        }
+        if indexPath.row == 2
+        {
+            print("Alhamdulillah")
+            self.openURL(orgURL: "http://www.Donateazy.com")
+        }
+        
+        if indexPath.row == 3
+        {
+            print("Alhamdulillah")
+            self.openURL(orgURL: "http://www.NGO360.org")
+        }
+        
+        if indexPath.row == 4
+        {
+            print("Alhamdulillah")
+            self.openURL(orgURL: "http://www.Ummathjobs.com")
+        }
+        if indexPath.row == 5
+        {
+            print("Alhamdulillah")
+            self.openURL(orgURL: "http://www.Ummath.com")
+        }
+        if indexPath.row == 6
+        {
+            print("Alhamdulillah")
+            self.openURL(orgURL: "http://www.Quatriz.com")
+        }
+    }
+    
+    func openURL (orgURL: String?)
+    {
+        if let url = URL(string: orgURL!) {
+            UIApplication.shared.open(url, options: [:])
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         

@@ -1,31 +1,23 @@
 //
-//  SAIIftarDonateViewController.swift
+//  SAIMonthlyDonateViewController.swift
 //  ShareAnIftar
 //
-//  Created by tauqeer ahmed khan on 06/04/17.
+//  Created by Dilgir Siddiqui on 6/1/17.
 //  Copyright © 2017 QBS. All rights reserved.
 //
 
 import UIKit
 
-class SAIIftarDonateViewController: SAIViewController , UITextFieldDelegate {
+class SAIMonthlyDonateViewController: SAIViewController , UITextFieldDelegate {
     
-    // IBOutlet for Select Location Button
-    @IBOutlet weak var selectLocationButton: UIButton!
-    
-    // Flag to Check Eid ViewController
-    var eidVC : Bool = false
-    
-    // Flag to Check Monthly ViewController
-    var monthlyVC : Bool = false
-    
-    // View Controller Title
     @IBOutlet weak var VCTitle: UILabel!
     
     @IBOutlet weak var totalAmount: UILabel!
     
     @IBOutlet weak var iftarCountTextField: UITextField!
-        
+    
+    @IBOutlet weak var selectLocationButton: UIButton!
+    
     var accessCode = "AVFT65DF54AD51TFDA"
     var merchantId = "99763"
     var amount = ""
@@ -40,16 +32,17 @@ class SAIIftarDonateViewController: SAIViewController , UITextFieldDelegate {
     var merchant_param3 = ""
     var merchant_param4 = ""
     var merchant_param5 = ""
+
     
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
         
-        // Load the view with blue gradient color.
         addBlueGradientColor(GradientColor: SAIGradientColorConstants.SAIBlueGradient)
+        iftarCountTextField.keyboardType = UIKeyboardType.numberPad
         
-        self.iftarCountTextField.delegate = self
-        // Round Edged Button
         selectLocationButton.layer.cornerRadius = 5
         selectLocationButton.layer.borderWidth = 1
         selectLocationButton.layer.borderColor = SAIColorConstants.SAIAppColor.cgColor
@@ -57,13 +50,80 @@ class SAIIftarDonateViewController: SAIViewController , UITextFieldDelegate {
         totalAmount.layer.cornerRadius = 5
         totalAmount.layer.borderWidth = 1
         totalAmount.layer.borderColor = SAIColorConstants.SAIAppColor.cgColor
-        
-        iftarCountTextField.keyboardType = UIKeyboardType.numberPad
 
+        
         let randomNumber = arc4random () % 9999999 + 1
         self.orderId = randomNumber
         
     }
+    
+    var textLabelValue: Int32? {
+        if let value = textFieldValue {
+            
+            return value * 2100
+            
+            
+        } else {
+            return nil
+        }
+    }
+    
+    let numberFormatter: NumberFormatter = { // Using closure for creating the number formatter
+        let nf = NumberFormatter()
+        nf.numberStyle = .none
+        nf.minimumFractionDigits = 0
+        nf.maximumFractionDigits = 0
+        return nf
+    }()
+    
+    func updateTextLabelValue() {
+        if let value = textLabelValue {
+            totalAmount.text = numberFormatter.string(from: NSNumber(value: value))
+        } else {
+            totalAmount.text = ""
+        }
+    }
+    
+    
+    var textFieldValue: Int32? {
+        didSet {
+            updateTextLabelValue()
+        }
+    }
+    
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        print("Current Text: \(textField.text)")
+        print("Replacement Text: \(string)")
+        // if "textField.text" and "replacementString" have dot(.), then reject the entry, otherwise accept it
+        let existingTextHasDecimalSeparator = textField.text?.range(of: ".")
+        let replacementStringHasDecimalSeparator = string.range(of: ".")
+        
+        let characterSet = NSCharacterSet.init(charactersIn: "0123456789")
+        let result = string.rangeOfCharacter(from: characterSet as CharacterSet, options: .caseInsensitive, range: string.startIndex..<string.endIndex)
+        
+        if existingTextHasDecimalSeparator != nil &&
+            replacementStringHasDecimalSeparator != nil &&
+            result != nil {
+            return false
+        }
+        else {
+            return true
+        }
+        
+    }
+
+    
+    @IBAction func textFieldEditingChanged(_ sender: UITextField)
+    {
+        if let text = sender.text, let value = Double(text) {
+            textFieldValue = Int32(value)
+        } else {
+            textFieldValue = nil
+        }
+        
+    }
+    
     @IBAction func selectLocation(_ sender: Any)
     {
         let alertController = UIAlertController(title: "Select Location", message: "", preferredStyle: .actionSheet)
@@ -93,7 +153,7 @@ class SAIIftarDonateViewController: SAIViewController , UITextFieldDelegate {
             self.selectLocationButton.setTitle(titleString, for: .normal)
         })
         alertController.addAction(location3)
-
+        
         
         let location4 = UIAlertAction(title: SAISortByPickerList[4], style: .default, handler:{ action -> Void in
             let titleString =  SAISortByPickerList[4]
@@ -114,81 +174,26 @@ class SAIIftarDonateViewController: SAIViewController , UITextFieldDelegate {
         })
     }
     
-    
-    func updateTextLabelValue() {
-        if let value = textLabelValue {
-            totalAmount.text = numberFormatter.string(from: NSNumber(value: value))
-        } else {
-            totalAmount.text = ""
-        }
-    }
-    
-    var textLabelValue: Int32? {
-        if let value = textFieldValue {
-            return value * 50
-        } else {
-            return nil
-        }
-    }
-    
-    let numberFormatter: NumberFormatter = { // Using closure for creating the number formatter
-        let nf = NumberFormatter()
-        nf.numberStyle = .none
-        nf.minimumFractionDigits = 0
-        nf.maximumFractionDigits = 0
-        return nf
-    }()
-
-    
-    var textFieldValue: Int32? {
-        didSet {
-            updateTextLabelValue()
-        }
-    }
-
-
-    @IBAction func textFieldEditingChanged(_ sender: UITextField) {
-        if let text = sender.text, let value = Double(text) {
-            textFieldValue = Int32(value)
-        } else {
-            textFieldValue = nil
-        }
-    }
-  
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        print("Current Text: \(textField.text)")
-        print("Replacement Text: \(string)")
-        // if "textField.text" and "replacementString" have dot(.), then reject the entry, otherwise accept it
-        let existingTextHasDecimalSeparator = textField.text?.range(of: ".")
-        let replacementStringHasDecimalSeparator = string.range(of: ".")
-        
-        let characterSet = NSCharacterSet.init(charactersIn: "0123456789")
-        let result = string.rangeOfCharacter(from: characterSet as CharacterSet, options: .caseInsensitive, range: string.startIndex..<string.endIndex)
-        
-        if existingTextHasDecimalSeparator != nil &&
-            replacementStringHasDecimalSeparator != nil &&
-            result != nil {
-            return false
-        }
-        else {
-            return true
-        }
-
-    }
-    var webCC : CCWebViewController?
-    
-    @IBAction func donateAction(_ sender: Any)
+    func alertControllerBackgroundTapped()
     {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
+    var webCC : CCWebViewController?
 
+    
+    @IBAction func donateMonthly(_ sender: Any)
+    {
         let title = selectLocationButton.titleLabel?.text
         let totalKitsCount = self.iftarCountTextField.text
-
+        
         if title == "Location"
         {
-                            let alert = UIAlertController(title: "Invalid Location", message: "Please Select Location", preferredStyle: .alert)
-                            alert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
-                            self.present(alert, animated: true, completion: nil)
-                            return
+            let alert = UIAlertController(title: "Invalid Location", message: "Please Select Location", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
         }
         
         if totalKitsCount == ""
@@ -198,6 +203,8 @@ class SAIIftarDonateViewController: SAIViewController , UITextFieldDelegate {
             self.present(alert, animated: true, completion: nil)
             return
         }
+        
+        
         
         let storyBoard : UIStoryboard = UIStoryboard (name: SAIStoryBoardIdentifiers.SAIStoryBoardMain , bundle: nil)
         webCC  = storyBoard.instantiateViewController(withIdentifier: "CCWebViewController") as? CCWebViewController
@@ -210,19 +217,20 @@ class SAIIftarDonateViewController: SAIViewController , UITextFieldDelegate {
         webCC?.redirectUrl =  self.redirectUrl
         webCC?.cancelUrl = self.cancelUrl
         webCC?.rsaKeyUrl = self.rsaKeyUrl
- 
         
         webCC?.delivery_address = selectLocationButton.titleLabel?.text
-        webCC?.merchant_param2 = "Iftar"
+        webCC?.merchant_param2 = "Ramdan Kit"
         webCC?.merchant_param3 = "General"
         webCC?.merchant_param4 = iftarCountTextField.text
         webCC?.merchant_param5 = UserDefaults.standard.integer(forKey: "UserID")
         
         self.present(webCC!, animated: true, completion: nil)
+
         
     }
-    func alertControllerBackgroundTapped()
+    @IBAction func dimissViewController(_ sender: Any)
     {
         self.dismiss(animated: true, completion: nil)
     }
+    
 }

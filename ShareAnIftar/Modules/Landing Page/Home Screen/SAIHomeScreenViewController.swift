@@ -58,9 +58,12 @@ class SAIHomeScreenViewController: SAIViewController ,SWRevealViewControllerDele
         })
         self.view.addSubview(fab)
         
+        
         loadCounter()
         
     }
+    
+    
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
@@ -122,7 +125,8 @@ class SAIHomeScreenViewController: SAIViewController ,SWRevealViewControllerDele
                      else
                         {
                             let loginVC = storyBoard.instantiateViewController(withIdentifier: "LoginVC")
-                            self.present(loginVC, animated: true, completion: nil)
+                            self.navigationController?.present(loginVC, animated: true, completion: nil)
+                         //   self.present(loginVC, animated: true, completion: nil)
         }
 
     }

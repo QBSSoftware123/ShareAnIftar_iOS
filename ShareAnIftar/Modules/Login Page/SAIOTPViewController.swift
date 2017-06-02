@@ -54,6 +54,9 @@ class SAIOTPViewController: UIViewController {
                         if((error) != nil)
                         {
                            // self.reportError(error: error!)
+                            let alert = UIAlertController(title: "Error", message: "Please Try Again", preferredStyle: .alert)
+                            alert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
+                            self.present(alert, animated: true, completion: nil)
                         }
         
                         //Populate the data
@@ -74,6 +77,9 @@ class SAIOTPViewController: UIViewController {
                         else
                         {
                             print("Astagfirullah")
+                            let alert = UIAlertController(title: "Invalid OTP", message: "Please Enter Valid OTP", preferredStyle: .alert)
+                            alert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
+                            self.present(alert, animated: true, completion: nil)
                         }
                     }
                 })

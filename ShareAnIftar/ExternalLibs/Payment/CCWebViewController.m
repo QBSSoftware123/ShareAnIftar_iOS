@@ -37,7 +37,7 @@
     
     self.accessCode = @"AVFT65DF54AD51TFDA";
     self.merchantId = @"99763";
-    self.amount = @"10";
+//    self.amount = @"10";
     self.currency = @"INR";
     self.redirectUrl = @"http://shareaniftar.com/ccavResponseHandler.php";
     self.cancelUrl = @"http://shareaniftar.com/ccavResponseHandler.php";
@@ -70,7 +70,7 @@
     
     //Preparing for a webview call
     NSString *urlAsString = [NSString stringWithFormat:@"https://secure.ccavenue.com/transaction/initTrans"];
-    NSString *encryptedStr = [NSString stringWithFormat:@"merchant_id=%@&order_id=%u&redirect_url=%@&cancel_url=%@&enc_val=%@&access_code=%@&delivery_address=%@&merchant_param2=%@&merchant_param3=%@&merchant_param4=%@&merchant_param5=%@&delivery_name=%@",merchantId,orderId,redirectUrl,cancelUrl,encVal,accessCode,delivery_address,merchant_param2,merchant_param3,merchant_param4,merchant_param5,delivery_name];
+    NSString *encryptedStr = [NSString stringWithFormat:@"merchant_id=%@&order_id=%u&redirect_url=%@&cancel_url=%@&enc_val=%@&access_code=%@&delivery_address=%@&merchant_param2=%@&merchant_param3=%@&merchant_param4=%@&merchant_param5=%ld&delivery_name=%@",merchantId,orderId,redirectUrl,cancelUrl,encVal,accessCode,delivery_address,merchant_param2,merchant_param3,merchant_param4,(long)merchant_param5,delivery_name];
     NSLog(@"-------%@",encryptedStr);
     NSData *myRequestData = [NSData dataWithBytes: [encryptedStr UTF8String] length: [encryptedStr length]];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL: [NSURL URLWithString: urlAsString]];

@@ -10,6 +10,9 @@ import UIKit
 
 class SAIIftarViewController: SAIViewController {
 
+    
+    let storyBoard : UIStoryboard = UIStoryboard (name: SAIStoryBoardIdentifiers.SAIStoryBoardMain , bundle: nil)
+
     @IBOutlet weak var menuItem: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +26,21 @@ class SAIIftarViewController: SAIViewController {
             menuItem.target = self.revealViewController()
             menuItem.action = #selector(SWRevealViewController.revealToggle(_:))
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
+    }
+    @IBAction func donateAction(_ sender: Any)
+    {
+        // iftarDonateVC
+        let isLoggedIn : String? = UserDefaults.standard.string(forKey: "LoggedIn")
+        if (isLoggedIn != nil)
+        {
+            let gemVC = storyBoard.instantiateViewController(withIdentifier: "iftarDonateVC")
+            self.present(gemVC, animated: true, completion: nil)
+        }
+        else
+        {
+            let loginVC = storyBoard.instantiateViewController(withIdentifier: "LoginVC")
+            self.navigationController?.present(loginVC, animated: true, completion: nil)
         }
     }
 }

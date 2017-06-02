@@ -40,7 +40,7 @@ class SAILoginViewController: UIViewController {
          if phoneNumberTextField.text?.characters.count != 10
          {
             let alert = UIAlertController(title: "Invalid Number", message: "Please Enter 10-Digit Number", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Dimiss", style: .default, handler: nil))
+            alert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
             self.present(alert, animated: true, completion: nil)
             return
         }

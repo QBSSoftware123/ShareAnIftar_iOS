@@ -25,5 +25,21 @@ class SAISideMenuTableViewController: UITableViewController {
             let gemVC = storyBoard.instantiateViewController(withIdentifier: SAIStoryBoardIdentifiers.SAIGemViewControllerIdentifier)
             self.present(gemVC, animated: true, completion: nil)
         }
+        if indexPath.row == 6
+        {
+            
+            if let name = NSURL(string: "https://itunes.apple.com/us/app/ShareAnIftar/id1239892904?ls=1&mt=8") {
+                let appName  = " Share An Iftar iOS App"
+                let objectsToShare :Array = [name, appName] as [Any]
+                let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+                activityVC.excludedActivityTypes = [UIActivityType.print, UIActivityType.postToWeibo, UIActivityType.copyToPasteboard, UIActivityType.addToReadingList, UIActivityType.postToVimeo,UIActivityType.airDrop,UIActivityType.message,UIActivityType.mail,UIActivityType.postToTwitter]
+
+                self.present(activityVC, animated: true, completion: nil)
+            }
+            else
+            {
+                // show alert for not available
+            }
+        }
     }
 }
