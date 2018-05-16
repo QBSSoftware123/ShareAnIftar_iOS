@@ -34,8 +34,10 @@
     [super viewDidLoad];
     
     self.viewWeb.delegate = self;
+   // AVDM77FD71CG80MDGC
     
-    self.accessCode = @"AVFT65DF54AD51TFDA";
+  //  self.accessCode = @"AVFT65DF54AD51TFDA";
+    self.accessCode = @"AVDM77FD71CG80MDGC";
     self.merchantId = @"99763";
 //    self.amount = @"10";
     self.currency = @"INR";
@@ -79,6 +81,7 @@
     [request setHTTPMethod: @"POST"];
     [request setHTTPBody: myRequestData];
     [_viewWeb loadRequest:request];
+
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView{

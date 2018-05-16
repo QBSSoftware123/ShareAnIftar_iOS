@@ -8,16 +8,17 @@
 
 import UIKit
 
-class SAIMonthlyViewController: SAIViewController {
+class SAIMonthlyViewController: SAIViewController, UIScrollViewDelegate {
     var boolValue : Bool = false
     let storyBoard : UIStoryboard = UIStoryboard (name: SAIStoryBoardIdentifiers.SAIStoryBoardMain , bundle: nil)
 
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var menuItem: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Load HTML Page
-        loadHTML(pageName: "ramadankit1")
+       // loadHTML(pageName: "ramadankit1")
         
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
 

@@ -39,26 +39,13 @@ class SAIHomeScreenViewController: SAIViewController ,SWRevealViewControllerDele
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
         
-//        // Adding Floating Button.
-//        let floatButton = KCFloatingActionButton()
-//        floatButton.buttonColor = SAIColorConstants.SAIAppGreenColor
-//        let tap = UITapGestureRecognizer(target: self, action:#selector(handleTap))
-//        
-//        floatButton.addGestureRecognizer(tap)
-//        floatButton.addItem(title: "Call Us")
-//        self.view.addSubview(floatButton)
         
         let fab = KCFloatingActionButton()
         fab.buttonColor = SAIColorConstants.SAIAppGreenColor
         fab.addItem("Call Us", icon: nil, handler: { item in
-//            let alert = UIAlertController(title: "Hey Call Us On...", message: "9986021214", preferredStyle: .alert)
-//            alert.addAction(UIAlertAction(title: "9986021214", style: .default, handler: nil))
-//            self.present(alert, animated: true, completion: nil)
             fab.callUs(phoneNumber: "9986021214")
         })
         self.view.addSubview(fab)
-        
-        
         loadCounter()
         
     }
@@ -83,7 +70,7 @@ class SAIHomeScreenViewController: SAIViewController ,SWRevealViewControllerDele
     {
         
         //Add progress before you start fetching
-        HUD.show(HUDContentType.labeledRotatingImage(image:  UIImage(named: "progress_circular"), title:"" , subtitle:"Fetching Count…"))
+    //    HUD.show(HUDContentType.labeledRotatingImage(image:  UIImage(named: "progress_circular"), title:"" , subtitle:"Fetching Count…"))
         
         
         SIANetworkService.defaultManger.sentRequestFor(serviceName: "smile_counter", withParameters: "No", completionHandler:{(response:Any?, error:Error?) in

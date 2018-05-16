@@ -19,7 +19,7 @@ class SAIEidDonateViewController: SAIViewController , UITextFieldDelegate{
     
     @IBOutlet weak var selectLocationButton: UIButton!
     
-    var accessCode = "AVFT65DF54AD51TFDA"
+    var accessCode = "AVDM77FD71CG80MDGC"
     var merchantId = "99763"
     var amount = ""
     var currency = "INR"
@@ -117,7 +117,7 @@ class SAIEidDonateViewController: SAIViewController , UITextFieldDelegate{
     var textLabelValue: Int32? {
         if let value = textFieldValue {
 
-                return value * 600
+                return value * 630
         
 
         } else {

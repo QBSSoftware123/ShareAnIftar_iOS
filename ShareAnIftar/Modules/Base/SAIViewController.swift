@@ -13,6 +13,7 @@ class SAIViewController: UIViewController , UIWebViewDelegate{
     // Webview to load HTML Pages.
     @IBOutlet weak var htmlWebView: UIWebView!
     
+    @IBOutlet weak var webViewActivityIndicator: UIActivityIndicatorView!
     //Side Bar
     var revealVC:SWRevealViewController?
     
@@ -116,8 +117,9 @@ class SAIViewController: UIViewController , UIWebViewDelegate{
     //MARK: - Loading HTML Mehods
     func loadHTML (pageName: String)
     {
-        HUD.show(HUDContentType.labeledRotatingImage(image:  UIImage(named: "progress_circular"), title:"" , subtitle:"Fetching…"))
-
+     //   HUD.show(HUDContentType.labeledRotatingImage(image:  UIImage(named: "progress_circular"), title:"" , subtitle:"Fetching…"))
+        
+        webViewActivityIndicator.startAnimating()
         let url = Bundle.main.url(forResource: pageName, withExtension: "html")
         let myRequest = NSURLRequest(url: url!)
         DispatchQueue.global(qos: .background).async {
@@ -129,9 +131,9 @@ class SAIViewController: UIViewController , UIWebViewDelegate{
         }
     }
     
-    func webViewDidFinishLoad(_ webView: UIWebView)
-    {
-      HUD.hide()
+    func webViewDidFinishLoad(_ webView: UIWebView){
+        webViewActivityIndicator.stopAnimating()
+        webViewActivityIndicator.removeFromSuperview()
     }
     
     

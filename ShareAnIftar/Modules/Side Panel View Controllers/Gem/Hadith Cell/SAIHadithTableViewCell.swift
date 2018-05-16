@@ -10,6 +10,7 @@ import UIKit
 
 class SAIHadithTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var title: UILabel!
     @IBOutlet weak var readMore: UIButton!
     @IBOutlet weak var hadithText: UITextView!
     override func awakeFromNib() {

@@ -906,7 +906,7 @@
 				TargetAttributes = {
 					96F7D4521E91346D00B23325 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = HXM59V3YWP;
+						DevelopmentTeam = 7NAZG4PL36;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
@@ -1168,13 +1168,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = HXM59V3YWP;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7NAZG4PL36;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ShareAnIftar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
-					"\"$(SRCROOT)/../../../Downloads/Non-Seamless/Openssl/openssl-1.0.1i-iOS/include\"",
-					"\"$(SRCROOT)/../../../Downloads/Non-Seamless/Openssl/openssl-1.0.1i-iOS/lib\"",
+					"\"$(SRCROOT)/ShareAnIftar/ExternalLibs/Payment/include\"",
+					"\"$(SRCROOT)/ShareAnIftar/ExternalLibs/Payment/lib\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.QBS.ShareAnIftar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1182,7 +1183,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "ShareAnIftar/ExternalLibs/Side Menu/SWReveal/ShareAnIftar-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
-				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../../Downloads/Non-Seamless/Openssl/openssl-1.0.1i-iOS/include\" \"$(SRCROOT)/../../../Downloads/Non-Seamless/Openssl/openssl-1.0.1i-iOS/lib\"";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/ShareAnIftar/ExternalLibs/Payment/include\" \"$(SRCROOT)/ShareAnIftar/ExternalLibs/Payment/lib\"";
 			};
 			name = Debug;
 		};
@@ -1192,20 +1193,21 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = HXM59V3YWP;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7NAZG4PL36;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ShareAnIftar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
-					"\"$(SRCROOT)/../../../Downloads/Non-Seamless/Openssl/openssl-1.0.1i-iOS/include\"",
-					"\"$(SRCROOT)/../../../Downloads/Non-Seamless/Openssl/openssl-1.0.1i-iOS/lib\"",
+					"\"$(SRCROOT)/ShareAnIftar/ExternalLibs/Payment/include\"",
+					"\"$(SRCROOT)/ShareAnIftar/ExternalLibs/Payment/lib\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.QBS.ShareAnIftar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "ShareAnIftar/ExternalLibs/Side Menu/SWReveal/ShareAnIftar-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
-				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../../Downloads/Non-Seamless/Openssl/openssl-1.0.1i-iOS/include\" \"$(SRCROOT)/../../../Downloads/Non-Seamless/Openssl/openssl-1.0.1i-iOS/lib\"";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/ShareAnIftar/ExternalLibs/Payment/include\" \"$(SRCROOT)/ShareAnIftar/ExternalLibs/Payment/lib\"";
 			};
 			name = Release;
 		};

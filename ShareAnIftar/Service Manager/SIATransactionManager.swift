@@ -27,7 +27,7 @@ class SIATransactionManager: NSObject {
             self.services = services
         }
     }
-    
+    //http://shareaniftar.com/api/dua_notification.php
     //----------------------------------------------
     // Construct service URL with parameters
     //----------------------------------------------
@@ -42,7 +42,15 @@ class SIATransactionManager: NSObject {
         case "smile_counter":
             serviceURL = "\(baseURL)\(service).php"
             print("\(serviceURL)")
-
+            
+        case "hadith_notification":
+            serviceURL = "\(baseURL)\(service).php"
+            print("\(serviceURL)")
+            
+        case "dua_notification":
+            serviceURL = "\(baseURL)\(service).php"
+            print("\(serviceURL)")
+            
         case "generate_otp":
             serviceURL = "\(baseURL)\(service).php?\(parameters)"
             print("\(serviceURL)")

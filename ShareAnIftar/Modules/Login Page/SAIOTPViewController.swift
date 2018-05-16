@@ -39,55 +39,42 @@ class SAIOTPViewController: UIViewController {
         print("\(phoneNo2)")
         self.userID2 =  UserDefaults.standard.integer(forKey: "UserID")
         print("\( userID2)")
-
-    
- //       HUD.show(HUDContentType.labeledRotatingImage(image:  UIImage(named: "progress_circular"), title:"" , subtitle:"Fetching Count…"))
         
-                SIANetworkService.defaultManger.sentRequestFor(serviceName: "validate_otp", withParameters: "\(userID)\(userID2)\(phoneNo)\(phoneNo2)", completionHandler:{(response:Any?, error:Error?) in
-        
-                    //Display on main queue
-                    DispatchQueue.main.async { [unowned self] in
-        
-                       //Remove Progress
-                      //   HUD.hide()
-                        
-                        if((error) != nil)
-                        {
-                           // self.reportError(error: error!)
-                            let alert = UIAlertController(title: "Error", message: "Please Try Again", preferredStyle: .alert)
-                            alert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
-                            self.present(alert, animated: true, completion: nil)
-                        }
-        
-                        //Populate the data
-                        let responseDict : [String:Any] = response as! [String:Any]
-                        //self.counterValue = responseDict["count"] as! String
-                        // self.counterTextField.text = self.counterValue
-                        // print(self.counterValue)
-                        print("Response: \(responseDict)")
-                        if (responseDict["result"] as! String == "reg_success")
-                        {
-                         print("Alhamdulillah")
-//                            UserDefaults.standard.set(self.userID, forKey: "UserID") //setObject
-                            UserDefaults.standard.set("YES", forKey: "LoggedIn")
-
-                        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                        self.view.window?.rootViewController = mainStoryboard.instantiateViewController(withIdentifier: "SWRevealViewController")
-                        }
-                        else
-                        {
-                            print("Astagfirullah")
-                            let alert = UIAlertController(title: "Invalid OTP", message: "Please Enter Valid OTP", preferredStyle: .alert)
-                            alert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
-                            self.present(alert, animated: true, completion: nil)
-                        }
-                    }
-                })
-        
-        //  self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
-        
-       // let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-       // self.view.window?.rootViewController = mainStoryboard.instantiateViewController(withIdentifier: "TabBarVC")
+        SIANetworkService.defaultManger.sentRequestFor(serviceName: "validate_otp", withParameters: "\(userID)\(userID2)\(phoneNo)\(phoneNo2)", completionHandler:{(response:Any?, error:Error?) in
+            
+            //Display on main queue
+            DispatchQueue.main.async { [unowned self] in
+                
+                //Remove Progress
+                //   HUD.hide()
+                
+                if((error) != nil)
+                {
+                    let alert = UIAlertController(title: "Error", message: "Please Try Again", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                }
+                
+                //Populate the data
+                let responseDict : [String:Any] = response as! [String:Any]
+                print("Response: \(responseDict)")
+                if (responseDict["result"] as! String == "reg_success")
+                {
+                    print("Alhamdulillah")
+                    UserDefaults.standard.set("YES", forKey: "LoggedIn")
+                    
+                    let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    self.view.window?.rootViewController = mainStoryboard.instantiateViewController(withIdentifier: "SWRevealViewController")
+                }
+                else
+                {
+                    print("Astagfirullah")
+                    let alert = UIAlertController(title: "Invalid OTP", message: "Please Enter Valid OTP", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                }
+            }
+        })
     }
 }
 

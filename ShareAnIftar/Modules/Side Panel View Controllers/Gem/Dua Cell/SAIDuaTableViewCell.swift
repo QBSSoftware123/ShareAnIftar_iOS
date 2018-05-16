@@ -11,6 +11,8 @@ import UIKit
 
 class SAIDuaTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var arabicText: UITextView!
+    @IBOutlet weak var dayCount: UILabel!
     @IBOutlet weak var readMore: UIButton!
     @IBOutlet weak var duaText: UITextView!
     var urlWhats : String!

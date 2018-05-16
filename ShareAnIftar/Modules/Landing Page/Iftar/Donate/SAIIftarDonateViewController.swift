@@ -26,7 +26,7 @@ class SAIIftarDonateViewController: SAIViewController , UITextFieldDelegate {
     
     @IBOutlet weak var iftarCountTextField: UITextField!
         
-    var accessCode = "AVFT65DF54AD51TFDA"
+    var accessCode = "AVDM77FD71CG80MDGC"
     var merchantId = "99763"
     var amount = ""
     var currency = "INR"
@@ -213,7 +213,7 @@ class SAIIftarDonateViewController: SAIViewController , UITextFieldDelegate {
  
         
         webCC?.delivery_address = selectLocationButton.titleLabel?.text
-        webCC?.merchant_param2 = "Iftar"
+        webCC?.merchant_param2 = "Iftar Kit"
         webCC?.merchant_param3 = "General"
         webCC?.merchant_param4 = iftarCountTextField.text
         webCC?.merchant_param5 = UserDefaults.standard.integer(forKey: "UserID")

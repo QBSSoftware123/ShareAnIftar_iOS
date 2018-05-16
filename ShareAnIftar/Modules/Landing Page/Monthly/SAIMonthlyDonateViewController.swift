@@ -12,13 +12,10 @@ class SAIMonthlyDonateViewController: SAIViewController , UITextFieldDelegate {
     
     @IBOutlet weak var VCTitle: UILabel!
     
-    @IBOutlet weak var totalAmount: UILabel!
+    var totalAmount: String?
+    var numberOfMonths: String?
     
-    @IBOutlet weak var iftarCountTextField: UITextField!
-    
-    @IBOutlet weak var selectLocationButton: UIButton!
-    
-    var accessCode = "AVFT65DF54AD51TFDA"
+    var accessCode = "AVDM77FD71CG80MDGC"
     var merchantId = "99763"
     var amount = ""
     var currency = "INR"
@@ -33,6 +30,8 @@ class SAIMonthlyDonateViewController: SAIViewController , UITextFieldDelegate {
     var merchant_param4 = ""
     var merchant_param5 = ""
 
+    @IBOutlet weak var selectDonationButton: UIButton!
+    var feedMotherList = ["Pay 1,500 for a month", "Pay 4,500 for 3 months", "Pay 9,000 for 6 months", "Pay 18,000 for 1 year"]
     
 
     override func viewDidLoad() {
@@ -41,131 +40,43 @@ class SAIMonthlyDonateViewController: SAIViewController , UITextFieldDelegate {
         // Do any additional setup after loading the view.
         
         addBlueGradientColor(GradientColor: SAIGradientColorConstants.SAIBlueGradient)
-        iftarCountTextField.keyboardType = UIKeyboardType.numberPad
+        selectDonationButton.titleLabel?.textColor = UIColor.white
+        selectDonationButton.backgroundColor = UIColor.white
+        selectDonationButton.layer.cornerRadius = 5
+        selectDonationButton.layer.borderWidth = 1
+        selectDonationButton.layer.borderColor = SAIColorConstants.SAIAppColor.cgColor
         
-        selectLocationButton.layer.cornerRadius = 5
-        selectLocationButton.layer.borderWidth = 1
-        selectLocationButton.layer.borderColor = SAIColorConstants.SAIAppColor.cgColor
-        
-        totalAmount.layer.cornerRadius = 5
-        totalAmount.layer.borderWidth = 1
-        totalAmount.layer.borderColor = SAIColorConstants.SAIAppColor.cgColor
-
         
         let randomNumber = arc4random () % 9999999 + 1
         self.orderId = randomNumber
         
     }
-    
-    var textLabelValue: Int32? {
-        if let value = textFieldValue {
-            
-            return value * 2100
-            
-            
-        } else {
-            return nil
-        }
-    }
-    
-    let numberFormatter: NumberFormatter = { // Using closure for creating the number formatter
-        let nf = NumberFormatter()
-        nf.numberStyle = .none
-        nf.minimumFractionDigits = 0
-        nf.maximumFractionDigits = 0
-        return nf
-    }()
-    
-    func updateTextLabelValue() {
-        if let value = textLabelValue {
-            totalAmount.text = numberFormatter.string(from: NSNumber(value: value))
-        } else {
-            totalAmount.text = ""
-        }
-    }
-    
-    
-    var textFieldValue: Int32? {
-        didSet {
-            updateTextLabelValue()
-        }
-    }
-    
-    
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        print("Current Text: \(textField.text)")
-        print("Replacement Text: \(string)")
-        // if "textField.text" and "replacementString" have dot(.), then reject the entry, otherwise accept it
-        let existingTextHasDecimalSeparator = textField.text?.range(of: ".")
-        let replacementStringHasDecimalSeparator = string.range(of: ".")
-        
-        let characterSet = NSCharacterSet.init(charactersIn: "0123456789")
-        let result = string.rangeOfCharacter(from: characterSet as CharacterSet, options: .caseInsensitive, range: string.startIndex..<string.endIndex)
-        
-        if existingTextHasDecimalSeparator != nil &&
-            replacementStringHasDecimalSeparator != nil &&
-            result != nil {
-            return false
-        }
-        else {
-            return true
-        }
-        
-    }
 
-    
-    @IBAction func textFieldEditingChanged(_ sender: UITextField)
-    {
-        if let text = sender.text, let value = Double(text) {
-            textFieldValue = Int32(value)
-        } else {
-            textFieldValue = nil
-        }
-        
-    }
-    
     @IBAction func selectLocation(_ sender: Any)
     {
-        let alertController = UIAlertController(title: "Select Location", message: "", preferredStyle: .actionSheet)
+        let alertController = UIAlertController(title: "Select Package", message: "", preferredStyle: .actionSheet)
         
         alertController.view.tintColor = SAIColorConstants.SAIAppColor
         
-        let location0 = UIAlertAction(title: SAISortByPickerList[0], style: .default, handler:{ action -> Void in
-            let titleString = SAISortByPickerList[0]
-            self.selectLocationButton.setTitle(titleString, for: .normal)
+        let location0 = UIAlertAction(title: feedMotherList[0], style: .default, handler:{ action -> Void in
+            self.selectDonationButton.setTitle(self.feedMotherList[0], for: .normal)
         })
         alertController.addAction(location0)
         
-        let location1 = UIAlertAction(title: SAISortByPickerList[1], style: .default, handler:{ action -> Void in
-            let titleString = SAISortByPickerList[1]
-            self.selectLocationButton.setTitle(titleString, for: .normal)
+        let location1 = UIAlertAction(title: feedMotherList[1], style: .default, handler:{ action -> Void in
+             self.selectDonationButton.setTitle(self.feedMotherList[1], for: .normal)
         })
         alertController.addAction(location1)
         
-        let location2 = UIAlertAction(title: SAISortByPickerList[2], style: .default, handler:{ action -> Void in
-            let titleString =  SAISortByPickerList[2]
-            self.selectLocationButton.setTitle(titleString, for: .normal)
+        let location2 = UIAlertAction(title: feedMotherList[2], style: .default, handler:{ action -> Void in
+             self.selectDonationButton.setTitle(self.feedMotherList[2], for: .normal)
         })
         alertController.addAction(location2)
         
-        let location3 = UIAlertAction(title: SAISortByPickerList[3], style: .default, handler:{ action -> Void in
-            let titleString =  SAISortByPickerList[3]
-            self.selectLocationButton.setTitle(titleString, for: .normal)
+        let location3 = UIAlertAction(title: feedMotherList[3], style: .default, handler:{ action -> Void in
+             self.selectDonationButton.setTitle(self.feedMotherList[3], for: .normal)
         })
         alertController.addAction(location3)
-        
-        
-        let location4 = UIAlertAction(title: SAISortByPickerList[4], style: .default, handler:{ action -> Void in
-            let titleString =  SAISortByPickerList[4]
-            self.selectLocationButton.setTitle(titleString, for: .normal)
-        })
-        alertController.addAction(location4)
-        
-        let location5 = UIAlertAction(title: SAISortByPickerList[5], style: .default, handler:{ action -> Void in
-            let titleString =  SAISortByPickerList[5]
-            self.selectLocationButton.setTitle(titleString, for: .normal)
-        })
-        alertController.addAction(location5)
         
         present(alertController, animated: true, completion: {
             let view = (alertController.view.superview?.subviews[1])! as UIView
@@ -185,48 +96,54 @@ class SAIMonthlyDonateViewController: SAIViewController , UITextFieldDelegate {
     
     @IBAction func donateMonthly(_ sender: Any)
     {
-        let title = selectLocationButton.titleLabel?.text
-        let totalKitsCount = self.iftarCountTextField.text
-        
-        if title == "Location"
+        let title = selectDonationButton.titleLabel?.text
+
+        if title == "Select Donation"
         {
-            let alert = UIAlertController(title: "Invalid Location", message: "Please Select Location", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Invalid Selection", message: "Please Select Donation Package", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
             self.present(alert, animated: true, completion: nil)
             return
         }
         
-        if totalKitsCount == ""
-        {
-            let alert = UIAlertController(title: "Invalid Amount", message: "Please Enter Valid Data", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-            return
+        if title == "Pay 1,500 for a month" {
+            self.totalAmount = "1500"
+            self.numberOfMonths = "1"
         }
         
+        if title == "Pay 4,500 for 3 months" {
+            self.totalAmount = "4500"
+            self.numberOfMonths = "3"
+        }
         
+        if title == "Pay 9,000 for 6 months" {
+            self.totalAmount = "9000"
+            self.numberOfMonths = "6"
+        }
+        
+        if title == "Pay 18,000 for 1 year" {
+            self.totalAmount = "18000"
+            self.numberOfMonths = "12"
+        }
         
         let storyBoard : UIStoryboard = UIStoryboard (name: SAIStoryBoardIdentifiers.SAIStoryBoardMain , bundle: nil)
         webCC  = storyBoard.instantiateViewController(withIdentifier: "CCWebViewController") as? CCWebViewController
         webCC?.accessCode = self.accessCode
         webCC?.cancelUrl = self.cancelUrl
         webCC?.orderId = self.orderId
-        webCC?.amount = self.totalAmount.text
+        webCC?.amount = self.totalAmount
         webCC?.currency = "INR"
         webCC?.merchantId = self.merchantId
         webCC?.redirectUrl =  self.redirectUrl
         webCC?.cancelUrl = self.cancelUrl
         webCC?.rsaKeyUrl = self.rsaKeyUrl
         
-        webCC?.delivery_address = selectLocationButton.titleLabel?.text
-        webCC?.merchant_param2 = "Ramdan Kit"
-        webCC?.merchant_param3 = "General"
-        webCC?.merchant_param4 = iftarCountTextField.text
+        webCC?.merchant_param2 = "Feed a Mother"
+        webCC?.merchant_param3 = "1 Month ₹1,500"
+        webCC?.merchant_param4 = self.numberOfMonths
         webCC?.merchant_param5 = UserDefaults.standard.integer(forKey: "UserID")
         
         self.present(webCC!, animated: true, completion: nil)
-
-        
     }
     @IBAction func dimissViewController(_ sender: Any)
     {

@@ -8,38 +8,40 @@
 
 import UIKit
 
-class Model
-{
-    var description: String = ""
-    var value: String = ""
-    
-    init(withDescription description: String?, andValue value: String?) {
-        self.description = description!
-        self.value = value!
-    }
-
+class ProfileModel: Codable {
+    let user_id : String?
+    let user: String?
+    let prof_pic: String?
+    let total_donation: String?
+    let eid_kit: String?
+    let iftar_kit:String?
+    let ramadan_kit: String?
+    let monthly_kit: String?
+    let daily: String?
+    let weekly: String?
+    let education: String?
+    let medical: String?
+    let relief: String?
+    let feed_mother: String?
 }
 
 class SAIUserProfileViewController: UIViewController , UITableViewDelegate , UITableViewDataSource
 {
-
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var userDataTableView: UITableView!
     
-    var testModel = [Model]()
-    var valuesArray = [AnyObject]()
-
-    
     var userId : Int = 0
     
+    var dataArray1 = ["Total Donations","Total Iftar Kits Donated","Total Monthly Kits","Total Ramadan Kits","Total Feed A Mother Kits"]
     
-    var dataArray : Array = ["","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""]
-    var dataArray1 = ["Total Iftar Kits","Total Daily Kits","Total Donations","Total Monthly Kits","Total Eid Kits","Total Ramadan Kits","Total Donations Towards Education"]
-       var dataArray2 = ["0","0","0","0","0","0","0"]
+    var dataArray2 = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
@@ -47,12 +49,12 @@ class SAIUserProfileViewController: UIViewController , UITableViewDelegate , UIT
         userDataTableView.register(UINib(nibName: "SAIUserTableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
         
         self.userId = UserDefaults.standard.integer(forKey: "UserID")
-
-       self.fetchUserProfile()
         
-
+        self.fetchUserProfile()
+        
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -60,104 +62,51 @@ class SAIUserProfileViewController: UIViewController , UITableViewDelegate , UIT
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-      return dataArray1.count
+        return dataArray2.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
-    {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell : SAIUserTableViewCell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! SAIUserTableViewCell
-        
-            cell.donationDescription.text  = dataArray1 [indexPath.row]
-        //userModel?.donationDes [indexPath.row]
-        
-        if valuesArray.count == 0 {
+        cell.donationDescription.text  = dataArray1 [indexPath.row]
+        if dataArray2.count == 0 {
+            cell.donationData.text = ""
+        } else {
             cell.donationData.text = dataArray2 [indexPath.row]
         }
-        else{
-            cell.donationData.text = valuesArray [indexPath.row] as? String
-        }
-                //userModel?.donationAmt [indexPath.row] as! String?
         return cell
     }
     
     func fetchUserProfile ()
     {
-//        let isLoggedIn : String? = UserDefaults.standard.string(forKey: "LoggedIn")
-//        if (isLoggedIn == nil)
-//        {
-//            HUD.flash(.label("Please Register to Access User Profile"), delay: 4.0) { _ in
-//                print("Register.")
-//            }
-//            dismiss(animated: true, completion: nil)
-//        }
-        // http://shareaniftar.com/api/user_profile.php?user_id=7
-        
-        //Add progress before you start fetching
-        HUD.show(HUDContentType.labeledRotatingImage(image:  UIImage(named: "progress_circular"), title:"" , subtitle:"Fetching User Data..."))
-        
-        
-        SIANetworkService.defaultManger.sentRequestFor(serviceName: "user_profile", withParameters: "user_id=\(userId)", completionHandler:{(response:Any?, error:Error?) in
-            
-            //Display on main queue
-            DispatchQueue.main.async { [unowned self] in
-                //Remove Progress
-                HUD.hide()
-                
-                
-                //Populate the data
-                let responseDict : [String:Any] = response as! [String:Any]
-//                self.counterValue = responseDict["count"] as! String
-//                self.counterTextField.text = self.counterValue
-//                print(self.counterValue)
-                
-                for (desc, value) in responseDict
-                {
-                    if desc == "total_donation"
-                    {
-                        self.valuesArray.append((value as AnyObject) as! String as AnyObject)
-                    }
-                    if desc == "eid_kit"
-                    {
-                       self.valuesArray.append((value as AnyObject) as! String as AnyObject)
-                    }
-                    if desc == "iftar_kit"
-                    {
-                        self.valuesArray.append((value as AnyObject) as! String as AnyObject)
-                    }
-                    if desc == "ramadan_kit"
-                    {
-                        self.valuesArray.append((value as AnyObject) as! String as AnyObject)
-                    }
-                    if desc == "daily"
-                    {
-                        self.valuesArray.append((value as AnyObject) as! String as AnyObject)
-                    }
-                    if desc == "monthly_kit"
-                    {
-                        self.valuesArray.append((value as AnyObject) as! String as AnyObject)
-                    }
-                    if desc == "education"
-                    {
-                        self.valuesArray.append((value as AnyObject) as! String as AnyObject)
-                    }
-                    self.testModel.append(Model.init(withDescription: desc, andValue: value as? String))
-                }
-                
-                print("ValueArray:\(self.valuesArray)")
-                
-                print("\nMODEL\n")
-                for test in self.testModel {
-                    self.dataArray = [test.value]
-                    print("\(test.value)")
-                }
-                print("DataArray:\(self.dataArray)")
-                
-                 print("Response: \(responseDict)")
-                self.tableView.reloadData()
-                
+        self.activityIndicator.startAnimating()
+        SIANetworkService.defaultManger.sentRequestForProfile(serviceName: "user_profile", withParameters: "user_id=\(userId)") { (response, error) in
+            if let error = error {
+                print(error)
             }
-        })
-
-        
+            
+            if let response = response {
+                if let totalDonations = response.total_donation {
+                    self.dataArray2.append(totalDonations)
+                }
+                if let totalIftarKits = response.iftar_kit {
+                    self.dataArray2.append(totalIftarKits)
+                }
+                if let motherKits = response.monthly_kit {
+                    self.dataArray2.append(motherKits)
+                }
+                if let totalRamadanKits = response.ramadan_kit {
+                    self.dataArray2.append(totalRamadanKits)
+                }
+                DispatchQueue.main.async {
+                    self.activityIndicator.stopAnimating()
+                    self.activityIndicator.removeFromSuperview()
+                    if let userName = response.user{
+                        self.userName.text = userName
+                    }
+                    self.tableView.reloadData()
+                }
+            }
+        }
     }
 }
