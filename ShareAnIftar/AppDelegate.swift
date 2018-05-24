@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().barTintColor = SAIColorConstants.SAIAppColor
         UITabBar.appearance().tintColor = SAIColorConstants.SAIAppGreenColor
         
-        IQKeyboardManager.sharedManager().enable = true
+       IQKeyboardManager.shared.enable = true
         
         Thread.sleep(forTimeInterval: 1.0)
        

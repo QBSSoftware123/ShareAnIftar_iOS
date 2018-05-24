@@ -20,8 +20,8 @@ class SAILoginViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         phoneNumberTextField.keyboardType = UIKeyboardType.numberPad
-        self.navigationController?.isNavigationBarHidden = false
-
+        nameTextField.keyboardType = UIKeyboardType.namePhonePad
+        self.navigationItem.title = "Enter"
 
     }
 

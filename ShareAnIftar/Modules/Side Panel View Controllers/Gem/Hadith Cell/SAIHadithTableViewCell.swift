@@ -18,6 +18,7 @@ class SAIHadithTableViewCell: UITableViewCell {
         // Initialization code
         
         readMore.isHidden = true
+        shareHadith.isHidden = true
     }
     var urlWhats : String!
     

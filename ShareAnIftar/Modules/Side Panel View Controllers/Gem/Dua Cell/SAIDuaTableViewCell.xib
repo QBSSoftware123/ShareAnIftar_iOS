@@ -43,58 +43,36 @@
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="English Translation" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ihs-dl-yf5">
-                        <rect key="frame" x="20" y="97" width="239" height="20"/>
+                        <rect key="frame" x="20" y="87" width="239" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="K4F-2I-WDd"/>
+                        </constraints>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Our Lord Accept (this service) from us: For Thou art the All-Hearing, the All-knowing [2:127]" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTJ-bB-MVc">
-                        <rect key="frame" x="20" y="125" width="359" height="100.5"/>
+                        <rect key="frame" x="20" y="136" width="359" height="135"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="height" priority="750" constant="106" id="z6L-sE-aIH"/>
+                            <constraint firstAttribute="height" constant="135" id="z6L-sE-aIH"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Oj-gx-7nR">
-                        <rect key="frame" x="321" y="221.5" width="40" height="35"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="35" id="CMX-Lt-mDY"/>
-                        </constraints>
-                        <state key="normal" title="Share"/>
-                        <connections>
-                            <action selector="shareToWhatsApp:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="qxF-pG-Bxc"/>
-                        </connections>
-                    </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ev9-S8-CEK">
-                        <rect key="frame" x="20" y="222.5" width="94" height="34"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="34" id="EVC-b1-tqs"/>
-                            <constraint firstAttribute="width" constant="94" id="t2L-wD-2tv"/>
-                        </constraints>
-                        <state key="normal" title="Read More..."/>
-                    </button>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="ihs-dl-yf5" firstAttribute="top" secondItem="HUM-C3-2ar" secondAttribute="bottom" constant="8" id="3gT-dc-Hgf"/>
+                    <constraint firstItem="ihs-dl-yf5" firstAttribute="top" secondItem="HUM-C3-2ar" secondAttribute="bottom" constant="-2" id="3gT-dc-Hgf"/>
                     <constraint firstAttribute="leadingMargin" secondItem="ihs-dl-yf5" secondAttribute="leading" id="45y-2d-5Dy"/>
                     <constraint firstAttribute="trailingMargin" secondItem="T67-4Z-Tso" secondAttribute="trailing" constant="120" id="4Ol-i9-A4V"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="9Oj-gx-7nR" secondAttribute="trailing" constant="18" id="98i-CA-dpy"/>
                     <constraint firstAttribute="trailingMargin" secondItem="ihs-dl-yf5" secondAttribute="trailing" constant="120" id="Eui-Lz-r2x"/>
-                    <constraint firstItem="9Oj-gx-7nR" firstAttribute="baseline" secondItem="Ev9-S8-CEK" secondAttribute="baseline" id="J6w-BA-BlT"/>
-                    <constraint firstItem="Ev9-S8-CEK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Lxh-Py-ilf"/>
                     <constraint firstItem="T67-4Z-Tso" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="121" id="U8h-Jh-nVh"/>
                     <constraint firstAttribute="leadingMargin" secondItem="HUM-C3-2ar" secondAttribute="leading" id="cNh-rN-14p"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="9Oj-gx-7nR" secondAttribute="bottom" constant="9.5" id="caa-Or-has"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="Ev9-S8-CEK" secondAttribute="bottom" constant="9.5" id="eRE-eO-nyW"/>
                     <constraint firstItem="gTJ-bB-MVc" firstAttribute="trailing" secondItem="HUM-C3-2ar" secondAttribute="trailing" id="p6o-KX-8YC"/>
                     <constraint firstAttribute="topMargin" secondItem="T67-4Z-Tso" secondAttribute="top" id="pcV-Zn-xlU"/>
                     <constraint firstItem="HUM-C3-2ar" firstAttribute="top" secondItem="T67-4Z-Tso" secondAttribute="bottom" constant="8" id="ppB-av-gTQ"/>
                     <constraint firstAttribute="trailingMargin" secondItem="HUM-C3-2ar" secondAttribute="trailing" id="q70-S8-CCN"/>
-                    <constraint firstItem="gTJ-bB-MVc" firstAttribute="top" secondItem="ihs-dl-yf5" secondAttribute="bottom" constant="8" symbolic="YES" id="w2W-ap-Sd2"/>
-                    <constraint firstItem="Ev9-S8-CEK" firstAttribute="top" secondItem="gTJ-bB-MVc" secondAttribute="bottom" constant="-3" id="x5F-Lv-gDB"/>
-                    <constraint firstItem="9Oj-gx-7nR" firstAttribute="top" secondItem="gTJ-bB-MVc" secondAttribute="bottom" constant="-4" id="y4z-xP-i20"/>
+                    <constraint firstItem="gTJ-bB-MVc" firstAttribute="top" secondItem="ihs-dl-yf5" secondAttribute="bottom" constant="18.5" id="w2W-ap-Sd2"/>
                     <constraint firstItem="gTJ-bB-MVc" firstAttribute="leading" secondItem="ihs-dl-yf5" secondAttribute="leading" id="yOK-Qt-QID"/>
                 </constraints>
             </tableViewCellContentView>
@@ -102,7 +80,6 @@
                 <outlet property="arabicText" destination="HUM-C3-2ar" id="uCj-NR-k94"/>
                 <outlet property="dayCount" destination="T67-4Z-Tso" id="c19-Ju-umn"/>
                 <outlet property="duaText" destination="gTJ-bB-MVc" id="9Oh-VG-JeM"/>
-                <outlet property="readMore" destination="Ev9-S8-CEK" id="Fsf-Yf-ras"/>
             </connections>
             <point key="canvasLocation" x="47.5" y="39.5"/>
         </tableViewCell>

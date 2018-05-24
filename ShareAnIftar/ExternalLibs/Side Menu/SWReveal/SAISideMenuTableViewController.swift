@@ -25,7 +25,7 @@ class SAISideMenuTableViewController: UITableViewController {
             let gemVC = storyBoard.instantiateViewController(withIdentifier: SAIStoryBoardIdentifiers.SAIGemViewControllerIdentifier)
             self.present(gemVC, animated: true, completion: nil)
         }
-        if indexPath.row == 6
+        if indexPath.row == 5
         {
             
             if let name = NSURL(string: "https://itunes.apple.com/us/app/ShareAnIftar/id1239892904?ls=1&mt=8") {
